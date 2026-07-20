@@ -124,15 +124,13 @@ body {
 </head>
 <body class="blueprint-grid min-h-screen">
 <header class="fixed top-0 w-full z-50 bg-deep-obsidian/85 backdrop-blur-xl border-b border-outline/20">
-<div class="max-w-[1440px] mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop py-3.5">
-<div class="flex items-center gap-8">
-<a href="index.html" class="flex items-center gap-2.5 group">
+<div class="max-w-[1440px] mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop py-3.5 relative">
+<a href="index.html" class="flex items-center gap-2.5 group shrink-0">
 <img src="assets/logo.png" alt="TrailOps" class="w-8 h-8 object-contain transition-transform group-hover:scale-105 duration-200" width="32" height="32"/>
 <span class="font-headline-md text-2xl font-bold text-electric-moss tracking-tighter">TrailOps</span>
 </a>
 
-<nav class="hidden lg:flex gap-6 font-label-mono text-xs items-center">
-
+<nav class="hidden lg:flex gap-8 font-label-mono text-xs items-center absolute left-1/2 -translate-x-1/2">
 <!-- Services Mega Menu Dropdown Container -->
 <div class="relative group mega-menu-container">
 <a href="services.html" class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent hover:border-electric-moss/50 uppercase flex items-center gap-1 py-1 font-semibold">
@@ -141,7 +139,7 @@ body {
 </a>
 
 <!-- Mega Menu Dropdown Panel with Hit-box Bridge -->
-<div class="mega-menu-panel absolute top-full left-0 pt-3 -mt-1 w-[820px] max-w-[90vw] opacity-0 invisible pointer-events-none transition-all duration-200 transform translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 [.mega-menu-panel.is-active]:opacity-100 [.mega-menu-panel.is-active]:visible [.mega-menu-panel.is-active]:pointer-events-auto [.mega-menu-panel.is-active]:translate-y-0 z-50">
+<div class="mega-menu-panel absolute top-full left-1/2 -translate-x-1/2 pt-3 -mt-1 w-[820px] max-w-[90vw] opacity-0 invisible pointer-events-none transition-all duration-200 transform translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 [.mega-menu-panel.is-active]:opacity-100 [.mega-menu-panel.is-active]:visible [.mega-menu-panel.is-active]:pointer-events-auto [.mega-menu-panel.is-active]:translate-y-0 z-50">
 <div class="bg-deep-obsidian/95 backdrop-blur-2xl border border-electric-moss/30 rounded-xl p-6 shadow-[0_20px_50px_rgba(0,0,0,0.85)] relative overflow-hidden">
 <div class="scanline"></div>
 
@@ -226,10 +224,10 @@ View All Services <span class="text-xs">&rarr;</span>
 <div>
 <span class="bg-electric-moss/20 text-electric-moss px-2 py-0.5 border border-electric-moss/30 text-[9px] font-label-mono uppercase rounded">High Leverage</span>
 <h4 class="font-headline-md text-sm text-data-white font-bold mt-2">Ready to ship?</h4>
-<p class="font-body-md text-[11px] text-slate-silver mt-1 leading-relaxed">Book a free technical build call. We scope your project on the call without fluff.</p>
+<p class="font-body-md text-[11px] text-slate-silver mt-1 leading-relaxed">Book a free technical call. We scope your project on the call without fluff.</p>
 </div>
 <div class="mt-4 pt-3 border-t border-slate-silver/10 space-y-2">
-<a href="contact.html" class="block w-full text-center bg-electric-moss text-deep-obsidian font-label-mono py-2 rounded text-xs uppercase font-bold hover:brightness-110 transition-all glow-active">Book Build Call</a>
+<a href="contact.html" class="block w-full text-center bg-electric-moss text-deep-obsidian font-label-mono py-2 rounded text-xs uppercase font-bold hover:brightness-110 transition-all glow-active">Book a Call</a>
 <a href="featured-work.html" class="block w-full text-center text-slate-silver hover:text-data-white font-label-mono text-[10px] uppercase transition-colors">View Case Studies &rarr;</a>
 </div>
 </div>
@@ -242,11 +240,10 @@ View All Services <span class="text-xs">&rarr;</span>
 <a class="text-electric-moss border-b-2 border-electric-moss pb-1 uppercase font-semibold" href="about.html">About</a>
 <a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase" href="contact.html">Contact</a>
 </nav>
-</div>
 
-<div class="flex items-center gap-3">
+<div class="flex items-center gap-3 shrink-0">
 <a href="contact.html" class="bg-electric-moss text-deep-obsidian font-label-mono px-4 py-2 uppercase font-bold text-xs transition-transform active:scale-95 duration-100 glow-active whitespace-nowrap">
-Book a Free Build Call
+Book a Call
 </a>
 
 <!-- Mobile Menu Hamburger Button -->
@@ -308,7 +305,7 @@ All Services <span>&rarr;</span>
 
 <div class="mt-5 pt-4 border-t border-outline/20">
 <a href="contact.html" class="block w-full text-center bg-electric-moss text-deep-obsidian font-label-mono py-3 uppercase font-bold text-xs glow-active">
-Book a Free Build Call
+Book a Call
 </a>
 </div>
 </div>
@@ -358,7 +355,7 @@ Book a Free Build Call
 <h2 class="font-headline-lg text-2xl md:text-3xl text-data-white mb-4">Got something worth building?</h2>
 <p class="font-body-md text-slate-silver max-w-xl mx-auto mb-8">Tell us what you're building or what's slowing your team down &mdash; we'll scope it on the call, no discovery-deck theater.</p>
 <div class="flex flex-wrap justify-center gap-4">
-<a href="contact.html" class="bg-electric-moss text-deep-obsidian font-label-mono px-6 py-3 uppercase font-bold text-sm glow-active">Book a Free Build Call</a>
+<a href="contact.html" class="bg-electric-moss text-deep-obsidian font-label-mono px-6 py-3 uppercase font-bold text-sm glow-active">Book a Call</a>
 <a href="services.html" class="border border-slate-silver text-data-white font-label-mono px-6 py-3 uppercase font-bold text-sm hover:bg-white/5">See Our Services</a>
 </div>
 </div>
