@@ -88,34 +88,172 @@
 <div class="scanline"></div>
 
 <!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 bg-background-deep/90 backdrop-blur-xl border-b border-border-muted flex justify-between items-center px-6 md:px-margin-safe py-3 max-w-full">
-    <a href="index.html" class="flex items-center gap-3 group">
-        <img alt="TrailOps Logo" class="h-8 w-8 object-contain transition-transform group-hover:rotate-12" src="assets/logo.png"/>
-        <span class="font-display-lg text-2xl md:text-headline-lg tracking-tighter text-primary">TrailOps</span>
-    </a>
-    <div class="hidden md:flex items-center space-x-8">
-        <a class="font-label-caps text-label-caps text-circuit-cyan border-b border-circuit-cyan pb-0.5" href="services.html">Services</a>
-        <a class="font-label-caps text-label-caps text-terminal-gray hover:text-circuit-cyan transition-colors duration-300" href="featured-work.html">Case Studies</a>
-        <a class="font-label-caps text-label-caps text-terminal-gray hover:text-circuit-cyan transition-colors duration-300" href="about.html">Process</a>
-        <a class="font-label-caps text-label-caps text-terminal-gray hover:text-circuit-cyan transition-colors duration-300" href="index.html#faq">FAQ</a>
-    </div>
-    <div class="flex items-center gap-4">
-        <a href="contact.html" class="bg-logic-green text-background-deep font-label-caps text-label-caps px-5 py-2.5 md:px-6 md:py-3 scale-95 hover:scale-100 transition-all font-bold hover:bg-circuit-cyan glow-green inline-block text-center">
-            BOOK A FREE BUILD CALL
+<header class="fixed top-0 w-full z-50 bg-background-deep/90 backdrop-blur-xl border-b border-border-muted">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center py-3">
+        <a href="index.html" class="flex items-center gap-3 group">
+            <img alt="TrailOps Logo" class="h-8 w-8 object-contain transition-transform group-hover:rotate-12" src="assets/logo.png"/>
+            <span class="font-display-lg text-2xl md:text-headline-lg tracking-tighter text-primary">TrailOps</span>
         </a>
-        <button id="mobile-menu-btn" class="md:hidden text-terminal-gray hover:text-primary">
-            <span class="material-symbols-outlined text-3xl">menu</span>
-        </button>
+        
+        <!-- Desktop Nav with Fancy Mega Menu -->
+        <nav class="hidden md:flex items-center space-x-8">
+            <!-- Services Mega Menu Dropdown -->
+            <div class="relative group nav-dropdown-group py-2">
+                <a href="services.html" class="dropdown-trigger font-label-caps text-label-caps text-terminal-gray hover:text-circuit-cyan transition-colors duration-300 flex items-center gap-1">
+                    <span>Services</span>
+                    <span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180 text-circuit-cyan">expand_more</span>
+                </a>
+                
+                <!-- Mega Menu Dropdown Panel -->
+                <div class="dropdown-panel absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[780px] opacity-0 invisible pointer-events-none transition-all duration-300 ease-out z-50">
+                    <div class="glass-panel border border-border-muted shadow-2xl p-6 relative overflow-hidden bg-background-deep/95 backdrop-blur-2xl rounded-sm text-left">
+                        <div class="scanline"></div>
+                        
+                        <div class="flex justify-between items-center mb-4 pb-3 border-b border-border-muted/60">
+                            <span class="font-mono-data text-xs text-circuit-cyan tracking-widest uppercase">// SYSTEM MODULES &amp; ARCHITECTURE</span>
+                            <a href="services.html" class="font-label-caps text-[11px] text-logic-green hover:underline flex items-center gap-1">
+                                VIEW ALL SPECS <span class="material-symbols-outlined text-xs">arrow_forward</span>
+                            </a>
+                        </div>
+                        
+                        <div class="grid grid-cols-12 gap-6">
+                            <!-- Modules Grid -->
+                            <div class="col-span-8 grid grid-cols-2 gap-3">
+                                <a href="workflow-automation.html" class="p-3 border border-border-muted/50 hover:border-circuit-cyan/50 hover:bg-surface-container-high/40 transition-all group/item block">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="font-mono-data text-[10px] text-circuit-cyan">MODULE_01</span>
+                                        <span class="material-symbols-outlined text-sm text-circuit-cyan group-hover/item:translate-x-0.5 transition-transform">hub</span>
+                                    </div>
+                                    <div class="font-headline-lg text-sm text-primary group-hover/item:text-circuit-cyan transition-colors">Workflow Automation</div>
+                                    <p class="font-body-md text-[11px] text-terminal-gray line-clamp-1 mt-0.5">n8n &amp; Python API pipelines</p>
+                                </a>
+
+                                <a href="ai-integration.html" class="p-3 border border-border-muted/50 hover:border-logic-green/50 hover:bg-surface-container-high/40 transition-all group/item block">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="font-mono-data text-[10px] text-logic-green">MODULE_02</span>
+                                        <span class="material-symbols-outlined text-sm text-logic-green group-hover/item:translate-x-0.5 transition-transform">psychology</span>
+                                    </div>
+                                    <div class="font-headline-lg text-sm text-primary group-hover/item:text-logic-green transition-colors">AI Integration &amp; RAG</div>
+                                    <p class="font-body-md text-[11px] text-terminal-gray line-clamp-1 mt-0.5">Pinecone, Qdrant &amp; LLMs</p>
+                                </a>
+
+                                <a href="saas-development.html" class="p-3 border border-border-muted/50 hover:border-circuit-cyan/50 hover:bg-surface-container-high/40 transition-all group/item block">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="font-mono-data text-[10px] text-circuit-cyan">MODULE_03</span>
+                                        <span class="material-symbols-outlined text-sm text-circuit-cyan group-hover/item:translate-x-0.5 transition-transform">dashboard</span>
+                                    </div>
+                                    <div class="font-headline-lg text-sm text-primary group-hover/item:text-circuit-cyan transition-colors">SaaS Development</div>
+                                    <p class="font-body-md text-[11px] text-terminal-gray line-clamp-1 mt-0.5">Next.js 14, Supabase &amp; Stripe</p>
+                                </a>
+
+                                <a href="social-media-automation.html" class="p-3 border border-border-muted/50 hover:border-logic-green/50 hover:bg-surface-container-high/40 transition-all group/item block">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="font-mono-data text-[10px] text-logic-green">MODULE_04</span>
+                                        <span class="material-symbols-outlined text-sm text-logic-green group-hover/item:translate-x-0.5 transition-transform">share</span>
+                                    </div>
+                                    <div class="font-headline-lg text-sm text-primary group-hover/item:text-logic-green transition-colors">Social Automation</div>
+                                    <p class="font-body-md text-[11px] text-terminal-gray line-clamp-1 mt-0.5">Multi-channel Graph API</p>
+                                </a>
+
+                                <a href="ai-chatbots-agents.html" class="p-3 border border-border-muted/50 hover:border-circuit-cyan/50 hover:bg-surface-container-high/40 transition-all group/item block">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="font-mono-data text-[10px] text-circuit-cyan">MODULE_05</span>
+                                        <span class="material-symbols-outlined text-sm text-circuit-cyan group-hover/item:translate-x-0.5 transition-transform">smart_toy</span>
+                                    </div>
+                                    <div class="font-headline-lg text-sm text-primary group-hover/item:text-circuit-cyan transition-colors">AI Chatbots &amp; Agents</div>
+                                    <p class="font-body-md text-[11px] text-terminal-gray line-clamp-1 mt-0.5">Autonomous tool-calling bots</p>
+                                </a>
+
+                                <a href="no-code-low-code-tooling.html" class="p-3 border border-border-muted/50 hover:border-logic-green/50 hover:bg-surface-container-high/40 transition-all group/item block">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="font-mono-data text-[10px] text-logic-green">MODULE_06</span>
+                                        <span class="material-symbols-outlined text-sm text-logic-green group-hover/item:translate-x-0.5 transition-transform">widgets</span>
+                                    </div>
+                                    <div class="font-headline-lg text-sm text-primary group-hover/item:text-logic-green transition-colors">Rapid Tooling</div>
+                                    <p class="font-body-md text-[11px] text-terminal-gray line-clamp-1 mt-0.5">Retool &amp; Airtable internal tools</p>
+                                </a>
+                            </div>
+
+                            <!-- Mega Menu Sidebar -->
+                            <div class="col-span-4 border-l border-border-muted/60 pl-6 flex flex-col justify-between">
+                                <div>
+                                    <span class="font-mono-data text-[10px] text-logic-green block mb-1">// AUDIT &amp; BLUEPRINT</span>
+                                    <div class="font-headline-lg text-base text-primary mb-2">Automation Strategy Audit</div>
+                                    <p class="font-body-md text-xs text-terminal-gray leading-relaxed mb-4">
+                                        Full tech stack evaluation, bottleneck detection &amp; milestone build plan.
+                                    </p>
+                                </div>
+                                <a href="automation-strategy-audit.html" class="inline-block text-center bg-logic-green text-background-deep font-label-caps text-[11px] font-bold py-2.5 px-4 hover:bg-circuit-cyan transition-colors">
+                                    REQUEST AUDIT NODE
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Mega Menu Dropdown -->
+            <div class="relative group nav-dropdown-group py-2">
+                <a href="featured-work.html" class="dropdown-trigger font-label-caps text-label-caps text-terminal-gray hover:text-circuit-cyan transition-colors duration-300 flex items-center gap-1">
+                    <span>Projects</span>
+                    <span class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180 text-circuit-cyan">expand_more</span>
+                </a>
+                
+                <div class="dropdown-panel absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[500px] opacity-0 invisible pointer-events-none transition-all duration-300 ease-out z-50">
+                    <div class="glass-panel border border-border-muted shadow-2xl p-5 bg-background-deep/95 backdrop-blur-2xl rounded-sm text-left">
+                        <div class="flex justify-between items-center mb-3 pb-2 border-b border-border-muted/60">
+                            <span class="font-mono-data text-xs text-circuit-cyan tracking-widest">// NODE_ARCHIVE DEPLOYMENTS</span>
+                            <a href="featured-work.html" class="font-label-caps text-[11px] text-logic-green hover:underline">VIEW ALL</a>
+                        </div>
+                        <div class="space-y-2.5 font-mono-data text-xs">
+                            <a href="featured-work.html" class="flex justify-between items-center p-2.5 border border-border-muted/40 hover:border-circuit-cyan/50 hover:bg-surface-container-high/40 transition-all group/cs">
+                                <div>
+                                    <span class="text-primary font-headline-lg group-hover/cs:text-circuit-cyan block">LinkGrow AI Node</span>
+                                    <span class="text-[10px] text-terminal-gray">AI Outreach &amp; Gemini Copy Pipeline</span>
+                                </div>
+                                <span class="text-[10px] text-circuit-cyan border border-circuit-cyan/40 px-2 py-0.5">+400% Leads</span>
+                            </a>
+                            <a href="featured-work.html" class="flex justify-between items-center p-2.5 border border-border-muted/40 hover:border-logic-green/50 hover:bg-surface-container-high/40 transition-all group/cs">
+                                <div>
+                                    <span class="text-primary font-headline-lg group-hover/cs:text-logic-green block">Flipbook SaaS Core</span>
+                                    <span class="text-[10px] text-terminal-gray">Multi-tenant Next.js &amp; Supabase Engine</span>
+                                </div>
+                                <span class="text-[10px] text-logic-green border border-logic-green/40 px-2 py-0.5">&lt;1s Latency</span>
+                            </a>
+                            <a href="featured-work.html" class="flex justify-between items-center p-2.5 border border-border-muted/40 hover:border-circuit-cyan/50 hover:bg-surface-container-high/40 transition-all group/cs">
+                                <div>
+                                    <span class="text-primary font-headline-lg group-hover/cs:text-circuit-cyan block">Multi-Channel Publisher</span>
+                                    <span class="text-[10px] text-terminal-gray">n8n &amp; Self-Hosted Ollama AI Pipeline</span>
+                                </div>
+                                <span class="text-[10px] text-circuit-cyan border border-circuit-cyan/40 px-2 py-0.5">7+ Platforms</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="font-label-caps text-label-caps text-terminal-gray hover:text-circuit-cyan transition-colors duration-300 py-2" href="about.html">Process</a>
+            <a class="font-label-caps text-label-caps text-terminal-gray hover:text-circuit-cyan transition-colors duration-300 py-2" href="index.html#faq">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+            <a href="contact.html" class="bg-logic-green text-background-deep font-label-caps text-label-caps px-5 py-2.5 md:px-6 md:py-3 scale-95 hover:scale-100 transition-all font-bold hover:bg-circuit-cyan glow-green inline-block text-center">
+                BOOK A FREE CALL
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden text-terminal-gray hover:text-primary">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
     </div>
-</nav>
+</header>
 
 <!-- Mobile Nav Drawer -->
 <div id="mobile-menu" class="fixed inset-0 z-40 bg-background-deep/98 backdrop-blur-2xl flex flex-col justify-center items-center gap-8 hidden md:hidden">
     <a href="index.html" class="font-label-caps text-lg text-primary hover:text-logic-green">Home</a>
-    <a href="services.html" class="font-label-caps text-lg text-circuit-cyan font-bold">Services</a>
-    <a href="featured-work.html" class="font-label-caps text-lg text-primary hover:text-logic-green">Case Studies</a>
+    <a href="services.html" class="font-label-caps text-lg text-primary hover:text-logic-green">Services</a>
+    <a href="featured-work.html" class="font-label-caps text-lg text-primary hover:text-logic-green">Projects</a>
     <a href="about.html" class="font-label-caps text-lg text-primary hover:text-logic-green">Process</a>
-    <a href="contact.html" class="font-label-caps text-lg text-logic-green border border-logic-green px-6 py-3">Book Build Call</a>
+    <a href="contact.html" class="font-label-caps text-lg text-logic-green border border-logic-green px-6 py-3">Book a Free Call</a>
 </div>
 
 <!-- Studio Status Sidebar (Desktop) -->
@@ -220,13 +358,13 @@
             Book a call with TrailOps to design a rapid internal dashboard or workflow prototype.
         </p>
         <a href="contact.html" class="inline-block bg-logic-green text-background-deep px-10 py-4 font-label-caps text-label-caps font-bold hover:bg-circuit-cyan transition-all glow-green">
-            BOOK A FREE BUILD CALL
+            BOOK A FREE CALL
         </a>
     </section>
 </main>
 
 <footer class="bg-background-deep border-t border-border-muted w-full mt-section-lg">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 md:px-margin-safe py-16 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-4 md:px-8 py-16 max-w-7xl mx-auto">
         <div class="md:col-span-2 space-y-4">
             <div class="flex items-center gap-3">
                 <img alt="TrailOps Logo" class="h-8 w-8 object-contain" src="assets/logo.png"/>
@@ -235,12 +373,28 @@
             <p class="font-mono-data text-terminal-gray max-w-xs text-sm">
                 Engineering production-grade automation for the next generation of SaaS founders.
             </p>
+            <div class="pt-3 flex items-center gap-3">
+                <a href="https://www.facebook.com/profile.php?id=61585746117831" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-9 h-9 border border-border-muted bg-surface-container-lowest text-terminal-gray hover:text-circuit-cyan hover:border-circuit-cyan/50 hover:bg-circuit-cyan/10 transition-all rounded-sm group" aria-label="Facebook">
+                    <svg class="w-4 h-4 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/company/trailopsllc" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-9 h-9 border border-border-muted bg-surface-container-lowest text-terminal-gray hover:text-logic-green hover:border-logic-green/50 hover:bg-logic-green/10 transition-all rounded-sm group" aria-label="LinkedIn">
+                    <svg class="w-4 h-4 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-9 h-9 border border-border-muted bg-surface-container-lowest text-terminal-gray hover:text-circuit-cyan hover:border-circuit-cyan/50 hover:bg-circuit-cyan/10 transition-all rounded-sm group" aria-label="GitHub">
+                    <svg class="w-4 h-4 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-9 h-9 border border-border-muted bg-surface-container-lowest text-terminal-gray hover:text-logic-green hover:border-logic-green/50 hover:bg-logic-green/10 transition-all rounded-sm group" aria-label="X / Twitter">
+                    <svg class="w-4 h-4 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+            </div>
         </div>
         <div class="space-y-4">
             <p class="font-label-caps text-label-caps text-primary">RESOURCES</p>
             <ul class="font-mono-data text-sm space-y-2">
                 <li><a class="text-terminal-gray hover:text-logic-green transition-all" href="services.html">Services Specs</a></li>
-                <li><a class="text-terminal-gray hover:text-logic-green transition-all" href="featured-work.html">Case Studies</a></li>
+                <li><a class="text-terminal-gray hover:text-logic-green transition-all" href="featured-work.html">Projects</a></li>
+                <li><a class="text-terminal-gray hover:text-logic-green transition-all" href="about.html">Build Process</a></li>
+                <li><a class="text-terminal-gray hover:text-logic-green transition-all" href="automation-strategy-audit.html">Strategy Audit</a></li>
             </ul>
         </div>
         <div class="space-y-4">
@@ -248,11 +402,12 @@
             <ul class="font-mono-data text-sm space-y-2">
                 <li><a class="text-terminal-gray hover:text-circuit-cyan transition-all" href="privacy-policy.html">Privacy Policy</a></li>
                 <li><a class="text-terminal-gray hover:text-circuit-cyan transition-all" href="contact.html">Contact Node</a></li>
+                <li><a class="text-terminal-gray hover:text-circuit-cyan transition-all" href="index.html">System Status</a></li>
             </ul>
         </div>
     </div>
-    <div class="px-6 md:px-margin-safe py-6 border-t border-border-muted/50 max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p class="font-mono-data text-xs text-terminal-gray">© 2026 TrailOps Systems. All nodes active.</p>
+    <div class="px-4 md:px-8 py-6 border-t border-border-muted/50 max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="font-mono-data text-xs text-terminal-gray">© 2026 TrailOps Systems. All nodes active. 30 N Gould St, Sheridan, WY.</p>
         <div class="flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-logic-green animate-pulse"></span>
             <span class="font-mono-data text-[10px] text-logic-green tracking-widest">LATENCY: 14MS</span>
@@ -268,6 +423,54 @@
             menu.classList.toggle('hidden');
         });
     }
+
+    // Mega Menu Dropdown Hover/Click Persistence Handler
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdownGroups = document.querySelectorAll('.nav-dropdown-group');
+        
+        dropdownGroups.forEach(group => {
+            const trigger = group.querySelector('.dropdown-trigger');
+            const panel = group.querySelector('.dropdown-panel');
+            if (!trigger || !panel) return;
+            
+            const openMenu = () => {
+                dropdownGroups.forEach(other => {
+                    if (other !== group) {
+                        other.classList.remove('is-active');
+                        const otherPanel = other.querySelector('.dropdown-panel');
+                        if (otherPanel) {
+                            otherPanel.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                            otherPanel.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                        }
+                    }
+                });
+                group.classList.add('is-active');
+                panel.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+                panel.classList.add('opacity-100', 'visible', 'pointer-events-auto');
+            };
+
+            group.addEventListener('mouseenter', openMenu);
+            trigger.addEventListener('click', (e) => {
+                if (!group.classList.contains('is-active')) {
+                    e.preventDefault();
+                    openMenu();
+                }
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-dropdown-group')) {
+                dropdownGroups.forEach(group => {
+                    group.classList.remove('is-active');
+                    const panel = group.querySelector('.dropdown-panel');
+                    if (panel) {
+                        panel.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+                        panel.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+                    }
+                });
+            }
+        });
+    });
 </script>
 </body>
 </html>
