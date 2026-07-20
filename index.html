@@ -6,7 +6,10 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>TrailOps · Automation &amp; AI Studio | Production-Grade Software</title>
     <meta name="description"
-        content="TrailOps designs and ships production-grade automation, AI integrations, and full-stack SaaS products for founders who need working software." />
+        content="TrailOps designs and ships production-grade automation, AI integrations, and full-stack SaaS products for founders who need working software — not slide decks." />
+    <meta name="author" content="TrailOps" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#0D0D0D" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -41,10 +44,17 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
 
-    <!-- Resource Preconnects -->
+    <!-- Resource Preconnects & DNS Prefetch -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <!-- LCP Preload: Logo -->
+    <link rel="preload" href="assets/logo.png" as="image" type="image/png" />
+    <link rel="preload" href="assets/og-image.png" as="image" type="image/png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
     <!-- Structured Data (JSON-LD) -->
@@ -56,13 +66,114 @@
       "@type": "Organization",
       "@id": "https://trailops.biz/#organization",
       "name": "TrailOps",
+      "alternateName": "TrailOps Systems",
       "url": "https://trailops.biz/",
-      "logo": "https://trailops.biz/assets/logo.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://trailops.biz/assets/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://trailops.biz/assets/og-image.png",
       "email": "support@trailops.biz",
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61585746117831",
-        "https://www.linkedin.com/company/trailopsllc"
+      "foundingDate": "2024",
+      "slogan": "Build. Automate. Ship.",
+      "description": "TrailOps is a production-grade automation and AI studio that designs and ships workflow automation, AI integrations, and full-stack SaaS products for founders and teams who need working software.",
+      "areaServed": "Worldwide",
+      "serviceArea": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "knowsAbout": [
+        "Workflow Automation",
+        "n8n Automation",
+        "AI Integration",
+        "Large Language Models",
+        "GPT-4",
+        "Google Gemini",
+        "Anthropic Claude",
+        "RAG Pipelines",
+        "AI Chatbots",
+        "Agentic AI",
+        "SaaS Development",
+        "Next.js",
+        "Supabase",
+        "Stripe Integration",
+        "Social Media Automation",
+        "LinkedIn Graph API",
+        "Meta Graph API",
+        "No-Code Tooling",
+        "Low-Code Development",
+        "Retool",
+        "Zapier",
+        "Make",
+        "Airtable",
+        "API Integration",
+        "CRM Automation",
+        "Business Process Automation"
       ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "TrailOps Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Workflow Automation",
+              "url": "https://trailops.biz/workflow-automation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Integration",
+              "url": "https://trailops.biz/ai-integration"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Chatbots & Agents",
+              "url": "https://trailops.biz/ai-chatbots-agents"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SaaS Development",
+              "url": "https://trailops.biz/saas-development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Social Media Automation",
+              "url": "https://trailops.biz/social-media-automation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "No-Code / Low-Code Tooling",
+              "url": "https://trailops.biz/no-code-low-code-tooling"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Automation Strategy & Audit",
+              "url": "https://trailops.biz/automation-strategy-audit"
+            }
+          }
+        ]
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "30 N Gould St Ste R",
@@ -70,7 +181,18 @@
         "addressRegion": "WY",
         "postalCode": "82801",
         "addressCountry": "US"
-      }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "support@trailops.biz",
+        "availableLanguage": "English",
+        "areaServed": "Worldwide"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61585746117831",
+        "https://www.linkedin.com/company/trailopsllc"
+      ]
     },
     {
       "@type": "ProfessionalService",
@@ -81,6 +203,9 @@
       "image": "https://trailops.biz/assets/og-image.png",
       "email": "support@trailops.biz",
       "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Credit Card, Bank Transfer",
+      "openingHours": "Mo-Fr 09:00-17:00",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "30 N Gould St Ste R",
@@ -108,7 +233,92 @@
       "description": "Production-grade automation, AI integrations, and full-stack SaaS products.",
       "publisher": {
         "@id": "https://trailops.biz/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://trailops.biz/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
       }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://trailops.biz/#webpage",
+      "url": "https://trailops.biz/",
+      "name": "TrailOps · Automation & AI Studio | Production-Grade Software",
+      "description": "TrailOps designs and ships production-grade automation, AI integrations, and full-stack SaaS products for founders who need working software, not another deck.",
+      "isPartOf": { "@id": "https://trailops.biz/#website" },
+      "about": { "@id": "https://trailops.biz/#organization" },
+      "mentions": [
+        { "@type": "Thing", "name": "n8n", "url": "https://n8n.io" },
+        { "@type": "Thing", "name": "Next.js", "url": "https://nextjs.org" },
+        { "@type": "Thing", "name": "Supabase", "url": "https://supabase.com" },
+        { "@type": "Thing", "name": "OpenAI GPT-4" },
+        { "@type": "Thing", "name": "Anthropic Claude" }
+      ],
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".speakable-hero", ".speakable-summary"]
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://trailops.biz/"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://trailops.biz/#process",
+      "name": "How TrailOps Builds Your Automation or SaaS Product",
+      "description": "TrailOps follows a proven four-step process to take any automation, AI integration, or SaaS product from brief to live — with full transparency and fixed-price scoping.",
+      "totalTime": "P3W",
+      "supply": [
+        { "@type": "HowToSupply", "name": "Project Brief" },
+        { "@type": "HowToSupply", "name": "Technical Requirements" }
+      ],
+      "tool": [
+        { "@type": "HowToTool", "name": "n8n" },
+        { "@type": "HowToTool", "name": "Next.js" },
+        { "@type": "HowToTool", "name": "Supabase" }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Discover",
+          "text": "A focused discovery call to understand your goals, current tech stack, and the highest-leverage problems to solve. No fluff, no lengthy proposals — just clarity on what needs to be built.",
+          "url": "https://trailops.biz/#process"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Scope",
+          "text": "TrailOps defines exactly what gets built, what doesn't, and why — then provides a fixed-price quote. Scope changes are handled transparently, never used as a gotcha.",
+          "url": "https://trailops.biz/#process"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Build",
+          "text": "We build in tight sprints with regular check-ins. You see working software early — not a final reveal at the end. Feedback loops are short and async-friendly.",
+          "url": "https://trailops.biz/#process"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Ship",
+          "text": "We deploy, verify, and hand over full access and documentation. Post-launch, you get a clean warranty window — then it's yours to run, no strings attached.",
+          "url": "https://trailops.biz/#process"
+        }
+      ]
     },
     {
       "@type": "FAQPage",
@@ -152,6 +362,30 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "That's most engagements, actually. A single high-leverage n8n workflow or API integration is a complete project on its own — we don't upsell you into scope you didn't ask for."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What tools does TrailOps use for automation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TrailOps primarily uses n8n for workflow automation pipelines, alongside Zapier and Make for simpler integrations. For AI features, we integrate GPT-4, Google Gemini, Anthropic Claude, and self-hosted Ollama models. SaaS products are built on Next.js, Supabase, and Stripe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is TrailOps located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TrailOps is headquartered at 30 N Gould St Ste R, Sheridan, Wyoming, USA. We work with clients globally and operate fully remotely for most projects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can TrailOps integrate AI into my existing product?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. TrailOps specialises in wiring LLM-powered features directly into existing products — GPT-4, Gemini, Claude, or local Ollama models for content generation, classification, summarisation, RAG pipelines, and decision logic. We don't rebuild your product; we augment it."
           }
         }
       ]

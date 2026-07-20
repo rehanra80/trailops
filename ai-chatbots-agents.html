@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>AI Chatbots &amp; Agents — Custom Support &amp; Lead Bots | TrailOps</title>
-<meta name="description" content="Custom chatbots and agentic tools that handle support, lead qualification, onboarding, and internal Q&amp;A — embedded into your product or site."/>
+<title>AI Chatbots &amp; Agents — Custom Support, Lead Qualification &amp; Onboarding Bots | TrailOps</title>
+<meta name="description" content="Custom AI chatbots and agentic tools for support automation, lead qualification, onboarding, and internal Q&amp;A — embedded into your product or site. Built with GPT-4, Claude, and Gemini."/>
+<meta name="author" content="TrailOps"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website"/>
@@ -50,35 +52,58 @@
   "@graph": [
     {
       "@type": "Service",
+      "@id": "https://trailops.biz/ai-chatbots-agents#service",
       "name": "AI Chatbots & Agents",
-      "provider": {
-        "@type": "Organization",
-        "name": "TrailOps",
-        "url": "https://trailops.biz/"
-      },
+      "provider": { "@id": "https://trailops.biz/#organization" },
       "url": "https://trailops.biz/ai-chatbots-agents",
-      "description": "Custom chatbots and agentic tools that handle support, lead qualification, onboarding, and internal Q&A."
+      "description": "Custom chatbots and agentic tools that handle support, lead qualification, onboarding, and internal Q&A — embedded into your product or site.",
+      "serviceType": "AI Chatbot Development",
+      "areaServed": "Worldwide",
+      "audience": { "@type": "Audience", "audienceType": "SaaS Companies, E-commerce, Internal Teams" },
+      "keywords": ["AI chatbot", "AI agent", "support automation", "lead qualification bot", "onboarding chatbot", "GPT chatbot", "agentic AI"]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://trailops.biz/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://trailops.biz/services" },
+        { "@type": "ListItem", "position": 3, "name": "AI Chatbots & Agents", "item": "https://trailops.biz/ai-chatbots-agents" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://trailops.biz/ai-chatbots-agents#webpage",
+      "url": "https://trailops.biz/ai-chatbots-agents",
+      "name": "AI Chatbots & Agents — Custom Support, Lead Qualification & Onboarding Bots | TrailOps",
+      "about": { "@id": "https://trailops.biz/ai-chatbots-agents#service" },
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".speakable-service"] }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://trailops.biz/"
+          "@type": "Question",
+          "name": "What is an AI chatbot vs an AI agent?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An AI chatbot is a conversational interface that answers questions using a knowledge base or LLM. An AI agent goes further — it can take actions: search the web, query databases, call APIs, send emails, or trigger workflows autonomously based on user intent. TrailOps builds both, and often combines them."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://trailops.biz/services"
+          "@type": "Question",
+          "name": "What can an AI chatbot from TrailOps do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TrailOps-built chatbots can handle: customer support with your own knowledge base, lead qualification and CRM capture, new user onboarding walkthroughs, internal employee Q&A from documentation, and product-embedded assistants. They're built to handle edge cases and escalate to humans when appropriate."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "AI Chatbots & Agents",
-          "item": "https://trailops.biz/ai-chatbots-agents"
+          "@type": "Question",
+          "name": "How do you embed a chatbot into my existing product or website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We embed chatbots via a JavaScript widget, iframe, or direct API integration into your existing UI — no rebuild required. For authenticated products, we can tie the chatbot to your user session so it knows who's asking and responds with personalised context."
+          }
         }
       ]
     }

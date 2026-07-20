@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Automation Strategy &amp; Audit — Ops Mapping | TrailOps</title>
-<meta name="description" content="We map your ops, identify the highest-leverage automation opportunities, and hand you a ranked build plan — so you know exactly what to build first and why."/>
+<title>Automation Strategy &amp; Audit — ROI Analysis &amp; Ranked Build Plan | TrailOps</title>
+<meta name="description" content="TrailOps maps your operations, identifies the highest-leverage automation opportunities, and delivers a ranked build plan with ROI analysis — so you know exactly what to automate first."/>
+<meta name="author" content="TrailOps"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website"/>
@@ -50,35 +52,58 @@
   "@graph": [
     {
       "@type": "Service",
+      "@id": "https://trailops.biz/automation-strategy-audit#service",
       "name": "Automation Strategy & Audit",
-      "provider": {
-        "@type": "Organization",
-        "name": "TrailOps",
-        "url": "https://trailops.biz/"
-      },
+      "provider": { "@id": "https://trailops.biz/#organization" },
       "url": "https://trailops.biz/automation-strategy-audit",
-      "description": "We map your ops, identify the highest-leverage automation opportunities, and hand you a ranked build plan."
+      "description": "We map your ops, identify the highest-leverage automation opportunities, and hand you a ranked build plan — so you know exactly what to build first and why.",
+      "serviceType": "Technology Consulting",
+      "areaServed": "Worldwide",
+      "audience": { "@type": "Audience", "audienceType": "Operations Leaders, CTOs, Founders" },
+      "keywords": ["automation audit", "automation strategy", "ROI analysis", "process mapping", "technology consulting", "build plan"]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://trailops.biz/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://trailops.biz/services" },
+        { "@type": "ListItem", "position": 3, "name": "Automation Strategy & Audit", "item": "https://trailops.biz/automation-strategy-audit" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://trailops.biz/automation-strategy-audit#webpage",
+      "url": "https://trailops.biz/automation-strategy-audit",
+      "name": "Automation Strategy & Audit — ROI Analysis & Ranked Build Plan | TrailOps",
+      "about": { "@id": "https://trailops.biz/automation-strategy-audit#service" },
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".speakable-service"] }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://trailops.biz/"
+          "@type": "Question",
+          "name": "What does an automation strategy audit include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The audit includes: mapping your current manual processes and workflows, identifying bottlenecks and high-volume repetitive tasks, evaluating your existing tech stack for automation potential, and delivering a prioritised build plan ranked by ROI and implementation effort. You get a clear document you can act on — or hand to any developer."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://trailops.biz/services"
+          "@type": "Question",
+          "name": "How do I know which processes to automate first?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TrailOps ranks automation opportunities by three factors: time saved per week (volume x minutes per task), implementation complexity, and dependency on other systems. High-frequency, low-complexity tasks with clear data triggers are almost always the right starting point."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Automation Strategy & Audit",
-          "item": "https://trailops.biz/automation-strategy-audit"
+          "@type": "Question",
+          "name": "Do I need to build anything after the audit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — the audit deliverable stands alone. You get a ranked build plan you can use however you like: implement it yourself, hand it to your internal team, or continue with TrailOps for execution. There's no obligation to build anything with us after the audit."
+          }
         }
       ]
     }

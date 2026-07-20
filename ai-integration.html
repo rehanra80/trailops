@@ -3,8 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>AI Integration — LLM Features &amp; Model Integration | TrailOps</title>
-<meta name="description" content="LLM-powered features wired into your product — GPT, Gemini, Claude, or local Ollama models for content generation, classification, summarisation, and decision logic."/>
+<title>AI Integration — LLM Features, RAG Pipelines & Model Integration | TrailOps</title>
+<meta name="description" content="Wire GPT-4, Gemini, Claude, or Ollama LLMs directly into your product — content generation, classification, summarisation, RAG pipelines, and decision logic. Built by TrailOps."/>
+<meta name="author" content="TrailOps"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<meta name="theme-color" content="#0D0D0D"/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website"/>
@@ -50,35 +53,72 @@
   "@graph": [
     {
       "@type": "Service",
+      "@id": "https://trailops.biz/ai-integration#service",
       "name": "AI Integration",
-      "provider": {
-        "@type": "Organization",
-        "name": "TrailOps",
-        "url": "https://trailops.biz/"
-      },
+      "provider": { "@id": "https://trailops.biz/#organization" },
       "url": "https://trailops.biz/ai-integration",
-      "description": "LLM-powered features wired into your product — GPT, Gemini, Claude, or local Ollama models."
+      "description": "LLM-powered features wired into your product — GPT-4, Gemini, Claude, or local Ollama models for content generation, classification, summarisation, RAG pipelines, and decision logic.",
+      "serviceType": "AI Integration",
+      "areaServed": "Worldwide",
+      "audience": { "@type": "Audience", "audienceType": "SaaS Founders, Product Teams, Developers" },
+      "keywords": ["AI integration", "LLM integration", "GPT-4", "RAG pipeline", "Claude", "Gemini", "Ollama", "AI features"]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://trailops.biz/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://trailops.biz/services" },
+        { "@type": "ListItem", "position": 3, "name": "AI Integration", "item": "https://trailops.biz/ai-integration" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://trailops.biz/ai-integration#webpage",
+      "url": "https://trailops.biz/ai-integration",
+      "name": "AI Integration — LLM Features, RAG Pipelines & Model Integration | TrailOps",
+      "about": { "@id": "https://trailops.biz/ai-integration#service" },
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".speakable-service"] },
+      "mentions": [
+        { "@type": "Thing", "name": "GPT-4", "url": "https://openai.com" },
+        { "@type": "Thing", "name": "Google Gemini", "url": "https://gemini.google.com" },
+        { "@type": "Thing", "name": "Anthropic Claude", "url": "https://anthropic.com" },
+        { "@type": "Thing", "name": "Ollama", "url": "https://ollama.ai" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://trailops.biz/"
+          "@type": "Question",
+          "name": "What LLM models does TrailOps integrate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TrailOps integrates with all major LLMs: OpenAI GPT-4 and GPT-4o, Google Gemini, Anthropic Claude, and self-hosted Ollama models (Llama, Mistral, etc.). We choose the model that best fits your use case, cost requirements, and data privacy needs."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://trailops.biz/services"
+          "@type": "Question",
+          "name": "What is a RAG pipeline and does TrailOps build them?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RAG (Retrieval-Augmented Generation) is a technique that gives LLMs access to your own data — documents, knowledge bases, product catalogs — so they can answer questions accurately without hallucinating. Yes, TrailOps builds production RAG pipelines with vector databases like Pinecone or pgvector."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "AI Integration",
-          "item": "https://trailops.biz/ai-integration"
+          "@type": "Question",
+          "name": "Can you add AI features to my existing product without rebuilding it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — that's the primary use case. We wire LLM features into your existing product via APIs, without requiring a full rebuild. Common additions include AI-generated content, smart search, classification, summarisation, and conversational assistants."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you handle data privacy when integrating AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For sensitive data, we recommend self-hosted Ollama models that run entirely on your infrastructure — nothing leaves your servers. For cloud APIs, we can configure data retention opt-outs and process-minimal prompting to limit exposure."
+          }
         }
       ]
     }

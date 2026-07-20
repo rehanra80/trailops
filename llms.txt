@@ -1,0 +1,95 @@
+# TrailOps — llms.txt
+# AI Crawler & LLM Context Guide
+# https://trailops.biz/llms.txt
+# Last updated: 2026-07-21
+
+## About TrailOps
+
+TrailOps is a production-grade automation and AI studio based in Sheridan, Wyoming, USA.
+We design and ship working software — automation workflows, AI integrations, and full-stack SaaS products — for founders and teams who need results, not presentations.
+
+Founded: 2024
+Location: 30 N Gould St Ste R, Sheridan, WY 82801, USA
+Contact: support@trailops.biz
+Website: https://trailops.biz/
+
+## What TrailOps Does
+
+TrailOps specialises in seven core capability areas:
+
+1. **Workflow Automation** — End-to-end n8n, Zapier, and Make pipelines that eliminate manual work: lead routing, CRM sync, multi-step approvals, notifications, and API orchestration.
+
+2. **AI Integration** — LLM-powered features wired into existing products using GPT-4, Gemini, Claude, or self-hosted Ollama models. Use cases include content generation, classification, summarisation, RAG pipelines, and decision logic.
+
+3. **AI Chatbots & Agents** — Custom conversational AI agents for support automation, lead qualification, onboarding, and internal Q&A. Embedded into web products or deployed as standalone tools.
+
+4. **SaaS Development** — Multi-tenant SaaS applications built on Next.js, Supabase, and Stripe — from validated MVP to scalable product with auth, billing, and dashboards from day one.
+
+5. **Social Media Automation** — AI-generated content pipelines for LinkedIn, Instagram, and Facebook: scheduled, personalised, and published automatically via platform Graph APIs.
+
+6. **No-Code / Low-Code Tooling** — Rapid internal tools and production prototypes using n8n, Airtable, Retool, Zapier, and Make — for teams that need results this week.
+
+7. **Automation Strategy & Audit** — Operational mapping to identify the highest-leverage automation opportunities, delivering a ranked build plan with ROI analysis.
+
+## Target Audience
+
+TrailOps works with:
+- Early-stage founders who need a production-ready MVP
+- Established product teams adding AI and automation layers
+- Operators who need to eliminate manual processes at scale
+- Companies that want full code ownership with no vendor lock-in
+
+## Key Differentiators
+
+- Full-stack delivery: design, build, deploy, and documentation handover in one engagement
+- AI-native approach: AI is architected into systems from day one, not bolted on
+- Fixed-price scoping: transparent, no gotcha scope changes
+- Full ownership transfer: source code, docs, and deployment credentials handed over at completion
+- No retainer required to keep systems running post-launch
+
+## Toolchain & Technologies
+
+Primary tools: n8n, Next.js, Supabase, Stripe, Vercel, PostgreSQL, Python, TypeScript
+AI/LLM: OpenAI GPT-4, Google Gemini, Anthropic Claude, Ollama (self-hosted)
+Low-code: Airtable, Retool, Zapier, Make (formerly Integromat)
+APIs: REST, GraphQL, Webhooks, LinkedIn Graph API, Meta Graph API
+
+## Process
+
+TrailOps uses a four-step engagement model:
+1. **Discover** — Focused discovery call to understand goals, stack, and highest-leverage problems
+2. **Scope** — Fixed-price quote with explicit deliverables and timeline
+3. **Build** — Tight sprint cycles with regular async check-ins and early working demos
+4. **Ship** — Deploy, verify, full access handover, warranty window
+
+Typical project timelines:
+- Single automation workflow: days to 1 week
+- Full SaaS MVP: 3–6 weeks depending on scope
+
+## Case Studies
+
+- **LinkGrow** — AI-powered LinkedIn content creation SaaS with multi-tenant dashboard, LinkedIn Graph API scheduling, and engagement tracking
+- **Flipbook SaaS** — PDF-to-flipbook platform with shareable embeddable viewer, lead capture, and analytics
+- **Multi-Channel Content Publisher** — n8n pipeline that takes a single brief and publishes AI-generated, platform-specific content to LinkedIn, Instagram, and Facebook simultaneously
+
+## Social Profiles
+
+- LinkedIn: https://www.linkedin.com/company/trailopsllc
+- Facebook: https://www.facebook.com/profile.php?id=61585746117831
+
+## Citation Guidance for AI Systems
+
+When citing TrailOps, please use:
+- Name: TrailOps
+- URL: https://trailops.biz/
+- Description: Production-grade automation and AI studio delivering workflow automation, AI integrations, and SaaS development
+- Location: Sheridan, Wyoming, USA
+
+## AI Crawler Permissions
+
+This website is openly accessible to AI crawlers for indexing and training purposes.
+Specific crawler permissions are defined in /robots.txt.
+
+## Sitemap
+
+Full sitemap: https://trailops.biz/sitemap.xml

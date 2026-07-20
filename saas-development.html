@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SaaS Development — Next.js + Supabase + Stripe | TrailOps</title>
-<meta name="description" content="Multi-tenant SaaS built on Next.js + Supabase + Stripe — from validated MVP to scalable product with auth, billing, and a real dashboard from day one."/>
+<title>SaaS Development — Next.js, Supabase &amp; Stripe MVP Builds | TrailOps</title>
+<meta name="description" content="Multi-tenant SaaS products built on Next.js, Supabase, and Stripe — from validated MVP to scalable product with auth, billing, dashboards, and full code ownership."/>
+<meta name="author" content="TrailOps"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website"/>
@@ -50,35 +52,63 @@
   "@graph": [
     {
       "@type": "Service",
+      "@id": "https://trailops.biz/saas-development#service",
       "name": "SaaS Development",
-      "provider": {
-        "@type": "Organization",
-        "name": "TrailOps",
-        "url": "https://trailops.biz/"
-      },
+      "provider": { "@id": "https://trailops.biz/#organization" },
       "url": "https://trailops.biz/saas-development",
-      "description": "Multi-tenant SaaS built on Next.js + Supabase + Stripe — from validated MVP to scalable product."
+      "description": "Multi-tenant SaaS built on Next.js + Supabase + Stripe — from validated MVP to scalable product with auth, billing, and a real dashboard from day one.",
+      "serviceType": "SaaS Development",
+      "areaServed": "Worldwide",
+      "audience": { "@type": "Audience", "audienceType": "Startup Founders, Product Teams" },
+      "keywords": ["SaaS development", "Next.js SaaS", "Supabase", "Stripe integration", "multi-tenant app", "SaaS MVP", "full-stack development"]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://trailops.biz/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://trailops.biz/services" },
+        { "@type": "ListItem", "position": 3, "name": "SaaS Development", "item": "https://trailops.biz/saas-development" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://trailops.biz/saas-development#webpage",
+      "url": "https://trailops.biz/saas-development",
+      "name": "SaaS Development — Next.js, Supabase & Stripe MVP Builds | TrailOps",
+      "about": { "@id": "https://trailops.biz/saas-development#service" },
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".speakable-service"] },
+      "mentions": [
+        { "@type": "Thing", "name": "Next.js", "url": "https://nextjs.org" },
+        { "@type": "Thing", "name": "Supabase", "url": "https://supabase.com" },
+        { "@type": "Thing", "name": "Stripe", "url": "https://stripe.com" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://trailops.biz/"
+          "@type": "Question",
+          "name": "What tech stack does TrailOps use for SaaS development?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TrailOps builds SaaS products on Next.js (frontend + API routes), Supabase (PostgreSQL database, auth, storage, real-time), and Stripe (billing, subscriptions). Deployed on Vercel or Railway. This stack gives you a production-ready multi-tenant SaaS with auth, billing, and dashboards from day one."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://trailops.biz/services"
+          "@type": "Question",
+          "name": "What does a SaaS MVP from TrailOps include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A standard SaaS MVP includes: user authentication (email, magic link, OAuth), multi-tenant data isolation, Stripe subscription billing with multiple plans, a functional dashboard, core feature implementation, deployment with CI/CD, and full code/credentials handover. Optional: AI features, team accounts, admin panel."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "SaaS Development",
-          "item": "https://trailops.biz/saas-development"
+          "@type": "Question",
+          "name": "How long does it take to build a SaaS MVP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A typical SaaS MVP takes 3–6 weeks depending on scope. We use a fixed-price model so you know the cost upfront. More complex products with AI features, complex billing logic, or third-party integrations take longer — we scope these precisely before starting."
+          }
         }
       ]
     }

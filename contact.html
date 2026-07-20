@@ -3,8 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Contact — Book a Call | TrailOps</title>
-<meta name="description" content="Tell TrailOps what you're trying to ship. We reply within one business day with next steps."/>
+<title>Contact TrailOps — Book a Free Discovery Call | Automation & AI Studio</title>
+<meta name="description" content="Book a free technical discovery call with TrailOps. Tell us what you're trying to automate or build — we scope it on the call. Reply within one business day."/>
+<meta name="author" content="TrailOps"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<meta name="theme-color" content="#0D0D0D"/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website"/>
@@ -52,30 +55,44 @@
       "@type": "ContactPage",
       "@id": "https://trailops.biz/contact#webpage",
       "url": "https://trailops.biz/contact",
-      "name": "Contact TrailOps"
+      "name": "Contact TrailOps — Book a Free Discovery Call",
+      "description": "Book a free technical discovery call with TrailOps. We scope your automation or SaaS project on the call — no fluff, no lengthy proposals.",
+      "about": { "@id": "https://trailops.biz/#organization" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".speakable-contact"]
+      }
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://trailops.biz/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Contact",
-          "item": "https://trailops.biz/contact"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://trailops.biz/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://trailops.biz/contact" }
       ]
     },
     {
       "@type": "ProfessionalService",
+      "@id": "https://trailops.biz/#localbusiness",
       "name": "TrailOps Systems",
       "url": "https://trailops.biz/",
       "email": "support@trailops.biz",
+      "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Credit Card, Bank Transfer",
+      "openingHours": "Mo-Fr 09:00-17:00",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "support@trailops.biz",
+        "availableLanguage": "English",
+        "areaServed": "Worldwide",
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "30 N Gould St Ste R",
@@ -89,7 +106,32 @@
         "latitude": 44.7972,
         "longitude": -106.9562
       },
-      "hasMap": "https://maps.google.com/maps?q=30+N+Gould+St+Ste+R,+Sheridan,+WY+82801"
+      "hasMap": "https://maps.google.com/maps?q=30+N+Gould+St+Ste+R,+Sheridan,+WY+82801",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61585746117831",
+        "https://www.linkedin.com/company/trailopsllc"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I contact TrailOps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can reach TrailOps by emailing support@trailops.biz or by booking a free discovery call through the contact form at https://trailops.biz/contact. We typically reply within one business day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens on the discovery call with TrailOps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The discovery call is a focused 30-minute session to understand your goals, current tech stack, and the highest-leverage problem to solve. No deck, no pitch — just clarity. If there's a fit, we follow up with a fixed-price scope within 2 business days."
+          }
+        }
+      ]
     }
   ]
 }

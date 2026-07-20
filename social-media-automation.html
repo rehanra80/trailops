@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Social Media Automation — AI Content Pipelines | TrailOps</title>
-<meta name="description" content="AI-generated content pipelines for LinkedIn, Instagram, and Facebook — scheduled, personalised, and published automatically via the Graph API."/>
+<title>Social Media Automation — AI Content Pipelines for LinkedIn, Instagram &amp; Facebook | TrailOps</title>
+<meta name="description" content="AI-generated content pipelines that schedule and publish personalised posts to LinkedIn, Instagram, and Facebook automatically via the Graph API. Built by TrailOps."/>
+<meta name="author" content="TrailOps"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website"/>
@@ -50,35 +52,58 @@
   "@graph": [
     {
       "@type": "Service",
+      "@id": "https://trailops.biz/social-media-automation#service",
       "name": "Social Media Automation",
-      "provider": {
-        "@type": "Organization",
-        "name": "TrailOps",
-        "url": "https://trailops.biz/"
-      },
+      "provider": { "@id": "https://trailops.biz/#organization" },
       "url": "https://trailops.biz/social-media-automation",
-      "description": "AI-generated content pipelines for LinkedIn, Instagram, and Facebook."
+      "description": "AI-generated content pipelines for LinkedIn, Instagram, and Facebook — scheduled, personalised, and published automatically via the Graph API.",
+      "serviceType": "Social Media Automation",
+      "areaServed": "Worldwide",
+      "audience": { "@type": "Audience", "audienceType": "Marketing Teams, Founders, Agencies" },
+      "keywords": ["social media automation", "LinkedIn automation", "Instagram automation", "AI content generation", "social media scheduling", "Graph API", "content pipeline"]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://trailops.biz/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://trailops.biz/services" },
+        { "@type": "ListItem", "position": 3, "name": "Social Media Automation", "item": "https://trailops.biz/social-media-automation" }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://trailops.biz/social-media-automation#webpage",
+      "url": "https://trailops.biz/social-media-automation",
+      "name": "Social Media Automation — AI Content Pipelines for LinkedIn, Instagram & Facebook | TrailOps",
+      "about": { "@id": "https://trailops.biz/social-media-automation#service" },
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".speakable-service"] }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://trailops.biz/"
+          "@type": "Question",
+          "name": "How does TrailOps automate social media posting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TrailOps builds n8n pipelines that take a content brief (or pull from your existing content), generate platform-specific posts using AI (GPT-4 or Claude), and publish them on a schedule via the LinkedIn Graph API, Meta Graph API (Instagram + Facebook). The pipeline runs hands-free — you approve content in a queue or let it run fully automated."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://trailops.biz/services"
+          "@type": "Question",
+          "name": "Can the AI generate content that sounds like my brand voice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We fine-tune prompts with your tone-of-voice guidelines, example posts, and brand rules. The AI learns your writing style and generates content that sounds like you wrote it — not generic AI copy. You can also set approval workflows where you review before anything posts."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Social Media Automation",
-          "item": "https://trailops.biz/social-media-automation"
+          "@type": "Question",
+          "name": "Which social platforms do you support for automation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We currently build automation for LinkedIn (personal and company pages), Instagram (Business accounts), and Facebook (Pages). Each platform requires proper API access setup — we handle the OAuth flow and API integration as part of the project."
+          }
         }
       ]
     }
