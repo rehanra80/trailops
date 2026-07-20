@@ -192,35 +192,35 @@
 </head>
 
 <body class="blueprint-grid min-h-screen">
-    <header
-        class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-deep-obsidian/80 backdrop-blur-md border-b border-outline/20">
-        <div class="flex items-center gap-8">
-            <a href="index.html" class="flex items-center gap-2.5">
-                <img src="assets/logo.png" alt="TrailOps" class="w-8 h-8 object-contain" width="32" height="32" />
-                <span class="font-headline-md text-2xl font-bold text-electric-moss tracking-tighter">TrailOps</span>
+    <header class="fixed top-0 w-full z-50 bg-deep-obsidian/80 backdrop-blur-md border-b border-outline/20">
+        <div class="max-w-[1440px] mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
+            <div class="flex items-center gap-8">
+                <a href="index.html" class="flex items-center gap-2.5">
+                    <img src="assets/logo.png" alt="TrailOps" class="w-8 h-8 object-contain" width="32" height="32" />
+                    <span class="font-headline-md text-2xl font-bold text-electric-moss tracking-tighter">TrailOps</span>
+                </a>
+                <nav class="hidden lg:flex gap-6 font-label-mono text-xs items-center">
+                    <a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase"
+                        href="index.html">Home</a>
+                    <a class="text-electric-moss border-b-2 border-electric-moss pb-1 uppercase"
+                        href="services.html">Services</a>
+                    <a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase"
+                        href="featured-work.html">Work</a>
+                    <a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase"
+                        href="about.html">About</a>
+                    <a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase"
+                        href="contact.html">Contact</a>
+                </nav>
+            </div>
+            <a href="contact.html"
+                class="bg-electric-moss text-deep-obsidian font-label-mono px-4 py-2 uppercase font-bold text-xs transition-transform active:scale-95 duration-100 glow-active whitespace-nowrap">
+                Book a Free Build Call
             </a>
-            <nav class="hidden lg:flex gap-6 font-label-mono text-xs items-center">
-                <a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase"
-                    href="index.html">Home</a>
-                <a class="text-electric-moss border-b-2 border-electric-moss pb-1 uppercase"
-                    href="services.html">Services</a>
-                <a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase"
-                    href="featured-work.html">Work</a>
-                <a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase"
-                    href="about.html">About</a>
-                <a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase"
-                    href="contact.html">Contact</a>
-            </nav>
         </div>
-        <a href="contact.html"
-            class="bg-electric-moss text-deep-obsidian font-label-mono px-4 py-2 uppercase font-bold text-xs transition-transform active:scale-95 duration-100 glow-active whitespace-nowrap">
-            Book a Free Build Call
-        </a>
     </header>
     <!-- mobile nav -->
-    <div
-        class="lg:hidden fixed top-[64px] w-full z-40 bg-deep-obsidian/95 backdrop-blur-md border-b border-outline/20 overflow-x-auto">
-        <div class="flex gap-4 px-margin-mobile py-3 font-label-mono text-[11px] uppercase whitespace-nowrap">
+    <div class="lg:hidden fixed top-[64px] w-full z-40 bg-deep-obsidian/95 backdrop-blur-md border-b border-outline/20 overflow-x-auto">
+        <div class="max-w-[1440px] mx-auto flex gap-4 px-margin-mobile py-3 font-label-mono text-[11px] uppercase whitespace-nowrap">
             <a class="text-slate-silver" href="index.html">Home</a> <a class="text-electric-moss"
                 href="services.html">Services</a> <a class="text-slate-silver" href="featured-work.html">Work</a> <a
                 class="text-slate-silver" href="about.html">About</a> <a class="text-slate-silver"
@@ -373,8 +373,8 @@
             </div>
         </div>
     </main>
-    <footer
-        class="w-full py-12 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-bento-gap bg-deep-obsidian border-t border-outline/30 relative z-10 mt-20">
+    <footer class="w-full bg-deep-obsidian border-t border-outline/30 relative z-10 mt-20">
+        <div class="max-w-[1440px] mx-auto py-12 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-bento-gap">
         <div>
             <div class="font-label-caps text-xs text-slate-silver mb-4 uppercase">Identity</div>
             <div class="flex items-center gap-2.5">
@@ -415,6 +415,7 @@
 </div>
 </div>
 </div>
+        </div>
     </footer>
 </body>
 
