@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Privacy Policy | TrailOps</title>
+<meta name="description" content="TrailOps privacy policy: what we collect, how we use it, and your rights."/>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root {
+    --obsidian: #0D0D0D;
+    --moss: #C4FF61;
+    --silver: #8E9AAF;
+}
+body {
+    background-color: var(--obsidian);
+    color: #F5F5F5;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+.blueprint-grid {
+    background-image:
+        linear-gradient(to right, rgba(142, 154, 175, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(142, 154, 175, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.glow-active { box-shadow: 0 0 15px rgba(196, 255, 97, 0.3); }
+.glass-card {
+    background: rgba(13, 13, 13, 0.8);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(142, 154, 175, 0.2);
+}
+.scanline {
+    width: 100%; height: 2px;
+    background: rgba(196, 255, 97, 0.1);
+    position: absolute;
+    animation: scan 4s linear infinite;
+}
+@keyframes scan { from { top: 0%; } to { top: 100%; } }
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+.font-headline-xl { font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+.font-headline-lg { font-family: 'Space Grotesk', sans-serif; font-weight: 600; letter-spacing: -0.01em; }
+.font-headline-md { font-family: 'Space Grotesk', sans-serif; font-weight: 500; }
+.font-label-mono { font-family: 'JetBrains Mono', monospace; }
+.font-label-caps { font-family: 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: 0.1em; }
+.node-dot { position: absolute; top: 50%; width: 1rem; height: 1rem; border-radius: 9999px; background: #0D0D0D; z-index: 10; }
+</style>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+            "deep-obsidian": "#0D0D0D",
+            "electric-moss": "#C4FF61",
+            "slate-silver": "#8E9AAF",
+            "matrix-green": "#00F5A0",
+            "cyan-pulse": "#00F2FE",
+            "data-white": "#F5F5F5",
+            "outline": "#8d937d",
+            "surface": "#131313"
+        },
+        spacing: {
+            "unit": "4px",
+            "margin-mobile": "16px",
+            "gutter": "16px",
+            "bento-gap": "20px",
+            "margin-desktop": "48px"
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="blueprint-grid min-h-screen">
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-deep-obsidian/80 backdrop-blur-md border-b border-outline/20">
+<div class="flex items-center gap-8">
+<a href="index.html" class="flex items-center gap-2.5">
+<img src="assets/logo.png" alt="TrailOps" class="w-8 h-8 object-contain"/>
+<span class="font-headline-md text-2xl font-bold text-electric-moss tracking-tighter">TrailOps</span>
+</a>
+<nav class="hidden lg:flex gap-6 font-label-mono text-xs items-center">
+<a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase" href="index.html">Home</a>
+<a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase" href="services.html">Services</a>
+<a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase" href="featured-work.html">Work</a>
+<a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase" href="about.html">About</a>
+<a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase" href="contact.html">Contact</a>
+</nav>
+</div>
+<a href="contact.html" class="bg-electric-moss text-deep-obsidian font-label-mono px-4 py-2 uppercase font-bold text-xs transition-transform active:scale-95 duration-100 glow-active whitespace-nowrap">
+Book a Free Build Call
+</a>
+</header>
+<!-- mobile nav -->
+<div class="lg:hidden fixed top-[64px] w-full z-40 bg-deep-obsidian/95 backdrop-blur-md border-b border-outline/20 overflow-x-auto">
+<div class="flex gap-4 px-margin-mobile py-3 font-label-mono text-[11px] uppercase whitespace-nowrap">
+<a class="text-slate-silver" href="index.html">Home</a> <a class="text-slate-silver" href="services.html">Services</a> <a class="text-slate-silver" href="featured-work.html">Work</a> <a class="text-slate-silver" href="about.html">About</a> <a class="text-slate-silver" href="contact.html">Contact</a>
+</div>
+</div>
+
+<main class="lg:pt-24 pt-32 pb-12 px-margin-mobile md:px-margin-desktop min-h-screen relative overflow-hidden max-w-[1440px] mx-auto">
+<div class="glass-card p-8 md:p-12 mb-12 max-w-4xl">
+<p class="font-label-caps text-xs text-electric-moss uppercase mb-4">Legal</p>
+<h1 class="font-headline-xl text-3xl md:text-4xl text-data-white leading-tight mb-8">Privacy Policy</h1>
+
+<div class="space-y-8 font-body-md text-slate-silver text-sm leading-relaxed">
+<section>
+<h2 class="font-headline-md text-lg text-data-white mb-2">Overview</h2>
+<p>TrailOps (&ldquo;we,&rdquo; &ldquo;us&rdquo;) operates trailops.biz. This page explains what information we collect when you visit or contact us, and how we use it. We keep this simple because we only collect what we actually need to run the business.</p>
+</section>
+<section>
+<h2 class="font-headline-md text-lg text-data-white mb-2">What we collect</h2>
+<p class="mb-3"><span class="text-data-white font-medium">Contact form submissions.</span> When you submit the form on our Contact page, we collect your name, email address, company name (if provided), and whatever you write in the message field. This is sent directly to our inbox and is not added to a mailing list or shared with third parties.</p>
+<p class="mb-3"><span class="text-data-white font-medium">Standard server logs.</span> Like most websites, our hosting provider logs basic technical data (IP address, browser type, pages visited, timestamps) for security and performance purposes. We don't use this for marketing or analytics profiling.</p>
+<p>We do not currently use analytics or advertising tracking scripts, and we do not sell or rent visitor data to anyone.</p>
+</section>
+<section>
+<h2 class="font-headline-md text-lg text-data-white mb-2">Cookies</h2>
+<p>This site does not set marketing or tracking cookies. WordPress may set a small technical cookie if you interact with certain site features; none of these are used to identify or track you across other websites.</p>
+</section>
+<section>
+<h2 class="font-headline-md text-lg text-data-white mb-2">How we use your information</h2>
+<p>We use contact form submissions solely to respond to your inquiry &mdash; typically to evaluate a project, schedule a call, or answer a question. We do not use this information for unrelated marketing.</p>
+</section>
+<section>
+<h2 class="font-headline-md text-lg text-data-white mb-2">How long we keep it</h2>
+<p>We retain contact form emails as long as reasonably necessary for the business relationship or inquiry they relate to, and delete them when they're no longer needed.</p>
+</section>
+<section>
+<h2 class="font-headline-md text-lg text-data-white mb-2">Your rights</h2>
+<p>You can ask us at any time what information we hold about you, request a copy of it, or ask us to delete it. Email <a class="text-electric-moss hover:underline" href="mailto:rehan@trailops.biz">rehan@trailops.biz</a> and we'll handle it directly &mdash; no ticketing system, no runaround.</p>
+</section>
+<section>
+<h2 class="font-headline-md text-lg text-data-white mb-2">Changes to this policy</h2>
+<p>If what we collect or how we use it changes materially, we'll update this page. This policy was last reviewed on July 19, 2026.</p>
+</section>
+<section>
+<h2 class="font-headline-md text-lg text-data-white mb-2">Contact</h2>
+<p>Questions about this policy: <a class="text-electric-moss hover:underline" href="mailto:rehan@trailops.biz">rehan@trailops.biz</a></p>
+</section>
+</div>
+</div>
+</main>
+<footer class="w-full py-12 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-bento-gap bg-deep-obsidian border-t border-outline/30 relative z-10 mt-20">
+<div>
+<div class="font-label-caps text-xs text-slate-silver mb-4 uppercase">Identity</div>
+<div class="flex items-center gap-2.5">
+<img src="assets/logo.png" alt="TrailOps" class="w-7 h-7 object-contain"/>
+<span class="font-headline-md text-2xl font-bold text-electric-moss tracking-tighter">TrailOps</span>
+</div>
+<p class="font-label-mono text-xs text-slate-silver mt-4">&copy; 2026 TrailOps Systems. All nodes active.</p>
+</div>
+<div>
+<div class="font-label-caps text-xs text-slate-silver mb-4 uppercase">Studio</div>
+<ul class="space-y-2 font-label-mono text-xs text-slate-silver">
+<li><a class="hover:text-electric-moss transition-colors" href="about.html">About</a></li>
+<li><a class="hover:text-electric-moss transition-colors" href="services.html">Services</a></li>
+<li><a class="hover:text-electric-moss transition-colors" href="featured-work.html">Featured Work</a></li>
+</ul>
+</div>
+<div>
+<div class="font-label-caps text-xs text-slate-silver mb-4 uppercase">Legal</div>
+<ul class="space-y-2 font-label-mono text-xs text-slate-silver">
+<li><a class="hover:text-electric-moss transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
+<li><a class="hover:text-electric-moss transition-colors" href="mailto:rehan@trailops.biz">rehan@trailops.biz</a></li>
+</ul>
+</div>
+<div class="flex flex-col items-start md:items-end justify-between">
+<div class="text-left md:text-right">
+<div class="font-label-caps text-xs text-electric-moss mb-1 uppercase">Status</div>
+<div class="flex items-center gap-2 md:justify-end">
+<div class="w-2 h-2 rounded-full bg-matrix-green animate-pulse"></div>
+<span class="font-label-mono text-sm text-data-white">Accepting new builds</span>
+</div>
+</div>
+<a href="contact.html" class="mt-4 text-electric-moss font-label-mono text-xs uppercase flex items-center gap-2 hover:gap-4 transition-all">
+Book a Free Build Call <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</footer>
+</body>
+</html>
