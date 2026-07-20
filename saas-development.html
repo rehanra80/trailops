@@ -1,275 +1,287 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>SaaS Development — Next.js + Supabase + Stripe | TrailOps</title>
-<meta name="description" content="Multi-tenant SaaS built on Next.js + Supabase + Stripe — from validated MVP to scalable product with auth, billing, and a real dashboard from day one."/>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>SaaS Development — Next.js, Supabase &amp; Stripe | TrailOps Studio</title>
+    <meta name="description" content="Build multi-tenant full-stack SaaS applications from MVP to scale with Next.js 14, Supabase, Tailwind, and Stripe."/>
+    
+    <link rel="canonical" href="https://trailops.biz/saas-development"/>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"/>
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="https://trailops.biz/saas-development"/>
-<meta property="og:title" content="SaaS Development — Next.js + Supabase + Stripe | TrailOps"/>
-<meta property="og:description" content="Multi-tenant SaaS built on Next.js + Supabase + Stripe — from validated MVP to scalable product with auth, billing, and a real dashboard from day one."/>
-<meta property="og:image" content="https://trailops.biz/assets/og-image.png"/>
-<meta property="og:site_name" content="TrailOps"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300..800;1,300..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:url" content="https://trailops.biz/saas-development"/>
-<meta name="twitter:title" content="SaaS Development — Next.js + Supabase + Stripe | TrailOps"/>
-<meta name="twitter:description" content="Multi-tenant SaaS built on Next.js + Supabase + Stripe — from validated MVP to scalable product with auth, billing, and a real dashboard from day one."/>
-<meta name="twitter:image" content="https://trailops.biz/assets/og-image.png"/>
-
-<!-- GEO Metadata -->
-<meta name="geo.region" content="US-WY"/>
-<meta name="geo.placename" content="Sheridan"/>
-<meta name="geo.position" content="44.7972;-106.9562"/>
-<meta name="ICBM" content="44.7972, -106.9562"/>
-
-<!-- Canonical Link -->
-<link rel="canonical" href="https://trailops.biz/saas-development"/>
-
-<!-- Favicon & Web Manifest -->
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"/>
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png"/>
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png"/>
-<link rel="manifest" href="site.webmanifest"/>
-
-<!-- Resource Preconnects -->
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preconnect" href="https://cdn.tailwindcss.com"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-<!-- Structured Data (JSON-LD) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Service",
-      "name": "SaaS Development",
-      "provider": {
-        "@type": "Organization",
-        "name": "TrailOps",
-        "url": "https://trailops.biz/"
-      },
-      "url": "https://trailops.biz/saas-development",
-      "description": "Multi-tenant SaaS built on Next.js + Supabase + Stripe — from validated MVP to scalable product."
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://trailops.biz/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://trailops.biz/services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "SaaS Development",
-          "item": "https://trailops.biz/saas-development"
+    <style>
+        body {
+            background-color: #0D0D0D;
+            color: #e5e2e1;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
         }
-      ]
-    }
-  ]
-}
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<style>
-:root {
-    --obsidian: #0D0D0D;
-    --moss: #C4FF61;
-    --silver: #8E9AAF;
-}
-body {
-    background-color: var(--obsidian);
-    color: #F5F5F5;
-    overflow-x: hidden;
-    font-family: 'Inter', sans-serif;
-}
-.blueprint-grid {
-    background-image:
-        linear-gradient(to right, rgba(142, 154, 175, 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(142, 154, 175, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
-}
-.glow-active { box-shadow: 0 0 15px rgba(196, 255, 97, 0.3); }
-.glass-card {
-    background: rgba(13, 13, 13, 0.8);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(142, 154, 175, 0.2);
-}
-.scanline {
-    width: 100%; height: 2px;
-    background: rgba(196, 255, 97, 0.1);
-    position: absolute;
-    animation: scan 4s linear infinite;
-}
-@keyframes scan { from { top: 0%; } to { top: 100%; } }
-.material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-}
-.font-headline-xl { font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
-.font-headline-lg { font-family: 'Space Grotesk', sans-serif; font-weight: 600; letter-spacing: -0.01em; }
-.font-headline-md { font-family: 'Space Grotesk', sans-serif; font-weight: 500; }
-.font-label-mono { font-family: 'JetBrains Mono', monospace; }
-.font-label-caps { font-family: 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: 0.1em; }
-.node-dot { position: absolute; top: 50%; width: 1rem; height: 1rem; border-radius: 9999px; background: #0D0D0D; z-index: 10; }
-</style>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-            "deep-obsidian": "#0D0D0D",
-            "electric-moss": "#C4FF61",
-            "slate-silver": "#8E9AAF",
-            "matrix-green": "#00F5A0",
-            "cyan-pulse": "#00F2FE",
-            "data-white": "#F5F5F5",
-            "outline": "#8d937d",
-            "surface": "#131313"
-        },
-        spacing: {
-            "unit": "4px",
-            "margin-mobile": "16px",
-            "gutter": "16px",
-            "bento-gap": "20px",
-            "margin-desktop": "48px"
+        .glass-panel {
+            backdrop-filter: blur(12px);
+            background: rgba(18, 18, 18, 0.7);
         }
-      }
-    }
-  }
-</script>
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 240, 255, 0.15);
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 99;
+            animation: scanline 8s linear infinite;
+        }
+        @keyframes scanline {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
+        }
+        .glow-cyan:hover {
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+        }
+        .glow-green:hover {
+            box-shadow: 0 0 20px rgba(217, 255, 0, 0.4);
+        }
+        .pixel-grid {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background-deep": "#0D0D0D",
+                        "circuit-cyan": "#00F0FF",
+                        "logic-green": "#D9FF00",
+                        "terminal-gray": "#888888",
+                        "border-muted": "#222222",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary": "#ffffff",
+                        "on-background": "#e5e2e1"
+                    },
+                    spacing: {
+                        "section-lg": "120px",
+                        "margin-safe": "32px"
+                    },
+                    fontFamily: {
+                        "label-caps": ["JetBrains Mono", "monospace"],
+                        "mono-data": ["JetBrains Mono", "monospace"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["JetBrains Mono", "monospace"],
+                        "display-lg": ["JetBrains Mono", "monospace"]
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="blueprint-grid min-h-screen">
-<header class="fixed top-0 w-full z-50 bg-deep-obsidian/80 backdrop-blur-md border-b border-outline/20">
-<div class="max-w-[1440px] mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
-<div class="flex items-center gap-8">
-<a href="index.html" class="flex items-center gap-2.5">
-<img src="assets/logo.png" alt="TrailOps" class="w-8 h-8 object-contain" width="32" height="32"/>
-<span class="font-headline-md text-2xl font-bold text-electric-moss tracking-tighter">TrailOps</span>
-</a>
-<nav class="hidden lg:flex gap-6 font-label-mono text-xs items-center">
-<a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase" href="index.html">Home</a>
-<a class="text-electric-moss border-b-2 border-electric-moss pb-1 uppercase" href="services.html">Services</a>
-<a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase" href="featured-work.html">Work</a>
-<a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase" href="about.html">About</a>
-<a class="text-slate-silver hover:text-electric-moss transition-colors pb-1 border-b-2 border-transparent uppercase" href="contact.html">Contact</a>
-</nav>
-</div>
-<a href="contact.html" class="bg-electric-moss text-deep-obsidian font-label-mono px-4 py-2 uppercase font-bold text-xs transition-transform active:scale-95 duration-100 glow-active whitespace-nowrap">
-Book a Free Build Call
-</a>
-</div>
-</header>
-<!-- mobile nav -->
-<div class="lg:hidden fixed top-[64px] w-full z-40 bg-deep-obsidian/95 backdrop-blur-md border-b border-outline/20 overflow-x-auto">
-<div class="max-w-[1440px] mx-auto flex gap-4 px-margin-mobile py-3 font-label-mono text-[11px] uppercase whitespace-nowrap">
-<a class="text-slate-silver" href="index.html">Home</a> <a class="text-electric-moss" href="services.html">Services</a> <a class="text-slate-silver" href="featured-work.html">Work</a> <a class="text-slate-silver" href="about.html">About</a> <a class="text-slate-silver" href="contact.html">Contact</a>
-</div>
-</div>
+<body class="bg-background-deep font-body-md text-on-background pixel-grid selection:bg-logic-green selection:text-background-deep">
 
-<main class="lg:pt-24 pt-32 pb-12 px-margin-mobile md:px-margin-desktop min-h-screen relative overflow-hidden max-w-[1440px] mx-auto">
-<div class="glass-card p-8 md:p-12 mb-16 relative overflow-hidden">
 <div class="scanline"></div>
-<p class="font-label-caps text-xs text-electric-moss uppercase mb-4">Services / SaaS Development</p>
-<h1 class="font-headline-xl text-3xl md:text-5xl text-data-white max-w-3xl leading-tight mb-6">A real product, not a prototype that stalls at MVP</h1>
-<p class="font-body-md text-slate-silver max-w-2xl mb-8">We build multi-tenant SaaS on Next.js, Supabase, and Stripe — auth, billing, and a real dashboard from day one. Scoped to validate demand first, then extended once paying users tell you what to build next.</p>
-<div class="flex flex-wrap gap-4">
-<a href="contact.html" class="bg-electric-moss text-deep-obsidian font-label-mono px-6 py-3 uppercase font-bold text-sm glow-active">Book a Free Build Call</a>
-<a href="featured-work.html" class="border border-slate-silver text-data-white font-label-mono px-6 py-3 uppercase font-bold text-sm hover:bg-white/5">See Our Work</a>
-</div>
-<div class="absolute top-4 right-4 font-label-mono text-[10px] text-slate-silver/20 uppercase">TYPE: PRODUCT_ENGINE</div>
+
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-background-deep/90 backdrop-blur-xl border-b border-border-muted flex justify-between items-center px-6 md:px-margin-safe py-3 max-w-full">
+    <a href="index.html" class="flex items-center gap-3 group">
+        <img alt="TrailOps Logo" class="h-8 w-8 object-contain transition-transform group-hover:rotate-12" src="assets/logo.png"/>
+        <span class="font-display-lg text-2xl md:text-headline-lg tracking-tighter text-primary">TrailOps</span>
+    </a>
+    <div class="hidden md:flex items-center space-x-8">
+        <a class="font-label-caps text-label-caps text-circuit-cyan border-b border-circuit-cyan pb-0.5" href="services.html">Services</a>
+        <a class="font-label-caps text-label-caps text-terminal-gray hover:text-circuit-cyan transition-colors duration-300" href="featured-work.html">Case Studies</a>
+        <a class="font-label-caps text-label-caps text-terminal-gray hover:text-circuit-cyan transition-colors duration-300" href="about.html">Process</a>
+        <a class="font-label-caps text-label-caps text-terminal-gray hover:text-circuit-cyan transition-colors duration-300" href="index.html#faq">FAQ</a>
+    </div>
+    <div class="flex items-center gap-4">
+        <a href="contact.html" class="bg-logic-green text-background-deep font-label-caps text-label-caps px-5 py-2.5 md:px-6 md:py-3 scale-95 hover:scale-100 transition-all font-bold hover:bg-circuit-cyan glow-green inline-block text-center">
+            BOOK A FREE BUILD CALL
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden text-terminal-gray hover:text-primary">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Nav Drawer -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-background-deep/98 backdrop-blur-2xl flex flex-col justify-center items-center gap-8 hidden md:hidden">
+    <a href="index.html" class="font-label-caps text-lg text-primary hover:text-logic-green">Home</a>
+    <a href="services.html" class="font-label-caps text-lg text-circuit-cyan font-bold">Services</a>
+    <a href="featured-work.html" class="font-label-caps text-lg text-primary hover:text-logic-green">Case Studies</a>
+    <a href="about.html" class="font-label-caps text-lg text-primary hover:text-logic-green">Process</a>
+    <a href="contact.html" class="font-label-caps text-lg text-logic-green border border-logic-green px-6 py-3">Book Build Call</a>
 </div>
 
-<h2 class="font-label-caps text-xs text-slate-silver mb-6 flex items-center gap-2"><span class="w-8 h-[1px] bg-slate-silver/30"></span>What's Included</h2>
-<h2 class="font-headline-lg text-2xl md:text-3xl text-data-white mb-8 max-w-2xl">Four ways we take manual work off your plate</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-bento-gap mb-16">
-<div class="glass-card p-6 relative hover:border-electric-moss/40 transition-colors">
-<div class="absolute -left-2 top-8 node-dot border border-electric-moss"></div>
-<h3 class="font-headline-md text-lg text-data-white mb-2">Multi-tenant architecture</h3>
-<p class="font-body-md text-sm text-slate-silver">Row-level security and proper tenant isolation from the first migration — built on Supabase Postgres, not bolted on after your first customer complains.</p>
-</div>
-<div class="glass-card p-6 relative hover:border-electric-moss/40 transition-colors">
-<div class="absolute -left-2 top-8 node-dot border border-electric-moss"></div>
-<h3 class="font-headline-md text-lg text-data-white mb-2">Auth & billing, done right</h3>
-<p class="font-body-md text-sm text-slate-silver">Stripe subscriptions, plan gating, and usage limits wired in from launch — not a TODO you discover the week you get your first paying customer.</p>
-</div>
-<div class="glass-card p-6 relative hover:border-electric-moss/40 transition-colors">
-<div class="absolute -left-2 top-8 node-dot border border-electric-moss"></div>
-<h3 class="font-headline-md text-lg text-data-white mb-2">A dashboard users actually want</h3>
-<p class="font-body-md text-sm text-slate-silver">A functional, fast product UI — not a wireframe stapled to a marketing template. Built with the same care as the backend.</p>
-</div>
-<div class="glass-card p-6 relative hover:border-electric-moss/40 transition-colors">
-<div class="absolute -left-2 top-8 node-dot border border-electric-moss"></div>
-<h3 class="font-headline-md text-lg text-data-white mb-2">Validation-first scope</h3>
-<p class="font-body-md text-sm text-slate-silver">We build what proves demand first, and defer A/B testing, native integrations, and edge-case features until paying users tell us they matter.</p>
-</div>
-</div>
+<!-- Studio Status Sidebar (Desktop) -->
+<aside class="fixed right-8 top-28 w-64 z-40 bg-surface-container-lowest border border-border-muted flex flex-col p-4 space-y-3 hidden xl:flex">
+    <div class="mb-1 border-b border-border-muted/50 pb-2">
+        <p class="font-label-caps text-[11px] text-circuit-cyan tracking-widest flex items-center justify-between">
+            <span>STUDIO STATUS</span>
+            <span class="w-2 h-2 rounded-full bg-logic-green animate-ping"></span>
+        </p>
+        <p class="font-mono-data text-[10px] text-terminal-gray mt-0.5">ACTIVE NODES // 07</p>
+    </div>
+    <div class="flex flex-col space-y-2">
+        <div class="flex justify-between items-center border-b border-border-muted/30 pb-1.5">
+            <span class="font-mono-data text-logic-green text-xs font-bold flex items-center gap-2">
+                <span class="material-symbols-outlined text-[14px]">architecture</span> Design
+            </span>
+            <span class="font-mono-data text-terminal-gray text-[10px]">DONE</span>
+        </div>
+        <div class="flex justify-between items-center border-b border-border-muted/30 pb-1.5">
+            <span class="font-mono-data text-logic-green text-xs font-bold flex items-center gap-2">
+                <span class="material-symbols-outlined text-[14px]">construction</span> Build
+            </span>
+            <span class="font-mono-data text-terminal-gray text-[10px]">DONE</span>
+        </div>
+        <div class="flex justify-between items-center border-b border-border-muted/30 pb-1.5">
+            <span class="font-mono-data text-circuit-cyan text-xs font-bold flex items-center gap-2">
+                <span class="material-symbols-outlined text-[14px]">verified</span> Handover
+            </span>
+            <span class="font-mono-data text-logic-green text-[10px] animate-pulse">READY</span>
+        </div>
+    </div>
+    <div class="mt-4 p-2 bg-background-deep border border-logic-green/30">
+        <p class="font-mono-data text-[10px] text-logic-green text-center tracking-wider">// SYSTEM READY</p>
+    </div>
+</aside>
 
-<div class="glass-card p-10 text-center border-electric-moss/30">
-<p class="font-label-caps text-xs text-electric-moss uppercase mb-2">Get Started</p>
-<h2 class="font-headline-lg text-2xl md:text-3xl text-data-white mb-4">Ready to build the real thing?</h2>
-<p class="font-body-md text-slate-silver max-w-xl mx-auto mb-8">Tell us what's slowing your team down. We'll scope it on the call &mdash; no discovery-deck theater.</p>
-<div class="flex flex-wrap justify-center gap-4">
-<a href="contact.html" class="bg-electric-moss text-deep-obsidian font-label-mono px-6 py-3 uppercase font-bold text-sm glow-active">Book a Free Build Call</a>
-<a href="services.html" class="border border-slate-silver text-data-white font-label-mono px-6 py-3 uppercase font-bold text-sm hover:bg-white/5">See All Services</a>
-</div>
-</div>
+<main class="relative pt-28 md:pt-36 px-4 md:px-margin-safe max-w-7xl mx-auto">
+    <!-- Breadcrumb & Header -->
+    <div class="mb-6 flex items-center gap-2 font-mono-data text-xs text-terminal-gray">
+        <a href="services.html" class="hover:text-circuit-cyan">Services</a>
+        <span>/</span>
+        <span class="text-circuit-cyan">Module 03</span>
+    </div>
+
+    <div class="glass-panel border border-border-muted p-8 md:p-12 mb-section-lg relative overflow-hidden">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high border border-circuit-cyan/40 mb-4">
+            <span class="font-mono-data text-xs text-circuit-cyan">MODULE_03 // FULLSTACK SAAS</span>
+        </div>
+        <h1 class="font-headline-lg text-3xl md:text-5xl text-primary font-bold mb-6">
+            Production SaaS Engineering &amp; Architecture
+        </h1>
+        <p class="font-body-md text-terminal-gray max-w-3xl text-lg leading-relaxed mb-8">
+            Full-stack web application development built on Next.js 14 App Router, Supabase multi-tenant database schemas, Stripe billing portals, and high-performance serverless endpoints.
+        </p>
+        <div class="flex flex-wrap gap-4">
+            <a href="contact.html" class="bg-logic-green text-background-deep px-8 py-3.5 font-label-caps text-label-caps font-bold hover:bg-circuit-cyan transition-all glow-green">
+                BUILD THIS MODULE
+            </a>
+            <a href="services.html" class="border border-border-muted px-8 py-3.5 font-label-caps text-label-caps text-primary hover:border-circuit-cyan transition-all">
+                ALL MODULES
+            </a>
+        </div>
+    </div>
+
+    <!-- Specs -->
+    <section class="mb-section-lg">
+        <div class="flex items-center gap-4 mb-8">
+            <h2 class="font-headline-lg text-2xl md:text-headline-lg">SAAS ARCHITECTURE STACK</h2>
+            <div class="h-[1px] flex-grow bg-border-muted"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="border border-border-muted p-6 glass-panel space-y-3">
+                <span class="material-symbols-outlined text-circuit-cyan text-3xl">database</span>
+                <h3 class="font-headline-lg text-xl text-primary">Multi-Tenant Supabase DB</h3>
+                <p class="font-body-md text-terminal-gray text-sm leading-relaxed">
+                    Row-Level Security (RLS), automated migrations, and instant real-time websocket subscriptions.
+                </p>
+            </div>
+            <div class="border border-border-muted p-6 glass-panel space-y-3">
+                <span class="material-symbols-outlined text-logic-green text-3xl">payments</span>
+                <h3 class="font-headline-lg text-xl text-primary">Stripe Billing Portal</h3>
+                <p class="font-body-md text-terminal-gray text-sm leading-relaxed">
+                    Subscriptions, seat-based billing, usage metering, and automated webhooks handling.
+                </p>
+            </div>
+            <div class="border border-border-muted p-6 glass-panel space-y-3">
+                <span class="material-symbols-outlined text-circuit-cyan text-3xl">admin_panel_settings</span>
+                <h3 class="font-headline-lg text-xl text-primary">Role-Based Access Control</h3>
+                <p class="font-body-md text-terminal-gray text-sm leading-relaxed">
+                    Granular team permissions, admin override toggles, audit logs, and SSO auth integrations.
+                </p>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="border border-border-muted p-8 glass-panel">
+            <span class="font-mono-data text-xs text-terminal-gray block mb-4">// PRODUCTION CORE TECH</span>
+            <div class="flex flex-wrap gap-3 font-mono-data text-xs">
+                <span class="px-3 py-1.5 bg-background-deep border border-circuit-cyan/40 text-circuit-cyan">Next.js 14+ (App Router)</span>
+                <span class="px-3 py-1.5 bg-background-deep border border-border-muted text-primary">TypeScript &amp; React 18</span>
+                <span class="px-3 py-1.5 bg-background-deep border border-border-muted text-primary">Tailwind CSS &amp; Shadcn</span>
+                <span class="px-3 py-1.5 bg-background-deep border border-border-muted text-primary">Supabase / PostgreSQL</span>
+                <span class="px-3 py-1.5 bg-background-deep border border-border-muted text-primary">Prisma / Drizzle ORM</span>
+                <span class="px-3 py-1.5 bg-background-deep border border-border-muted text-primary">Vercel &amp; AWS Deployment</span>
+                <span class="px-3 py-1.5 bg-background-deep border border-logic-green/40 text-logic-green">Stripe Connect &amp; Billing</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="mb-section-lg border border-circuit-cyan/30 p-8 md:p-12 glass-panel text-center">
+        <span class="font-mono-data text-xs text-circuit-cyan tracking-widest uppercase mb-3 inline-block">// INITIALIZE SAAS NODE</span>
+        <h2 class="font-headline-lg text-3xl text-primary mb-4">Build Your Full-Stack Web Application</h2>
+        <p class="font-body-md text-terminal-gray max-w-xl mx-auto mb-8 text-lg">
+            Schedule a free build call to review database schema, subscription models, and technical milestone schedule.
+        </p>
+        <a href="contact.html" class="inline-block bg-logic-green text-background-deep px-10 py-4 font-label-caps text-label-caps font-bold hover:bg-circuit-cyan transition-all glow-green">
+            BOOK A FREE BUILD CALL
+        </a>
+    </section>
 </main>
-<footer class="w-full bg-deep-obsidian border-t border-outline/30 relative z-10 mt-20">
-<div class="max-w-[1440px] mx-auto py-12 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-bento-gap">
-<div>
-<div class="font-label-caps text-xs text-slate-silver mb-4 uppercase">Identity</div>
-<div class="flex items-center gap-2.5">
-<img src="assets/logo.png" alt="TrailOps" class="w-7 h-7 object-contain" width="28" height="28" loading="lazy"/>
-<span class="font-headline-md text-2xl font-bold text-electric-moss tracking-tighter">TrailOps</span>
-</div>
-<p class="font-label-mono text-xs text-slate-silver mt-4">&copy; 2026 TrailOps Systems. All nodes active.</p>
-</div>
-<div>
-<div class="font-label-caps text-xs text-slate-silver mb-4 uppercase">Studio</div>
-<ul class="space-y-2 font-label-mono text-xs text-slate-silver">
-<li><a class="hover:text-electric-moss transition-colors" href="about.html">About</a></li>
-<li><a class="hover:text-electric-moss transition-colors" href="services.html">Services</a></li>
-<li><a class="hover:text-electric-moss transition-colors" href="featured-work.html">Featured Work</a></li>
-</ul>
-</div>
-<div>
-<div class="font-label-caps text-xs text-slate-silver mb-4 uppercase">Legal</div>
-<ul class="space-y-2 font-label-mono text-xs text-slate-silver">
-<li><a class="hover:text-electric-moss transition-colors" href="privacy-policy.html">Privacy Policy</a></li>
 
-</ul>
-</div>
-<div class="flex flex-col items-start md:items-end justify-between">
-<div class="text-left md:text-right">
-<div class="font-label-caps text-xs text-slate-silver mb-3 uppercase">Connect</div>
-<div class="flex items-center gap-4 md:justify-end">
-<a href="https://www.facebook.com/profile.php?id=61585746117831" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-11 h-11 rounded-lg border border-slate-silver/20 bg-surface/50 text-slate-silver hover:text-electric-moss hover:border-electric-moss/30 hover:bg-electric-moss/5 transition-all" aria-label="Facebook">
-<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-</a>
-<a href="https://www.linkedin.com/company/trailopsllc" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-11 h-11 rounded-lg border border-slate-silver/20 bg-surface/50 text-slate-silver hover:text-electric-moss hover:border-electric-moss/30 hover:bg-electric-moss/5 transition-all" aria-label="LinkedIn">
-<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-</a>
-</div>
-</div>
-</div>
-</div>
+<footer class="bg-background-deep border-t border-border-muted w-full mt-section-lg">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 md:px-margin-safe py-16 max-w-7xl mx-auto">
+        <div class="md:col-span-2 space-y-4">
+            <div class="flex items-center gap-3">
+                <img alt="TrailOps Logo" class="h-8 w-8 object-contain" src="assets/logo.png"/>
+                <span class="font-display-lg text-headline-lg text-primary">TrailOps</span>
+            </div>
+            <p class="font-mono-data text-terminal-gray max-w-xs text-sm">
+                Engineering production-grade automation for the next generation of SaaS founders.
+            </p>
+        </div>
+        <div class="space-y-4">
+            <p class="font-label-caps text-label-caps text-primary">RESOURCES</p>
+            <ul class="font-mono-data text-sm space-y-2">
+                <li><a class="text-terminal-gray hover:text-logic-green transition-all" href="services.html">Services Specs</a></li>
+                <li><a class="text-terminal-gray hover:text-logic-green transition-all" href="featured-work.html">Case Studies</a></li>
+            </ul>
+        </div>
+        <div class="space-y-4">
+            <p class="font-label-caps text-label-caps text-primary">LEGAL &amp; NODES</p>
+            <ul class="font-mono-data text-sm space-y-2">
+                <li><a class="text-terminal-gray hover:text-circuit-cyan transition-all" href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a class="text-terminal-gray hover:text-circuit-cyan transition-all" href="contact.html">Contact Node</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="px-6 md:px-margin-safe py-6 border-t border-border-muted/50 max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="font-mono-data text-xs text-terminal-gray">© 2026 TrailOps Systems. All nodes active.</p>
+        <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-logic-green animate-pulse"></span>
+            <span class="font-mono-data text-[10px] text-logic-green tracking-widest">LATENCY: 14MS</span>
+        </div>
+    </div>
 </footer>
+
+<script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (menuBtn && menu) {
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+</script>
 </body>
 </html>
