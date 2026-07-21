@@ -415,8 +415,10 @@ All Services <span>&rarr;</span>
 </div>
 
 <main class="lg:pt-24 pt-32 pb-12 px-margin-mobile md:px-margin-desktop min-h-screen relative overflow-hidden max-w-[1440px] mx-auto">
-<div class="glass-card p-8 md:p-12 mb-16 relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-bento-gap mb-16">
+<div class="lg:col-span-12 relative group glass-card min-h-[420px] flex flex-col justify-end p-8 md:p-12 overflow-hidden">
 <div class="scanline"></div>
+<div class="relative z-10">
 <div class="flex flex-wrap items-center gap-2 mb-4">
 <span class="font-label-caps text-xs text-electric-moss uppercase">Services / SaaS Development</span>
 <span class="text-slate-silver/40">•</span>
@@ -447,18 +449,15 @@ All Services <span>&rarr;</span>
 <div class="font-headline-md text-sm text-data-white font-semibold mt-0.5">Vercel &amp; Edge Runtime</div>
 </div>
 </div>
+</div>
 <div class="absolute top-4 right-4 font-label-mono text-[10px] text-slate-silver/20 uppercase hidden md:block">STACK // NEXTJS_SUPABASE_STRIPE</div>
+</div>
 </div>
 
 <!-- SaaS Architecture Visualizer Component -->
 <div class="mb-16">
-<div class="flex items-center justify-between mb-6">
-<div>
-<p class="font-label-caps text-xs text-electric-moss uppercase">System Architecture</p>
-<h2 class="font-headline-lg text-2xl text-data-white font-bold mt-1">Multi-Tenant SaaS Stack Overview</h2>
-</div>
-<span class="font-label-mono text-xs text-slate-silver hidden md:block">Target Launch: <span class="text-electric-moss">3–4 Weeks MVP</span></span>
-</div>
+<h2 class="font-label-caps text-xs text-slate-silver mb-2 flex items-center gap-2"><span class="w-8 h-[1px] bg-slate-silver/30"></span>System Architecture</h2>
+<h2 class="font-headline-lg text-2xl md:text-3xl text-data-white mb-8 max-w-2xl font-bold">Multi-Tenant SaaS Stack Overview</h2>
 
 <div class="glass-card p-6 md:p-8 relative overflow-hidden bg-surface/60 border-electric-moss/20">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative z-10">
@@ -570,12 +569,12 @@ All Services <span>&rarr;</span>
 </div>
 
 <!-- Engineering Standards -->
-<div class="glass-card p-8 md:p-10 mb-16 border-slate-silver/20">
-<p class="font-label-caps text-xs text-electric-moss uppercase mb-2">Production Standards</p>
-<h2 class="font-headline-lg text-2xl text-data-white font-bold mb-6">Clean, extensible code handed over with full ownership</h2>
+<div class="mb-16">
+<h2 class="font-label-caps text-xs text-slate-silver mb-2 flex items-center gap-2"><span class="w-8 h-[1px] bg-slate-silver/30"></span>Production Standards</h2>
+<h2 class="font-headline-lg text-2xl md:text-3xl text-data-white mb-6 font-bold">Clean, extensible code handed over with full ownership</h2>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="p-5 rounded bg-surface/50 border border-slate-silver/10">
+<div class="glass-card p-5 relative">
 <div class="font-headline-md text-base text-data-white font-bold mb-2 flex items-center gap-2">
 <span class="material-symbols-outlined text-electric-moss text-lg">folder_code</span>
 100% Repository Transfer
@@ -583,7 +582,7 @@ All Services <span>&rarr;</span>
 <p class="font-body-md text-xs text-slate-silver leading-relaxed">You own all source code, database migration scripts, environment templates, and Vercel project configurations. No proprietary wrappers or hidden dependencies.</p>
 </div>
 
-<div class="p-5 rounded bg-surface/50 border border-slate-silver/10">
+<div class="glass-card p-5 relative">
 <div class="font-headline-md text-base text-data-white font-bold mb-2 flex items-center gap-2">
 <span class="material-symbols-outlined text-electric-moss text-lg">verified</span>
 Validation-First Scope
@@ -591,7 +590,7 @@ Validation-First Scope
 <p class="font-body-md text-xs text-slate-silver leading-relaxed">We prioritize core features that prove market demand and get paying users onboard fast — deferring non-essential complexity until user feedback calls for it.</p>
 </div>
 
-<div class="p-5 rounded bg-surface/50 border border-slate-silver/10">
+<div class="glass-card p-5 relative">
 <div class="font-headline-md text-base text-data-white font-bold mb-2 flex items-center gap-2">
 <span class="material-symbols-outlined text-electric-moss text-lg">database</span>
 Production Postgres RLS
@@ -618,9 +617,11 @@ Production Postgres RLS
 </div>
 
 <!-- Frequently Asked Questions -->
-<div class="glass-card p-8 md:p-12 mb-16 border-electric-moss/20">
-<p class="font-label-caps text-xs text-electric-moss uppercase mb-2">FAQ</p>
-<h2 class="font-headline-lg text-2xl md:text-3xl text-data-white font-bold mb-8">Frequently Asked Questions</h2>
+<div class="mb-16">
+<h2 class="font-label-caps text-xs text-slate-silver mb-2 flex items-center gap-2"><span class="w-8 h-[1px] bg-slate-silver/30"></span>FAQ</h2>
+<h2 class="font-headline-lg text-2xl md:text-3xl text-data-white mb-8 max-w-2xl font-bold">Frequently Asked Questions</h2>
+
+<div class="glass-card p-8 md:p-12 border-electric-moss/20">
 
 <div class="space-y-6">
 <div class="border-b border-slate-silver/15 pb-4">

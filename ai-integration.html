@@ -425,8 +425,10 @@ All Services <span>&rarr;</span>
 </div>
 
 <main class="lg:pt-24 pt-32 pb-12 px-margin-mobile md:px-margin-desktop min-h-screen relative overflow-hidden max-w-[1440px] mx-auto">
-<div class="glass-card p-8 md:p-12 mb-16 relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-bento-gap mb-16">
+<div class="lg:col-span-12 relative group glass-card min-h-[420px] flex flex-col justify-end p-8 md:p-12 overflow-hidden">
 <div class="scanline"></div>
+<div class="relative z-10">
 <div class="flex flex-wrap items-center gap-2 mb-4">
 <span class="font-label-caps text-xs text-cyan-pulse uppercase">Services / AI Integration</span>
 <span class="text-slate-silver/40">•</span>
@@ -457,18 +459,15 @@ All Services <span>&rarr;</span>
 <div class="font-headline-md text-sm text-data-white font-semibold mt-0.5">Streaming &amp; Model Routing</div>
 </div>
 </div>
+</div>
 <div class="absolute top-4 right-4 font-label-mono text-[10px] text-slate-silver/20 uppercase hidden md:block">ENGINE // INFERENCE_ROUTER_V2</div>
+</div>
 </div>
 
 <!-- Architecture LLM Inference Visualizer -->
 <div class="mb-16">
-<div class="flex items-center justify-between mb-6">
-<div>
-<p class="font-label-caps text-xs text-cyan-pulse uppercase">Pipeline Architecture</p>
-<h2 class="font-headline-lg text-2xl text-data-white font-bold mt-1">Multi-Model LLM Orchestration Flow</h2>
-</div>
-<span class="font-label-mono text-xs text-slate-silver hidden md:block">Latency Benchmark: <span class="text-cyan-pulse">~240ms Stream Start</span></span>
-</div>
+<h2 class="font-label-caps text-xs text-slate-silver mb-2 flex items-center gap-2"><span class="w-8 h-[1px] bg-slate-silver/30"></span>Pipeline Architecture</h2>
+<h2 class="font-headline-lg text-2xl md:text-3xl text-data-white mb-8 max-w-2xl font-bold">Multi-Model LLM Orchestration Flow</h2>
 
 <div class="glass-card p-6 md:p-8 relative overflow-hidden bg-surface/60 border-cyan-pulse/20">
 <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative z-10">
@@ -590,12 +589,12 @@ All Services <span>&rarr;</span>
 </div>
 
 <!-- Engineering Standards -->
-<div class="glass-card p-8 md:p-10 mb-16 border-cyan-pulse/20">
-<p class="font-label-caps text-xs text-cyan-pulse uppercase mb-2">Production Architecture</p>
-<h2 class="font-headline-lg text-2xl text-data-white font-bold mb-6">Engineered for deterministic reliability, not brittle demos</h2>
+<div class="mb-16">
+<h2 class="font-label-caps text-xs text-slate-silver mb-2 flex items-center gap-2"><span class="w-8 h-[1px] bg-slate-silver/30"></span>Production Architecture</h2>
+<h2 class="font-headline-lg text-2xl md:text-3xl text-data-white mb-6 font-bold">Engineered for deterministic reliability, not brittle demos</h2>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="p-5 rounded bg-surface/50 border border-slate-silver/10">
+<div class="glass-card p-5 relative">
 <div class="font-headline-md text-base text-data-white font-bold mb-2 flex items-center gap-2">
 <span class="material-symbols-outlined text-cyan-pulse text-lg">data_object</span>
 Structured JSON Output
@@ -603,7 +602,7 @@ Structured JSON Output
 <p class="font-body-md text-xs text-slate-silver leading-relaxed">We enforce strict JSON output schemas (via Zod / OpenAI Structured Outputs / Instructor). Your code gets predictable, typed data structures — never raw, unparsed conversational text.</p>
 </div>
 
-<div class="p-5 rounded bg-surface/50 border border-slate-silver/10">
+<div class="glass-card p-5 relative">
 <div class="font-headline-md text-base text-data-white font-bold mb-2 flex items-center gap-2">
 <span class="material-symbols-outlined text-cyan-pulse text-lg">alt_route</span>
 Fallback &amp; Cost Router
@@ -611,7 +610,7 @@ Fallback &amp; Cost Router
 <p class="font-body-md text-xs text-slate-silver leading-relaxed">Why spend $0.03 on GPT-4o for simple tasks? Our intelligent gateway routes routine queries to fast, low-cost models (GPT-4o-mini, Claude Haiku) and escalates complex reasoning to frontier models automatically.</p>
 </div>
 
-<div class="p-5 rounded bg-surface/50 border border-slate-silver/10">
+<div class="glass-card p-5 relative">
 <div class="font-headline-md text-base text-data-white font-bold mb-2 flex items-center gap-2">
 <span class="material-symbols-outlined text-cyan-pulse text-lg">flt_plus</span>
 Prompt Evals &amp; Benchmarks
@@ -638,9 +637,11 @@ Prompt Evals &amp; Benchmarks
 </div>
 
 <!-- Frequently Asked Questions -->
-<div class="glass-card p-8 md:p-12 mb-16 border-cyan-pulse/20">
-<p class="font-label-caps text-xs text-cyan-pulse uppercase mb-2">FAQ</p>
-<h2 class="font-headline-lg text-2xl md:text-3xl text-data-white font-bold mb-8">Frequently Asked Questions</h2>
+<div class="mb-16">
+<h2 class="font-label-caps text-xs text-slate-silver mb-2 flex items-center gap-2"><span class="w-8 h-[1px] bg-slate-silver/30"></span>FAQ</h2>
+<h2 class="font-headline-lg text-2xl md:text-3xl text-data-white mb-8 max-w-2xl font-bold">Frequently Asked Questions</h2>
+
+<div class="glass-card p-8 md:p-12 border-cyan-pulse/20">
 
 <div class="space-y-6">
 <div class="border-b border-slate-silver/15 pb-4">
