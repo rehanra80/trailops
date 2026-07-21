@@ -27,7 +27,7 @@ TrailOps specialises in seven core capability areas:
 
 5. **Social Media Automation** — AI-generated content pipelines for LinkedIn, Instagram, and Facebook: scheduled, personalised, and published automatically via platform Graph APIs.
 
-6. **No-Code / Low-Code Tooling** — Rapid internal tools and production prototypes using n8n, Airtable, Retool, Zapier, and Make — for teams that need results this week.
+6. **SEO Optimization Services** — Rapid internal tools and production prototypes using n8n, Airtable, Retool, Zapier, and Make — for teams that need results this week.
 
 7. **Automation Strategy & Audit** — Operational mapping to identify the highest-leverage automation opportunities, delivering a ranked build plan with ROI analysis.
 
