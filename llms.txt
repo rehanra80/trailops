@@ -70,7 +70,7 @@ Typical project timelines:
 
 - **LinkGrow** — AI-powered LinkedIn content creation SaaS with multi-tenant dashboard, LinkedIn Graph API scheduling, and engagement tracking
 - **Flipbook SaaS** — PDF-to-flipbook platform with shareable embeddable viewer, lead capture, and analytics
-- **Multi-Channel Content Publisher** — n8n pipeline that takes a single brief and publishes AI-generated, platform-specific content to LinkedIn, Instagram, and Facebook simultaneously
+- **Novodesk** — Retro-styled, web-based customer support platform designed to streamline inquiry management and ticket handling for teams. Features multi-workspace administration, role-based access control, analytics dashboards, and ticket queues (www.novodesk.cc)
 
 ## Social Profiles
 

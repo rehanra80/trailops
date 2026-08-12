@@ -113,6 +113,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://trailops.biz/novodesk</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://trailops.biz/assets/og-image.png</image:loc>
+      <image:title>Novodesk Ticketing System — Retro Customer Support Platform | TrailOps</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://trailops.biz/social-media-automation</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
