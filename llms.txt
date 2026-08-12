@@ -68,7 +68,7 @@ Typical project timelines:
 
 ## Case Studies
 
-- **LinkGrow** — AI-powered LinkedIn content creation SaaS with multi-tenant dashboard, LinkedIn Graph API scheduling, and engagement tracking
+- **WYSIWYG HTML Editor** — Free, web-based HTML editing SaaS combining a rich-text editor, live side-by-side HTML code inspection, layout templates, outline hierarchy, and multi-format export (https://wysiwyg-six.vercel.app)
 - **Stylchat** — Custom chat widget builder designed specifically for n8n workflows. Features direct n8n webhook integration, a live visual editor, rich media & file handling, security geofencing, and white-labeling (www.stylchat.com)
 - **Novodesk** — Retro-styled, web-based customer support platform designed to streamline inquiry management and ticket handling for teams. Features multi-workspace administration, role-based access control, analytics dashboards, and ticket queues (www.novodesk.cc)
 
