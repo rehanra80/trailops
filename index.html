@@ -547,10 +547,61 @@
             }
         }
 
-        @media (prefers-reduced-motion: reduce) {
+        /* Concept 2: n8n Visual Logic Canvas Motion Tokens */
+        .canvas-grid-dots {
+            background-image: radial-gradient(rgba(154, 166, 188, 0.15) 1.2px, transparent 1.2px);
+            background-size: 20px 20px;
+        }
 
+        .n8n-node {
+            transition: transform 200ms var(--ease-out), border-color 200ms ease, box-shadow 200ms ease;
+        }
+
+        .n8n-node:hover {
+            transform: translateY(-2px);
+            border-color: rgba(232, 163, 61, 0.6);
+            box-shadow: 0 10px 25px -5px rgba(232, 163, 61, 0.25);
+        }
+
+        .n8n-node:active {
+            transform: scale(0.97);
+        }
+
+        /* SVG Wire Packet Streams */
+        .n8n-wire-pulse-1 {
+            animation: n8n-pulse-flow 2.4s linear infinite;
+        }
+        .n8n-wire-pulse-2 {
+            animation: n8n-pulse-flow 2.4s linear infinite 0.4s;
+        }
+        .n8n-wire-pulse-3 {
+            animation: n8n-pulse-flow 2.4s linear infinite 0.8s;
+        }
+
+        @keyframes n8n-pulse-flow {
+            0% { stroke-dashoffset: 90; opacity: 0.2; }
+            40% { opacity: 1; }
+            100% { stroke-dashoffset: 0; opacity: 0.2; }
+        }
+
+        .pulse-beacon {
+            animation: beacon-ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes beacon-ping {
+            75%, 100% {
+                transform: scale(1.6);
+                opacity: 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
             .reveal-up,
-            .hero-enter {
+            .hero-enter,
+            .n8n-wire-pulse-1,
+            .n8n-wire-pulse-2,
+            .n8n-wire-pulse-3,
+            .pulse-beacon {
                 animation: none !important;
                 transform: none !important;
                 transition: opacity 200ms ease !important;
@@ -860,30 +911,185 @@
         class="lg:pt-24 pt-32 pb-12 px-margin-mobile md:px-margin-desktop min-h-screen relative overflow-hidden max-w-[1440px] mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-bento-gap mb-16">
             <div
-                class="lg:col-span-12 relative group glass-card min-h-[420px] flex flex-col justify-end p-8 overflow-hidden">
+                class="lg:col-span-12 relative group glass-card min-h-[500px] p-6 sm:p-8 lg:p-10 overflow-hidden flex flex-col justify-center">
                 <div class="scanline"></div>
-                <div class="relative z-10 hero-enter">
-                    <div class="flex items-center gap-2 mb-4 font-label-mono text-[10px] uppercase">
-                        <span
-                            class="bg-electric-moss/20 text-electric-moss px-2 py-0.5 border border-electric-moss/30">Build</span>
-                        <span
-                            class="bg-electric-moss/20 text-electric-moss px-2 py-0.5 border border-electric-moss/30">Automate</span>
-                        <span
-                            class="bg-electric-moss/20 text-electric-moss px-2 py-0.5 border border-electric-moss/30">Ship</span>
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="lg:col-span-6 hero-enter flex flex-col justify-center">
+                        <div class="flex items-center gap-2 mb-4 font-label-mono text-[10px] uppercase">
+                            <span
+                                class="bg-electric-moss/20 text-electric-moss px-2 py-0.5 border border-electric-moss/30">Build</span>
+                            <span
+                                class="bg-electric-moss/20 text-electric-moss px-2 py-0.5 border border-electric-moss/30">Automate</span>
+                            <span
+                                class="bg-electric-moss/20 text-electric-moss px-2 py-0.5 border border-electric-moss/30">Ship</span>
+                        </div>
+                        <h1 class="font-headline-xl text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-data-white leading-tight mb-5">
+                            Orchestrate Resilience With <span class="text-electric-moss">TrailOps</span>
+                        </h1>
+                        <p class="font-body-md text-slate-silver text-sm sm:text-base max-w-lg mb-7">TrailOps designs and ships production-grade
+                            automation, AI integrations, and full-stack SaaS products &mdash; for founders who need working
+                            software, not another deck.</p>
+                        <div class="flex flex-wrap gap-3 sm:gap-4">
+                            <a href="contact.html"
+                                class="bg-electric-moss text-deep-obsidian font-label-mono px-6 py-3 uppercase font-bold text-sm glow-active transition-transform duration-150 active:scale-[0.96]">Book
+                                a Call</a>
+                            <a href="featured-work.html"
+                                class="border border-slate-silver text-data-white font-label-mono px-6 py-3 uppercase font-bold text-sm hover:bg-white/5 transition-transform duration-150 active:scale-[0.96]">See
+                                Our Work</a>
+                        </div>
                     </div>
-                    <h1 class="font-headline-xl text-4xl md:text-6xl text-data-white max-w-2xl leading-tight mb-6">
-                        Orchestrate Resilience With <span class="text-electric-moss">TrailOps</span>
-                    </h1>
-                    <p class="font-body-md text-slate-silver max-w-xl mb-8">TrailOps designs and ships production-grade
-                        automation, AI integrations, and full-stack SaaS products &mdash; for founders who need working
-                        software, not another deck.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="contact.html"
-                            class="bg-electric-moss text-deep-obsidian font-label-mono px-6 py-3 uppercase font-bold text-sm glow-active transition-transform duration-100 active:scale-[0.97]">Book
-                            a Call</a>
-                        <a href="featured-work.html"
-                            class="border border-slate-silver text-data-white font-label-mono px-6 py-3 uppercase font-bold text-sm hover:bg-white/5 transition-transform duration-100 active:scale-[0.97]">See
-                            Our Work</a>
+
+                    <!-- Right Hero Animation: Interactive n8n Visual Logic Canvas -->
+                    <div class="lg:col-span-6 relative flex flex-col justify-center min-h-[380px] sm:min-h-[440px] w-full select-none">
+                        <!-- Canvas Container Window -->
+                        <div class="relative w-full rounded-2xl border border-outline/40 bg-[#0E1626]/90 backdrop-blur-xl overflow-hidden shadow-2xl canvas-grid-dots">
+                            
+                            <!-- Top Canvas Header Bar -->
+                            <div class="flex items-center justify-between px-4 py-2.5 bg-[#182238]/60 border-b border-outline/30 text-xs">
+                                <div class="flex items-center gap-2">
+                                    <div class="flex gap-1.5">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+                                    </div>
+                                    <span class="font-label-mono text-[10px] text-slate-silver ml-2 hidden sm:inline">workflow_orchestrator.json</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex items-center gap-1.5 bg-electric-moss/10 px-2 py-0.5 rounded border border-electric-moss/20">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                        <span class="font-label-mono text-[9px] text-electric-moss uppercase font-semibold">Active Engine</span>
+                                    </div>
+                                    <button class="p-1 rounded hover:bg-white/5 text-slate-silver hover:text-electric-moss transition-colors active:scale-95" aria-label="Simulate Workflow Run">
+                                        <span class="material-symbols-outlined text-sm">play_arrow</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Canvas Interactive Body Area -->
+                            <div class="relative p-5 sm:p-6 min-h-[330px] flex items-center justify-between overflow-hidden">
+                                
+                                <!-- Background SVG Bezier Connecting Cables -->
+                                <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 480 320" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Cable 1: Inbound Webhook -> IF Router -->
+                                    <path d="M 125 160 C 155 160, 165 160, 195 160" stroke="rgba(154, 166, 188, 0.25)" stroke-width="2" />
+                                    <!-- Cable 2: IF Router (Top Pin) -> Claude AI Agent -->
+                                    <path d="M 275 135 C 310 135, 310 85, 345 85" stroke="rgba(154, 166, 188, 0.25)" stroke-width="2" />
+                                    <!-- Cable 3: IF Router (Bottom Pin) -> Postgres DB -->
+                                    <path d="M 275 185 C 310 185, 310 235, 345 235" stroke="rgba(154, 166, 188, 0.25)" stroke-width="2" />
+
+                                    <!-- Flowing Packet Animation Paths -->
+                                    <path d="M 125 160 C 155 160, 165 160, 195 160" stroke="url(#n8n-wire-pulse)" stroke-width="2.5" stroke-dasharray="8 45" class="n8n-wire-pulse-1" />
+                                    <path d="M 275 135 C 310 135, 310 85, 345 85" stroke="url(#n8n-wire-pulse)" stroke-width="2.5" stroke-dasharray="8 45" class="n8n-wire-pulse-2" />
+                                    <path d="M 275 185 C 310 185, 310 235, 345 235" stroke="url(#n8n-wire-pulse)" stroke-width="2.5" stroke-dasharray="8 45" class="n8n-wire-pulse-3" />
+
+                                    <defs>
+                                        <linearGradient id="n8n-wire-pulse" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#E8A33D" stop-opacity="0.1" />
+                                            <stop offset="50%" stop-color="#E8A33D" stop-opacity="1" />
+                                            <stop offset="100%" stop-color="#E8A33D" stop-opacity="0.1" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+
+                                <!-- Column 1: Node 1 (Trigger Webhook) -->
+                                <div class="relative z-10 n8n-node w-[115px] sm:w-[125px] p-2.5 rounded-xl bg-[#0E1626]/95 border border-outline/40 shadow-lg cursor-pointer">
+                                    <div class="flex items-center gap-1.5 mb-2">
+                                        <div class="w-6 h-6 rounded-lg bg-electric-moss/10 border border-electric-moss/40 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-electric-moss text-xs">webhook</span>
+                                        </div>
+                                        <span class="font-headline-md text-[11px] text-data-white font-medium truncate">Webhook</span>
+                                    </div>
+                                    <div class="bg-black/30 p-1.5 rounded-md border border-white/5 font-label-mono text-[8px] text-slate-silver mb-1.5 truncate">
+                                        POST /inbound
+                                    </div>
+                                    <div class="flex items-center justify-between text-[8px] font-label-mono text-slate-silver">
+                                        <span class="text-emerald-400">200 OK</span>
+                                        <span class="tabular-nums">14 execs</span>
+                                    </div>
+                                    <!-- Output Port Pin -->
+                                    <span class="absolute right-[-5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-electric-moss border border-[#0E1626]"></span>
+                                </div>
+
+                                <!-- Column 2: Node 2 (Conditional IF Router) -->
+                                <div class="relative z-10 n8n-node w-[115px] sm:w-[125px] p-2.5 rounded-xl bg-[#0E1626]/95 border border-outline/40 shadow-lg cursor-pointer">
+                                    <!-- Input Port Pin -->
+                                    <span class="absolute left-[-5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-slate-silver border border-[#0E1626]"></span>
+                                    <div class="flex items-center gap-1.5 mb-2">
+                                        <div class="w-6 h-6 rounded-lg bg-white/5 border border-outline/30 flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-electric-moss text-xs">alt_route</span>
+                                        </div>
+                                        <span class="font-headline-md text-[11px] text-data-white font-medium truncate">IF Router</span>
+                                    </div>
+                                    <div class="bg-black/30 p-1.5 rounded-md border border-white/5 font-label-mono text-[8px] text-slate-silver mb-1.5 truncate">
+                                        is_priority == true
+                                    </div>
+                                    <div class="flex items-center justify-between text-[8px] font-label-mono text-slate-silver">
+                                        <span class="text-electric-moss">Branch 2x</span>
+                                        <span class="tabular-nums">12 execs</span>
+                                    </div>
+                                    <!-- True Pin (Top) -->
+                                    <span class="absolute right-[-5px] top-[30%] -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-emerald-400 border border-[#0E1626]"></span>
+                                    <!-- False Pin (Bottom) -->
+                                    <span class="absolute right-[-5px] top-[70%] -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-amber-400 border border-[#0E1626]"></span>
+                                </div>
+
+                                <!-- Column 3: Stacked Nodes (Claude 3.5 AI & Postgres DB) -->
+                                <div class="relative z-10 flex flex-col gap-4">
+                                    
+                                    <!-- Node 3: Top Branch (Claude 3.5 Agent) -->
+                                    <div class="n8n-node w-[125px] sm:w-[135px] p-2.5 rounded-xl bg-[#0E1626]/95 border border-outline/40 shadow-lg cursor-pointer">
+                                        <!-- Input Port Pin -->
+                                        <span class="absolute left-[-5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-emerald-400 border border-[#0E1626]"></span>
+                                        <div class="flex items-center gap-1.5 mb-1.5">
+                                            <div class="w-6 h-6 rounded-lg bg-electric-moss/10 border border-electric-moss/40 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-electric-moss text-xs">psychology</span>
+                                            </div>
+                                            <span class="font-headline-md text-[11px] text-data-white font-medium truncate">Claude 3.5</span>
+                                        </div>
+                                        <div class="bg-black/30 p-1.5 rounded-md border border-white/5 font-label-mono text-[8px] text-slate-silver mb-1 truncate">
+                                            { tokens: 342 }
+                                        </div>
+                                        <div class="flex items-center justify-between text-[8px] font-label-mono text-slate-silver">
+                                            <span class="text-emerald-400">● 48ms</span>
+                                            <span class="tabular-nums">12 runs</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Node 4: Bottom Branch (PostgreSQL Vector DB) -->
+                                    <div class="n8n-node w-[125px] sm:w-[135px] p-2.5 rounded-xl bg-[#0E1626]/95 border border-outline/40 shadow-lg cursor-pointer">
+                                        <!-- Input Port Pin -->
+                                        <span class="absolute left-[-5px] top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-amber-400 border border-[#0E1626]"></span>
+                                        <div class="flex items-center gap-1.5 mb-1.5">
+                                            <div class="w-6 h-6 rounded-lg bg-white/5 border border-outline/30 flex items-center justify-center">
+                                                <span class="material-symbols-outlined text-electric-moss text-xs">database</span>
+                                            </div>
+                                            <span class="font-headline-md text-[11px] text-data-white font-medium truncate">PostgreSQL</span>
+                                        </div>
+                                        <div class="bg-black/30 p-1.5 rounded-md border border-white/5 font-label-mono text-[8px] text-slate-silver mb-1 truncate">
+                                            { upsert: 125 }
+                                        </div>
+                                        <div class="flex items-center justify-between text-[8px] font-label-mono text-slate-silver">
+                                            <span class="text-emerald-400">● 14ms</span>
+                                            <span class="tabular-nums">14 runs</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Bottom Mini Status Footer -->
+                            <div class="flex items-center justify-between px-4 py-2 bg-[#182238]/40 border-t border-outline/20 font-label-mono text-[9px] text-slate-silver">
+                                <span class="flex items-center gap-1.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-electric-moss"></span>
+                                    <span>Latency: <strong class="text-data-white tabular-nums">62ms avg</strong></span>
+                                </span>
+                                <span class="text-slate-silver/70">Engine: <span class="text-electric-moss">TrailOps n8n v2.4</span></span>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
                 <div class="absolute top-4 right-4 font-label-mono text-[10px] text-slate-silver/20 uppercase">Ref:
