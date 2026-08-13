@@ -7,7 +7,7 @@
 <meta name="description" content="End-to-end n8n automation pipelines that eliminate manual work: lead routing, CRM sync, multi-step approvals, notifications, and API orchestration. Production-ready, hands-free."/>
 <meta name="author" content="TrailOps"/>
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
-<meta name="theme-color" content="#0D0D0D"/>
+<meta name="theme-color" content="#0E1626"/>
 <meta property="og:title" content="Workflow Automation — n8n Pipelines, CRM Sync & API Integration | TrailOps"/>
 <meta property="og:description" content="End-to-end n8n automation pipelines that eliminate manual work: lead routing, CRM sync, multi-step approvals, notifications, and API orchestration. Production-ready, hands-free."/>
 <meta property="og:image" content="https://trailops.biz/assets/og-image.png"/>
@@ -129,31 +129,31 @@
             font-weight: bold !important;
         }
 :root {
-    --obsidian: #0D0D0D;
-    --moss: #C4FF61;
-    --silver: #8E9AAF;
+    --obsidian: #0E1626;
+    --moss: #E8A33D;
+    --silver: #9AA6BC;
 }
 body {
     background-color: var(--obsidian);
-    color: #F5F5F5;
+    color: #EDEFF2;
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
 }
 .blueprint-grid {
     background-image:
-        linear-gradient(to right, rgba(142, 154, 175, 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(142, 154, 175, 0.05) 1px, transparent 1px);
+        linear-gradient(to right, rgba(154, 166, 188, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(154, 166, 188, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
 }
-.glow-active { box-shadow: 0 0 15px rgba(196, 255, 97, 0.3); }
+.glow-active { box-shadow: 0 0 15px rgba(232, 163, 61, 0.3); }
 .glass-card {
-    background: rgba(13, 13, 13, 0.8);
+    background: rgba(14, 22, 38, 0.8);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(142, 154, 175, 0.2);
+    border: 1px solid rgba(154, 166, 188, 0.2);
 }
 .scanline {
     width: 100%; height: 2px;
-    background: rgba(196, 255, 97, 0.1);
+    background: rgba(232, 163, 61, 0.1);
     position: absolute;
     animation: scan 4s linear infinite;
 }
@@ -166,7 +166,7 @@ body {
 .font-headline-md { font-family: 'Space Grotesk', sans-serif; font-weight: 500; }
 .font-label-mono { font-family: 'JetBrains Mono', monospace; }
 .font-label-caps { font-family: 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: 0.1em; }
-.node-dot { position: absolute; top: 50%; width: 1rem; height: 1rem; border-radius: 9999px; background: #0D0D0D; z-index: 10; }
+.node-dot { position: absolute; top: 50%; width: 1rem; height: 1rem; border-radius: 9999px; background: #0E1626; z-index: 10; }
 </style>
 <script id="tailwind-config">
   tailwind.config = {
@@ -174,14 +174,14 @@ body {
     theme: {
       extend: {
         colors: {
-            "deep-obsidian": "#0D0D0D",
-            "electric-moss": "#C4FF61",
-            "slate-silver": "#8E9AAF",
-            "matrix-green": "#00F5A0",
-            "cyan-pulse": "#00F2FE",
-            "data-white": "#F5F5F5",
-            "outline": "#8d937d",
-            "surface": "#131313"
+            "deep-obsidian": "#0E1626",
+            "electric-moss": "#E8A33D",
+            "slate-silver": "#9AA6BC",
+            "matrix-green": "#E8A33D",
+            "cyan-pulse": "#E8A33D",
+            "data-white": "#EDEFF2",
+            "outline": "#2A3958",
+            "surface": "#182238"
         },
         spacing: {
             "unit": "4px",
@@ -508,8 +508,8 @@ All Services <span>&rarr;</span>
 <!-- Node 4 -->
 <div class="p-4 rounded-lg bg-deep-obsidian border border-slate-silver/20 hover:border-electric-moss transition-colors">
 <div class="flex items-center justify-between mb-2">
-<span class="font-label-mono text-[10px] text-amber-400 uppercase font-bold">04 // APPROVAL</span>
-<span class="material-symbols-outlined text-amber-400 text-base">verified_user</span>
+<span class="font-label-mono text-[10px] text-electric-moss uppercase font-bold">04 // APPROVAL</span>
+<span class="material-symbols-outlined text-electric-moss text-base">verified_user</span>
 </div>
 <div class="font-headline-md text-sm text-data-white font-bold mb-1">Interactive Slack Approval</div>
 <p class="font-body-md text-xs text-slate-silver leading-relaxed">Sends interactive notification with approve/reject buttons to sales manager.</p>
