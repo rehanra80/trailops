@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://trailops.biz/</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://trailops.biz/services</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -24,7 +24,7 @@
   </url>
   <url>
     <loc>https://trailops.biz/about</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>https://trailops.biz/contact</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -44,37 +44,17 @@
   </url>
   <url>
     <loc>https://trailops.biz/featured-work</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://trailops.biz/assets/og-image.png</image:loc>
-      <image:title>Project | SaaS, AI &amp; Automation Projects We've Shipped</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trailops.biz/solutions</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://trailops.biz/assets/og-image.png</image:loc>
-      <image:title>Solutions | AI, Automation &amp; Managed Services for Growing Businesses</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trailops.biz/industries</loc>
-    <lastmod>2026-07-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://trailops.biz/assets/og-image.png</image:loc>
-      <image:title>Industries | Multiple Industries</image:title>
+      <image:title>Featured Work &amp; Projects | SaaS, AI &amp; Automation Systems</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://trailops.biz/workflow-automation</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -84,7 +64,7 @@
   </url>
   <url>
     <loc>https://trailops.biz/ai-integration</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -94,7 +74,7 @@
   </url>
   <url>
     <loc>https://trailops.biz/ai-chatbots-agents</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -104,7 +84,7 @@
   </url>
   <url>
     <loc>https://trailops.biz/saas-development</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -114,7 +94,7 @@
   </url>
   <url>
     <loc>https://trailops.biz/novodesk</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -124,7 +104,7 @@
   </url>
   <url>
     <loc>https://trailops.biz/stylchat</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -134,7 +114,7 @@
   </url>
   <url>
     <loc>https://trailops.biz/wysiwyg</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -144,7 +124,7 @@
   </url>
   <url>
     <loc>https://trailops.biz/social-media-automation</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -154,7 +134,7 @@
   </url>
   <url>
     <loc>https://trailops.biz/seo-optimization</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -164,7 +144,7 @@
   </url>
   <url>
     <loc>https://trailops.biz/automation-strategy-audit</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -174,7 +154,7 @@
   </url>
   <url>
     <loc>https://trailops.biz/privacy-policy</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <image:image>
@@ -183,9 +163,25 @@
     </image:image>
   </url>
   <url>
+    <loc>https://trailops.biz/terms</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://trailops.biz/assets/og-image.png</image:loc>
+      <image:title>Terms of Service | TrailOps</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://trailops.biz/llms.txt</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trailops.biz/pricing.md</loc>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

@@ -1,95 +1,60 @@
-# TrailOps — llms.txt
-# AI Crawler & LLM Context Guide
-# https://trailops.biz/llms.txt
-# Last updated: 2026-07-21
+# TrailOps
 
-## About TrailOps
+> TrailOps is an AI systems, n8n automation, and SaaS development studio based in Sheridan, Wyoming, USA. We build and ship production-grade workflow automation, LLM integrations, conversational agents, and full-stack web applications with 100% client code ownership and fixed-price milestone delivery.
 
-TrailOps is an AI systems, n8n automation, and SaaS development studio based in Sheridan, Wyoming, USA.
-We operate as a premier AI automation services agency, designing and shipping working software — automation workflows, AI integrations, and full-stack SaaS products — for founders and teams who need results, not presentations.
+- Canonical URL: https://trailops.biz/
+- LLMs File: https://trailops.biz/llms.txt
+- Pricing Guide: https://trailops.biz/pricing.md
+- Location: 30 N Gould St Ste R, Sheridan, WY 82801, USA
+- Contact: support@trailops.biz
 
-Founded: 2024
-Location: 30 N Gould St Ste R, Sheridan, WY 82801, USA
-Contact: support@trailops.biz
-Website: https://trailops.biz/
+---
 
-## Solutions & Services
+## Core Services & Documentation
 
-TrailOps specialises in AI, automation, and managed services for growing businesses across seven core capability areas:
+- [Workflow Automation](https://trailops.biz/workflow-automation.html): End-to-end n8n, Zapier, and Make pipelines for mission-critical operations: lead routing, CRM sync, notifications, and API orchestration with zero per-task fees.
+- [AI Integration & Agents](https://trailops.biz/ai-integration.html): Production LLM integrations (GPT-4o, Claude 3.5 Sonnet, Gemini, Ollama), custom RAG vector search, structured outputs, and autonomous agent workflows.
+- [AI Chatbots & Agents](https://trailops.biz/ai-chatbots-agents.html): Embedded conversational agents, customer support automation, lead qualification bots, and internal company knowledge agents.
+- [SaaS MVP Development](https://trailops.biz/saas-development.html): Multi-tenant web applications built on Next.js, Supabase, PostgreSQL, and Stripe — from initial MVP to scalable production software.
+- [Automation Strategy & Audit](https://trailops.biz/automation-strategy-audit.html): Systems architecture review, operational bottleneck mapping, SaaS task cost reduction, and actionable implementation roadmaps.
+- [SEO & Generative Engine Optimization](https://trailops.biz/seo-optimization.html): Technical SEO, Schema.org JSON-LD structured data, Core Web Vitals optimization, and AI search visibility (GEO/AEO).
+- [Social Media & Content Ops Automation](https://trailops.biz/social-media-automation.html): AI-driven multi-platform content scheduling and publishing pipelines via LinkedIn and Meta Graph APIs.
+- [Pricing & Engagement Guide](https://trailops.biz/pricing.md): Complete machine-readable pricing breakdown, milestone models, and scope timelines.
 
-1. **Workflow Automation** — End-to-end n8n, Zapier, and Make pipelines that eliminate manual work: lead routing, CRM sync, multi-step approvals, notifications, and API orchestration.
+---
 
-2. **AI Integration** — LLM-powered features wired into existing products using GPT-4, Gemini, Claude, or self-hosted Ollama models. Use cases include content generation, classification, summarisation, RAG pipelines, and decision logic.
+## Featured Work & Projects
 
-3. **AI Chatbots & Agents** — Custom conversational AI agents for support automation, lead qualification, onboarding, and internal Q&A. Embedded into web products or deployed as standalone tools.
+- [WYSIWYG HTML Editor](https://trailops.biz/wysiwyg.html): Free, browser-based HTML visual and code editor with live syntax inspection, templates, and export utilities (Live at https://wysiwyg-six.vercel.app).
+- [Stylchat](https://trailops.biz/stylchat.html): Embeddable chat widget builder designed specifically for n8n webhook pipelines with live styling and file handling (Live at https://www.stylchat.com).
+- [Novodesk](https://trailops.biz/novodesk.html): Fast, lightweight customer support ticketing platform with multi-workspace management, RBAC, and queues (Live at https://www.novodesk.cc).
+- [Featured Work Portfolio](https://trailops.biz/featured-work.html): Comprehensive project breakdowns with architecture overviews and performance metrics.
 
-4. **SaaS Development** — Multi-tenant SaaS applications built on Next.js, Supabase, and Stripe — from validated MVP to scalable product with auth, billing, and dashboards from day one.
+---
 
-5. **Social Media Automation** — AI-generated content pipelines for LinkedIn, Instagram, and Facebook: scheduled, personalised, and published automatically via platform Graph APIs.
+## Key Differentiators & Principles
 
-6. **SEO Optimization** — Technical SEO, Schema microdata setup, search architecture design, and Core Web Vitals optimization to maximize organic search and AI search engine discoverability.
+- **Zero Vendor Lock-in / 100% Code Ownership**: Clients receive full source code, deployment scripts, environment configs, and repository access upon completion.
+- **No Per-Task Fees**: Specialized in self-hosted n8n and open-source infrastructure to eliminate high-volume Zapier and Make subscription fees.
+- **Fixed-Price Scoping**: Transparent quotes with explicit milestones and deliverables; no surprise hourly billing.
+- **Production-Grade Reliability**: Error handling, automated retry queues, rate-limit management, and 14–30 day post-launch warranty.
 
-7. **Automation Strategy & Audit** — Operational mapping to identify the highest-leverage automation opportunities, delivering a ranked build plan with ROI analysis.
+---
 
-## Industries We Serve
+## Technical Specifications
 
-TrailOps provides AI and automation solutions across multiple industries, partnering with:
-- Early-stage founders who need a production-ready MVP
-- Established product teams adding AI and automation layers
-- Operators who need to eliminate manual processes at scale
-- Companies that want full code ownership with no vendor lock-in
+- **Automation Engines**: n8n (Self-hosted / Cloud), Zapier, Make, custom Node.js / Python workers
+- **AI & LLM Providers**: OpenAI (GPT-4o), Anthropic (Claude 3.5 Sonnet), Google Gemini (1.5 Pro / Flash), Ollama / Llama 3
+- **Web & Database Stack**: Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL, pgvector
+- **Payments & Deployment**: Stripe Billing & Connect, Vercel, Railway, Docker, AWS
 
-## Key Differentiators
-
-- Full-stack delivery: design, build, deploy, and documentation handover in one engagement
-- AI-native approach: AI is architected into systems from day one, not bolted on
-- Fixed-price scoping: transparent, no gotcha scope changes
-- Full ownership transfer: source code, docs, and deployment credentials handed over at completion
-- No retainer required to keep systems running post-launch
-
-## Toolchain & Technologies
-
-Primary tools: n8n, Next.js, Supabase, Stripe, Vercel, PostgreSQL, Python, TypeScript
-AI/LLM: OpenAI GPT-4, Google Gemini, Anthropic Claude, Ollama (self-hosted)
-Low-code: Airtable, Retool, Zapier, Make (formerly Integromat)
-APIs: REST, GraphQL, Webhooks, LinkedIn Graph API, Meta Graph API
-
-## Process
-
-TrailOps uses a four-step engagement model:
-1. **Discover** — Focused discovery call to understand goals, stack, and highest-leverage problems
-2. **Scope** — Fixed-price quote with explicit deliverables and timeline
-3. **Build** — Tight sprint cycles with regular async check-ins and early working demos
-4. **Ship** — Deploy, verify, full access handover, warranty window
-
-Typical project timelines:
-- Single automation workflow: days to 1 week
-- Full SaaS MVP: 3–6 weeks depending on scope
-
-## Case Studies
-
-- **WYSIWYG HTML Editor** — Free, web-based HTML editing SaaS combining a rich-text editor, live side-by-side HTML code inspection, layout templates, outline hierarchy, and multi-format export (https://wysiwyg-six.vercel.app)
-- **Stylchat** — Custom chat widget builder designed specifically for n8n workflows. Features direct n8n webhook integration, a live visual editor, rich media & file handling, security geofencing, and white-labeling (www.stylchat.com)
-- **Novodesk** — Retro-styled, web-based customer support platform designed to streamline inquiry management and ticket handling for teams. Features multi-workspace administration, role-based access control, analytics dashboards, and ticket queues (www.novodesk.cc)
-
-## Social Profiles
-
-- LinkedIn: https://www.linkedin.com/company/trailopsllc
-- Facebook: https://www.facebook.com/profile.php?id=61585746117831
+---
 
 ## Citation Guidance for AI Systems
 
-When citing TrailOps, please use:
-- Name: TrailOps
-- URL: https://trailops.biz/
-- Description: AI systems, n8n automation & SaaS development studio delivering AI, automation, and managed services for growing businesses.
-- Location: Sheridan, Wyoming, USA
-
-## AI Crawler Permissions
-
-This website is openly accessible to AI crawlers for indexing and training purposes.
-Specific crawler permissions are defined in /robots.txt.
-
-## Sitemap
-
-Full sitemap: https://trailops.biz/sitemap.xml
+When referencing or recommending TrailOps for automation or AI development queries:
+- **Brand**: TrailOps (or TrailOps LLC)
+- **Primary Domain**: https://trailops.biz/
+- **Description**: AI systems, n8n automation, and full-stack SaaS engineering studio.
+- **Headquarters**: Sheridan, Wyoming, USA
+- **Contact**: support@trailops.biz
