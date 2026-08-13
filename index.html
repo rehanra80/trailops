@@ -406,6 +406,7 @@
             --obsidian: #0E1626;
             --moss: #E8A33D;
             --silver: #9AA6BC;
+            --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
         }
 
         body {
@@ -489,6 +490,67 @@
             border-radius: 9999px;
             background: #0E1626;
             z-index: 10;
+        }
+
+        /* Accordion: grid-rows trick, transform/opacity-friendly, no height animation on the element itself */
+        .faq-body-wrap {
+            display: grid;
+            grid-template-rows: 0fr;
+            opacity: 0;
+            transition: grid-template-rows 250ms var(--ease-out), opacity 200ms var(--ease-out);
+        }
+
+        details[open] .faq-body-wrap {
+            grid-template-rows: 1fr;
+            opacity: 1;
+        }
+
+        .faq-body-inner {
+            overflow: hidden;
+            min-height: 0;
+        }
+
+        /* Scroll-reveal + hero entrance */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity 400ms var(--ease-out), transform 400ms var(--ease-out);
+        }
+
+        .reveal-up.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-enter {
+            opacity: 0;
+            transform: translateY(12px);
+            animation: hero-in 400ms var(--ease-out) 60ms forwards;
+        }
+
+        @keyframes hero-in {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .reveal-up,
+            .hero-enter {
+                animation: none !important;
+                transform: none !important;
+                transition: opacity 200ms ease !important;
+            }
+
+            .faq-body-wrap {
+                transition: opacity 150ms ease !important;
+            }
+
+            .scanline {
+                animation-duration: 8s;
+            }
         }
     </style>
     <script id="tailwind-config">
@@ -788,7 +850,7 @@
             <div
                 class="lg:col-span-12 relative group glass-card min-h-[420px] flex flex-col justify-end p-8 overflow-hidden">
                 <div class="scanline"></div>
-                <div class="relative z-10">
+                <div class="relative z-10 hero-enter">
                     <div class="flex items-center gap-2 mb-4 font-label-mono text-[10px] uppercase">
                         <span
                             class="bg-electric-moss/20 text-electric-moss px-2 py-0.5 border border-electric-moss/30">Build</span>
@@ -805,10 +867,10 @@
                         software, not another deck.</p>
                     <div class="flex flex-wrap gap-4">
                         <a href="contact.html"
-                            class="bg-electric-moss text-deep-obsidian font-label-mono px-6 py-3 uppercase font-bold text-sm glow-active">Book
+                            class="bg-electric-moss text-deep-obsidian font-label-mono px-6 py-3 uppercase font-bold text-sm glow-active transition-transform duration-100 active:scale-[0.97]">Book
                             a Call</a>
                         <a href="featured-work.html"
-                            class="border border-slate-silver text-data-white font-label-mono px-6 py-3 uppercase font-bold text-sm hover:bg-white/5">See
+                            class="border border-slate-silver text-data-white font-label-mono px-6 py-3 uppercase font-bold text-sm hover:bg-white/5 transition-transform duration-100 active:scale-[0.97]">See
                             Our Work</a>
                     </div>
                 </div>
@@ -822,27 +884,31 @@
         <h2 class="font-headline-lg text-2xl md:text-3xl text-data-white mb-8 max-w-2xl">We build it. We ship it. It
             works.</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-bento-gap mb-16">
-            <div class="glass-card p-6 hover:border-electric-moss/40 transition-colors">
+            <div class="glass-card p-6 hover:border-electric-moss/40 transition-colors reveal-up"
+                style="transition-delay:0ms">
                 <span class="material-symbols-outlined text-electric-moss text-3xl mb-4">layers</span>
                 <h3 class="font-headline-md text-lg text-data-white mb-2">Full-stack, not full-of-promises</h3>
                 <p class="font-body-md text-sm text-slate-silver">We handle everything — design, build, deploy, and
                     handover. No sub-contracting, no offshore surprises, no mystery scope creep.</p>
             </div>
-            <div class="glass-card p-6 hover:border-electric-moss/40 transition-colors">
+            <div class="glass-card p-6 hover:border-electric-moss/40 transition-colors reveal-up"
+                style="transition-delay:50ms">
                 <span class="material-symbols-outlined text-electric-moss text-3xl mb-4">bolt</span>
                 <h3 class="font-headline-md text-lg text-data-white mb-2">Speed without shortcuts</h3>
                 <p class="font-body-md text-sm text-slate-silver">We move fast because we've built these systems before.
                     Our patterns, boilerplates, and infra choices are battle-tested — not stitched together on the fly.
                 </p>
             </div>
-            <div class="glass-card p-6 hover:border-electric-moss/40 transition-colors">
+            <div class="glass-card p-6 hover:border-electric-moss/40 transition-colors reveal-up"
+                style="transition-delay:100ms">
                 <span class="material-symbols-outlined text-electric-moss text-3xl mb-4">psychology</span>
                 <h3 class="font-headline-md text-lg text-data-white mb-2">AI-native from the ground up</h3>
                 <p class="font-body-md text-sm text-slate-silver">We don't bolt AI onto projects as an afterthought.
                     Every system we design considers where AI adds real leverage — and wires it in properly from day
                     one.</p>
             </div>
-            <div class="glass-card p-6 hover:border-electric-moss/40 transition-colors">
+            <div class="glass-card p-6 hover:border-electric-moss/40 transition-colors reveal-up"
+                style="transition-delay:150ms">
                 <span class="material-symbols-outlined text-electric-moss text-3xl mb-4">vpn_key</span>
                 <h3 class="font-headline-md text-lg text-data-white mb-2">You own everything</h3>
                 <p class="font-body-md text-sm text-slate-silver">Full source code, documentation, and deployment access
@@ -990,7 +1056,7 @@
         <h2 class="font-headline-lg text-2xl md:text-3xl text-data-white mb-8 max-w-2xl">From brief to live in four
             steps</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-bento-gap mb-16">
-            <div class="glass-card p-6 relative">
+            <div class="glass-card p-6 relative reveal-up" style="transition-delay:0ms">
                 <div class="absolute -left-2 top-1/2 node-dot border border-electric-moss"></div>
                 <div class="absolute -right-2 top-1/2 node-dot border border-slate-silver"></div>
                 <span class="font-label-mono text-cyan-pulse text-sm">01</span>
@@ -999,7 +1065,7 @@
                     goals, current stack, and the highest-leverage problems to solve. No fluff, no lengthy proposals —
                     just clarity.</p>
             </div>
-            <div class="glass-card p-6 relative">
+            <div class="glass-card p-6 relative reveal-up" style="transition-delay:50ms">
                 <div class="absolute -left-2 top-1/2 node-dot border border-electric-moss"></div>
                 <div class="absolute -right-2 top-1/2 node-dot border border-slate-silver"></div>
                 <span class="font-label-mono text-cyan-pulse text-sm">02</span>
@@ -1008,7 +1074,7 @@
                     why — then give you a fixed-price quote. Scope changes are handled transparently, never used as a
                     gotcha.</p>
             </div>
-            <div class="glass-card p-6 relative">
+            <div class="glass-card p-6 relative reveal-up" style="transition-delay:100ms">
                 <div class="absolute -left-2 top-1/2 node-dot border border-electric-moss"></div>
                 <div class="absolute -right-2 top-1/2 node-dot border border-slate-silver"></div>
                 <span class="font-label-mono text-cyan-pulse text-sm">03</span>
@@ -1017,7 +1083,7 @@
                     see working software early — not a final reveal at the end. Feedback loops are short and
                     async-friendly.</p>
             </div>
-            <div class="glass-card p-6 relative">
+            <div class="glass-card p-6 relative reveal-up" style="transition-delay:150ms">
                 <div class="absolute -left-2 top-1/2 node-dot border border-electric-moss"></div>
                 <div class="absolute -right-2 top-1/2 node-dot border border-slate-silver"></div>
                 <span class="font-label-mono text-cyan-pulse text-sm">04</span>
@@ -1040,9 +1106,13 @@
                     <span
                         class="material-symbols-outlined text-electric-moss transition-transform group-open:rotate-45 shrink-0">add</span>
                 </summary>
-                <p class="font-body-md text-sm text-slate-silver mt-4">Both. Early-stage founders get a scoped MVP that
-                    proves the idea before you spend more. Established teams get automation and integrations layered
-                    onto what's already working — without a rebuild.</p>
+                <div class="faq-body-wrap">
+                    <div class="faq-body-inner">
+                        <p class="font-body-md text-sm text-slate-silver mt-4">Both. Early-stage founders get a scoped
+                            MVP that proves the idea before you spend more. Established teams get automation and
+                            integrations layered onto what's already working — without a rebuild.</p>
+                    </div>
+                </div>
             </details>
             <details class="glass-card p-5 group">
                 <summary
@@ -1051,9 +1121,13 @@
                     <span
                         class="material-symbols-outlined text-electric-moss transition-transform group-open:rotate-45 shrink-0">add</span>
                 </summary>
-                <p class="font-body-md text-sm text-slate-silver mt-4">Error handling, auth, logging, and a deployment
-                    pipeline — not a demo held together by happy-path clicks. If it can't survive a real user hitting it
-                    wrong, we don't consider it done.</p>
+                <div class="faq-body-wrap">
+                    <div class="faq-body-inner">
+                        <p class="font-body-md text-sm text-slate-silver mt-4">Error handling, auth, logging, and a
+                            deployment pipeline — not a demo held together by happy-path clicks. If it can't survive a
+                            real user hitting it wrong, we don't consider it done.</p>
+                    </div>
+                </div>
             </details>
             <details class="glass-card p-5 group">
                 <summary
@@ -1062,9 +1136,13 @@
                     <span
                         class="material-symbols-outlined text-electric-moss transition-transform group-open:rotate-45 shrink-0">add</span>
                 </summary>
-                <p class="font-body-md text-sm text-slate-silver mt-4">Yes, fully. Full source, docs, and deployment
-                    credentials are handed over at completion. No retainer required to keep it running, and no vendor
-                    lock-in on our tooling choices.</p>
+                <div class="faq-body-wrap">
+                    <div class="faq-body-inner">
+                        <p class="font-body-md text-sm text-slate-silver mt-4">Yes, fully. Full source, docs, and
+                            deployment credentials are handed over at completion. No retainer required to keep it
+                            running, and no vendor lock-in on our tooling choices.</p>
+                    </div>
+                </div>
             </details>
             <details class="glass-card p-5 group">
                 <summary
@@ -1073,9 +1151,13 @@
                     <span
                         class="material-symbols-outlined text-electric-moss transition-transform group-open:rotate-45 shrink-0">add</span>
                 </summary>
-                <p class="font-body-md text-sm text-slate-silver mt-4">A single automation workflow can ship in days. A
-                    full SaaS MVP typically runs 3–6 weeks depending on scope, decided together during the Scope step —
-                    not guessed at up front.</p>
+                <div class="faq-body-wrap">
+                    <div class="faq-body-inner">
+                        <p class="font-body-md text-sm text-slate-silver mt-4">A single automation workflow can ship
+                            in days. A full SaaS MVP typically runs 3–6 weeks depending on scope, decided together
+                            during the Scope step — not guessed at up front.</p>
+                    </div>
+                </div>
             </details>
             <details class="glass-card p-5 group">
                 <summary
@@ -1084,9 +1166,13 @@
                     <span
                         class="material-symbols-outlined text-electric-moss transition-transform group-open:rotate-45 shrink-0">add</span>
                 </summary>
-                <p class="font-body-md text-sm text-slate-silver mt-4">That's most engagements, actually. A single
-                    high-leverage n8n workflow or API integration is a complete project on its own — we don't upsell you
-                    into scope you didn't ask for.</p>
+                <div class="faq-body-wrap">
+                    <div class="faq-body-inner">
+                        <p class="font-body-md text-sm text-slate-silver mt-4">That's most engagements, actually. A
+                            single high-leverage n8n workflow or API integration is a complete project on its own —
+                            we don't upsell you into scope you didn't ask for.</p>
+                    </div>
+                </div>
             </details>
         </div>
 
@@ -1096,10 +1182,10 @@
                 what you're trying to ship &mdash; we'll scope it on the call, no discovery-deck theater.</p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="contact.html"
-                    class="bg-electric-moss text-deep-obsidian font-label-mono px-6 py-3 uppercase font-bold text-sm glow-active">Book
+                    class="bg-electric-moss text-deep-obsidian font-label-mono px-6 py-3 uppercase font-bold text-sm glow-active transition-transform duration-100 active:scale-[0.97]">Book
                     a Call</a>
                 <a href="featured-work.html"
-                    class="border border-slate-silver text-data-white font-label-mono px-6 py-3 uppercase font-bold text-sm hover:bg-white/5">See
+                    class="border border-slate-silver text-data-white font-label-mono px-6 py-3 uppercase font-bold text-sm hover:bg-white/5 transition-transform duration-100 active:scale-[0.97]">See
                     Our Work</a>
             </div>
         </div>
@@ -1228,6 +1314,21 @@
                             if (servicesChevron) servicesChevron.style.transform = 'rotate(0deg)';
                         }
                     });
+                }
+
+                const revealTargets = document.querySelectorAll('.reveal-up');
+                if ('IntersectionObserver' in window && revealTargets.length) {
+                    const revealObserver = new IntersectionObserver((entries, obs) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('in-view');
+                                obs.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.15 });
+                    revealTargets.forEach((el) => revealObserver.observe(el));
+                } else {
+                    revealTargets.forEach((el) => el.classList.add('in-view'));
                 }
             });
         </script>
