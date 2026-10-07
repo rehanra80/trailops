@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Extension Mockups Preview (1, 3, 4, 5)</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --obsidian: #0E1626;
+            --moss: #E8A33D;
+            --silver: #9AA6BC;
+            --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        body { background-color: var(--obsidian); color: #EDEFF2; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .blueprint-grid {
+            background-image: linear-gradient(to right, rgba(154, 166, 188, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(154, 166, 188, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glow-active { box-shadow: 0 0 15px rgba(232, 163, 61, 0.3); }
+        .glass-card { background: rgba(14, 22, 38, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(154, 166, 188, 0.2); }
+        .font-headline-xl { font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+        .font-headline-lg { font-family: 'Space Grotesk', sans-serif; font-weight: 600; letter-spacing: -0.01em; }
+        .font-headline-md { font-family: 'Space Grotesk', sans-serif; font-weight: 500; }
+        .font-label-mono { font-family: 'JetBrains Mono', monospace; }
+        .scanline { width: 100%; height: 2px; background: rgba(232, 163, 61, 0.1); position: absolute; animation: scan 4s linear infinite; top: 0; left: 0; z-index: 0; }
+        @keyframes scan { from { top: 0%; } to { top: 100%; } }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.2/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.2/src/bold/style.css" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: { extend: { colors: { "deep-obsidian": "#0E1626", "electric-moss": "#E8A33D", "slate-silver": "#9AA6BC", "surface": "#182238", "outline": "#2A3958", "data-white": "#EDEFF2" } } }
+        }
+    </script>
+</head>
+<body class="blueprint-grid p-8 md:p-16 space-y-32 pb-48">
+
+    <div class="max-w-5xl mx-auto space-y-32">
+        
+        <!-- Preview 1: Hero Section Buttons -->
+        <section>
+            <h2 class="text-electric-moss font-label-mono text-sm mb-6 uppercase flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-electric-moss"></span> Preview 1: Hero Section Action Buttons
+            </h2>
+            <div class="glass-card p-12 md:p-24 rounded-2xl flex flex-col items-center text-center">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface/50 border border-slate-silver/10 mb-8">
+                    <span class="w-1.5 h-1.5 rounded-full bg-electric-moss animate-pulse"></span>
+                    <span class="font-label-mono text-xs text-slate-silver uppercase tracking-wider">v2.0 Beta Live</span>
+                </div>
+                <h1 class="font-headline-xl text-5xl md:text-6xl text-data-white mb-6">Ship Software Faster</h1>
+                <p class="text-slate-silver max-w-xl text-lg mb-10">Production-grade automation and AI integrations.</p>
+                <div class="flex flex-col sm:flex-row items-center gap-4 justify-center">
+                    <button class="bg-electric-moss text-deep-obsidian font-label-mono px-8 py-3.5 rounded font-bold uppercase glow-active hover:brightness-110 transition-all w-full sm:w-auto">
+                        Book a Call
+                    </button>
+                    <!-- Mock Extension Buttons -->
+                    <button class="flex items-center justify-center gap-2 border border-slate-silver/20 bg-surface/40 hover:bg-surface/80 hover:border-electric-moss/50 text-slate-silver hover:text-electric-moss transition-all px-6 py-3.5 rounded font-semibold text-sm w-full sm:w-auto group">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" alt="Chrome" class="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" />
+                        Chrome
+                    </button>
+                    <button class="flex items-center justify-center gap-2 border border-slate-silver/20 bg-surface/40 hover:bg-surface/80 hover:border-electric-moss/50 text-slate-silver hover:text-electric-moss transition-all px-6 py-3.5 rounded font-semibold text-sm w-full sm:w-auto group">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" alt="Firefox" class="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" />
+                        Firefox
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preview 3: Floating Action Widget -->
+        <section>
+            <h2 class="text-electric-moss font-label-mono text-sm mb-6 uppercase flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-electric-moss"></span> Preview 3: Floating Action Widget (Hover it)
+            </h2>
+            <div class="glass-card rounded-2xl relative h-80 overflow-hidden border border-outline/50 shadow-2xl">
+                <!-- Background visual content simulation -->
+                <div class="absolute inset-0 p-8">
+                    <div class="w-3/4 h-6 bg-surface rounded mb-4"></div>
+                    <div class="w-full h-4 bg-surface/50 rounded mb-2"></div>
+                    <div class="w-5/6 h-4 bg-surface/50 rounded mb-2"></div>
+                    <div class="w-1/2 h-4 bg-surface/50 rounded mb-8"></div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="h-24 bg-surface/30 rounded border border-slate-silver/5"></div>
+                        <div class="h-24 bg-surface/30 rounded border border-slate-silver/5"></div>
+                    </div>
+                </div>
+                
+                <!-- The Floating Widget itself -->
+                <div class="absolute bottom-6 right-6 group flex items-end justify-end z-50">
+                    <div class="flex items-center bg-deep-obsidian/95 backdrop-blur-xl border border-electric-moss/30 p-1.5 rounded-full shadow-[0_10px_30px_rgba(232,163,61,0.2)] transition-all duration-400 ease-out w-14 overflow-hidden group-hover:w-[260px] h-14">
+                        <!-- Icon -->
+                        <div class="w-11 h-11 shrink-0 bg-electric-moss/10 rounded-full flex items-center justify-center text-electric-moss cursor-pointer group-hover:bg-transparent transition-colors">
+                            <i class="ph-bold ph-puzzle-piece text-[22px]" aria-hidden="true"></i>
+                        </div>
+                        <!-- Expanded Content -->
+                        <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 pl-2 pr-1 shrink-0">
+                            <span class="text-xs text-slate-silver font-semibold mr-1 whitespace-nowrap">Install:</span>
+                            <a href="#" class="flex items-center justify-center w-9 h-9 rounded-full bg-surface hover:bg-electric-moss/20 hover:text-electric-moss transition-all border border-slate-silver/10 hover:border-electric-moss/30" title="Chrome">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" alt="Chrome" class="w-4 h-4" />
+                            </a>
+                            <a href="#" class="flex items-center justify-center w-9 h-9 rounded-full bg-surface hover:bg-electric-moss/20 hover:text-electric-moss transition-all border border-slate-silver/10 hover:border-electric-moss/30" title="Firefox">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" alt="Firefox" class="w-4 h-4" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preview 4: Inline Contextual Banner -->
+        <section>
+            <h2 class="text-electric-moss font-label-mono text-sm mb-6 uppercase flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-electric-moss"></span> Preview 4: Inline Contextual Banner
+            </h2>
+            <div class="glass-card border border-electric-moss/30 rounded-2xl p-8 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 shadow-[0_0_40px_rgba(232,163,61,0.05)]">
+                <!-- Visual FX -->
+                <div class="absolute -top-[100px] -right-[100px] w-[300px] h-[300px] bg-electric-moss/5 blur-[100px] rounded-full z-0"></div>
+                <div class="scanline"></div>
+                
+                <div class="relative z-10 w-full md:w-auto text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start gap-2 font-label-caps text-xs text-electric-moss mb-3 uppercase tracking-widest">
+                        <span class="w-1.5 h-1.5 rounded-full bg-electric-moss animate-pulse"></span>
+                        Power User Tools
+                    </div>
+                    <h3 class="font-headline-lg text-2xl text-data-white mb-2">Automate from your browser</h3>
+                    <p class="text-slate-silver text-sm max-w-md mx-auto md:mx-0">Trigger n8n workflows and AI tasks instantly with the TrailOps extension. No tab-switching required.</p>
+                </div>
+                <div class="relative z-10 flex flex-col sm:flex-row gap-3 shrink-0 w-full md:w-auto">
+                    <a href="#" class="flex items-center justify-center gap-3 bg-surface border border-slate-silver/10 hover:border-electric-moss text-data-white px-6 py-3 rounded-lg transition-all hover:-translate-y-0.5 group shadow-lg">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" alt="Chrome" class="w-5 h-5 opacity-80 group-hover:opacity-100 transition-opacity" />
+                        <span class="font-semibold text-sm">Chrome</span>
+                    </a>
+                    <a href="#" class="flex items-center justify-center gap-3 bg-surface border border-slate-silver/10 hover:border-electric-moss text-data-white px-6 py-3 rounded-lg transition-all hover:-translate-y-0.5 group shadow-lg">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" alt="Firefox" class="w-5 h-5 opacity-80 group-hover:opacity-100 transition-opacity" />
+                        <span class="font-semibold text-sm">Firefox</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preview 5: Pre-Footer Download Block -->
+        <section>
+            <h2 class="text-electric-moss font-label-mono text-sm mb-6 uppercase flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-electric-moss"></span> Preview 5: Pre-Footer Download Block
+            </h2>
+            <div class="border border-outline/30 rounded-3xl overflow-hidden">
+                <div class="bg-surface/20 p-8 md:p-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    
+                    <div class="order-2 lg:order-1 relative h-full min-h-[300px]">
+                        <!-- Abstract Visual Graphic -->
+                        <div class="w-full h-full rounded-2xl bg-deep-obsidian border border-slate-silver/10 flex items-center justify-center relative overflow-hidden shadow-2xl">
+                            <div class="blueprint-grid absolute inset-0 opacity-40"></div>
+                            
+                            <!-- Browser Window Mockup -->
+                            <div class="w-64 h-40 bg-surface border border-electric-moss/30 rounded-lg shadow-2xl relative z-10 flex flex-col p-0 overflow-hidden transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                                <div class="bg-deep-obsidian px-3 py-2 flex items-center gap-2 border-b border-outline">
+                                    <div class="flex gap-1.5">
+                                        <div class="w-2.5 h-2.5 rounded-full bg-slate-silver/20"></div>
+                                        <div class="w-2.5 h-2.5 rounded-full bg-slate-silver/20"></div>
+                                        <div class="w-2.5 h-2.5 rounded-full bg-slate-silver/20"></div>
+                                    </div>
+                                    <div class="mx-auto w-32 h-3 bg-surface rounded-full border border-slate-silver/10"></div>
+                                    <i class="ph-bold ph-puzzle-piece text-[14px] text-electric-moss" aria-hidden="true"></i>
+                                </div>
+                                <div class="p-4 flex flex-col gap-3">
+                                    <div class="w-1/2 h-2 bg-electric-moss/40 rounded-full mb-1"></div>
+                                    <div class="w-full h-1.5 bg-slate-silver/10 rounded-full"></div>
+                                    <div class="w-5/6 h-1.5 bg-slate-silver/10 rounded-full"></div>
+                                    <div class="w-full h-1.5 bg-slate-silver/10 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-1 lg:order-2">
+                        <h2 class="font-headline-xl text-4xl md:text-5xl text-data-white mb-5 leading-tight">Take TrailOps<br/>With You.</h2>
+                        <p class="text-slate-silver mb-8 text-lg">Access your automations, manage RAG pipelines, and inject AI into any webpage with our official browser extensions.</p>
+                        
+                        <div class="flex flex-col gap-4">
+                            <a href="#" class="flex items-center justify-between bg-surface/60 hover:bg-surface border border-slate-silver/10 hover:border-electric-moss/40 p-4 rounded-xl transition-all group shadow-md">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-deep-obsidian rounded-full flex items-center justify-center shrink-0 border border-slate-silver/5">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" alt="Chrome" class="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-data-white text-base group-hover:text-electric-moss transition-colors">Download for Chrome</div>
+                                        <div class="text-xs text-slate-silver font-label-mono mt-0.5">Available on the Web Store</div>
+                                    </div>
+                                </div>
+                                <i class="ph-bold ph-arrow-right text-electric-moss opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="#" class="flex items-center justify-between bg-surface/60 hover:bg-surface border border-slate-silver/10 hover:border-electric-moss/40 p-4 rounded-xl transition-all group shadow-md">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-deep-obsidian rounded-full flex items-center justify-center shrink-0 border border-slate-silver/5">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" alt="Firefox" class="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-data-white text-base group-hover:text-electric-moss transition-colors">Download for Firefox</div>
+                                        <div class="text-xs text-slate-silver font-label-mono mt-0.5">Get it on Firefox Add-ons</div>
+                                    </div>
+                                </div>
+                                <i class="ph-bold ph-arrow-right text-electric-moss opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

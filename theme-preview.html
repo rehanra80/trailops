@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="amber" class="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrailOps Brand Mockup Preview · Tech SaaS Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.2/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.2/src/bold/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            /* Option A: Precision Amber (Default) */
+            --bg-base: #090D16;
+            --surface-card: #111827;
+            --surface-glass: rgba(17, 24, 39, 0.75);
+            --border-card: rgba(255, 255, 255, 0.08);
+            --border-highlight: rgba(245, 158, 11, 0.4);
+            --accent: #F59E0B;
+            --accent-hover: #D97706;
+            --accent-subtle: rgba(245, 158, 11, 0.12);
+            --accent-glow: rgba(245, 158, 11, 0.28);
+            --accent-text: #090D16;
+            --text-primary: #F8FAFC;
+            --text-muted: #CBD5E1;
+            --grid-line: rgba(148, 163, 184, 0.04);
+            --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        html[data-theme="teal"] {
+            /* Option B: Kinetic Teal */
+            --bg-base: #080C14;
+            --surface-card: #0F172A;
+            --surface-glass: rgba(15, 23, 42, 0.8);
+            --border-card: rgba(6, 214, 160, 0.14);
+            --border-highlight: rgba(6, 214, 160, 0.5);
+            --accent: #06D6A0;
+            --accent-hover: #05B385;
+            --accent-subtle: rgba(6, 214, 160, 0.12);
+            --accent-glow: rgba(6, 214, 160, 0.28);
+            --accent-text: #080C14;
+            --text-primary: #F8FAFC;
+            --text-muted: #CBD5E1;
+            --grid-line: rgba(6, 214, 160, 0.04);
+        }
+
+        html[data-theme="cobalt"] {
+            /* Option C: Foundry Cobalt */
+            --bg-base: #0A0A0C;
+            --surface-card: #141418;
+            --surface-glass: rgba(20, 20, 24, 0.8);
+            --border-card: rgba(255, 255, 255, 0.07);
+            --border-highlight: rgba(59, 130, 246, 0.5);
+            --accent: #3B82F6;
+            --accent-hover: #2563EB;
+            --accent-subtle: rgba(59, 130, 246, 0.12);
+            --accent-glow: rgba(59, 130, 246, 0.28);
+            --accent-text: #FFFFFF;
+            --text-primary: #FAFAFA;
+            --text-muted: #CBD5E1;
+            --grid-line: rgba(255, 255, 255, 0.03);
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            transition: background-color 300ms ease, color 300ms ease;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-wrap: balance;
+        }
+
+        p, li {
+            text-wrap: pretty;
+        }
+
+        .font-mono-code {
+            font-family: 'Geist Mono', monospace;
+        }
+
+        .tech-grid {
+            background-image:
+                linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        .glass-card {
+            background: var(--surface-glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-card);
+            transition: border-color 250ms ease, box-shadow 250ms ease, transform 200ms var(--ease-spring);
+        }
+
+        .glass-card:hover {
+            border-color: var(--border-highlight);
+            box-shadow: 0 12px 32px -8px var(--accent-glow);
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--accent-text);
+            box-shadow: 0 4px 18px var(--accent-glow);
+            transition: background-color 150ms ease, transform 120ms ease, box-shadow 150ms ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            box-shadow: 0 6px 24px var(--accent-glow);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.97);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-card);
+            transition: border-color 150ms ease, background-color 150ms ease, transform 120ms ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: rgba(255, 255, 255, 0.25);
+            background-color: rgba(255, 255, 255, 0.04);
+        }
+
+        .btn-secondary:active {
+            transform: scale(0.97);
+        }
+
+        .badge-accent {
+            background-color: var(--accent-subtle);
+            color: var(--accent);
+            border: 1px solid var(--border-highlight);
+        }
+
+        .text-accent {
+            color: var(--accent);
+        }
+
+        .n8n-node {
+            transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+        }
+
+        .n8n-node:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 24px -4px var(--accent-glow);
+        }
+
+        .node-active-pulse {
+            border-color: var(--accent) !important;
+            box-shadow: 0 0 25px 2px var(--accent-glow) !important;
+            transform: scale(1.04) translateY(-2px) !important;
+        }
+
+        .wire-pulse-1 { animation: wire-flow 2.4s linear infinite; }
+        .wire-pulse-2 { animation: wire-flow 2.4s linear infinite 0.4s; }
+        .wire-pulse-3 { animation: wire-flow 2.4s linear infinite 0.8s; }
+
+        @keyframes wire-flow {
+            0% { stroke-dashoffset: 90; opacity: 0.2; }
+            40% { opacity: 1; }
+            100% { stroke-dashoffset: 0; opacity: 0.2; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .wire-pulse-1, .wire-pulse-2, .wire-pulse-3, .node-active-pulse {
+                animation: none !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="tech-grid min-h-screen">
+
+    <!-- Top Live Theme Switcher Bar -->
+    <aside class="sticky top-0 z-50 w-full bg-[#06080E]/90 backdrop-blur-xl border-b border-white/10 px-4 py-2.5">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="font-mono-code text-xs uppercase tracking-wider text-slate-300 font-semibold">Live Brand System Mockup</span>
+                <span class="text-xs text-slate-500 hidden sm:inline">| Switch color palettes live below:</span>
+            </div>
+            
+            <div class="flex items-center gap-2 p-1 bg-white/5 rounded-xl border border-white/10">
+                <button onclick="setTheme('amber')" id="btn-amber" class="font-mono-code text-xs px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center gap-1.5 bg-amber-500/20 text-amber-400 border border-amber-500/40">
+                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                    Option A: Precision Amber
+                </button>
+                <button onclick="setTheme('teal')" id="btn-teal" class="font-mono-code text-xs px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center gap-1.5 text-slate-400 hover:text-white border border-transparent">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    Option B: Kinetic Teal
+                </button>
+                <button onclick="setTheme('cobalt')" id="btn-cobalt" class="font-mono-code text-xs px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center gap-1.5 text-slate-400 hover:text-white border border-transparent">
+                    <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                    Option C: Foundry Cobalt
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Global App Header -->
+    <header class="w-full border-b border-[var(--border-card)] bg-[var(--bg-base)]/80 backdrop-blur-md sticky top-[49px] z-40">
+        <div class="w-full max-w-[1800px] mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 2xl:px-20 py-4">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/logo.png" alt="TrailOps" class="w-8 h-8 object-contain transition-transform group-hover:scale-105" />
+                <span class="text-base font-bold tracking-tight text-[var(--text-primary)]">Trail<span class="text-accent">Ops</span></span>
+                <span class="hidden md:inline font-mono-code text-xs uppercase tracking-wider px-2.5 py-1 rounded badge-accent font-semibold">Studio</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-mono-code text-xs sm:text-sm text-[var(--text-muted)]">
+                <a href="#capabilities" class="hover:text-[var(--text-primary)] transition-colors">Capabilities</a>
+                <a href="#pipeline" class="hover:text-[var(--text-primary)] transition-colors">Architecture</a>
+                <a href="#work" class="hover:text-[var(--text-primary)] transition-colors">Shipped Work</a>
+                <a href="#faq" class="hover:text-[var(--text-primary)] transition-colors">FAQ</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="contact.html" class="btn-primary font-mono-code text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg uppercase tracking-wider">
+                    Book Technical Scope
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: Hero Section Stretched Across Page with Safe Responsive Padding Area -->
+    <section class="w-full max-w-[1800px] mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 2xl:px-20 pt-8 sm:pt-12 pb-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-16 items-center min-h-[486px]">
+            
+            <!-- Left Hero Content -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="inline-flex items-center gap-2 font-mono-code text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full badge-accent font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-[var(--accent)] animate-ping"></span>
+                    <span>Event Orchestration &amp; Full-Stack SaaS Studio</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-[52px] font-bold tracking-tight leading-[1.08] text-[var(--text-primary)]">
+                    Orchestrate Resilience With <span class="text-accent">TrailOps</span>
+                </h1>
+
+                <!-- Under 20 words copy discipline -->
+                <p class="text-base sm:text-lg text-[var(--text-muted)] leading-relaxed max-w-xl">
+                    We architect and ship production-grade event automation, custom AI integrations, and full-stack SaaS products for technical founders.
+                </p>
+
+                <div class="pt-2 space-y-3">
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <a href="contact.html" class="btn-primary font-mono-code text-xs font-bold px-6 py-3.5 rounded-lg uppercase tracking-wider">
+                            Book a Call
+                        </a>
+                        <a href="#work" class="btn-secondary font-mono-code text-xs font-semibold px-6 py-3.5 rounded-lg uppercase tracking-wider">
+                            Explore Architecture
+                        </a>
+                    </div>
+                    <!-- Conversion Reassurance Line -->
+                    <p class="font-mono-code text-xs text-[var(--text-muted)] flex items-center gap-2">
+                        <i class="ph-bold ph-seal-check text-sm text-accent" aria-hidden="true"></i>
+                        Free 20-minute technical scope call. Direct engineer access, zero slide decks.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Hero Visual: Generic Event-Driven Automation Pipeline Orchestrator -->
+            <div class="lg:col-span-7">
+                <div class="glass-card rounded-2xl border border-[var(--border-card)] p-4 sm:p-5 shadow-2xl relative overflow-hidden">
+                    
+                    <!-- Window Header with Interactive Simulation Trigger -->
+                    <div class="flex items-center justify-between pb-2 mb-3 border-b border-white/10 text-xs">
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+                            <span class="font-mono-code text-[11px] sm:text-xs text-slate-300 ml-2 flex items-center gap-1.5 font-medium">
+                                <i class="ph-bold ph-git-branch text-xs text-accent" aria-hidden="true"></i>
+                                event_pipeline.runtime.ts
+                            </span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <div class="flex items-center gap-1.5 font-mono-code text-[11px] sm:text-xs px-2 py-0.5 rounded badge-accent font-semibold uppercase">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse"></span>
+                                Active Pipeline
+                            </div>
+                            <button id="trigger-simulation-btn" onclick="runPipelineSimulation()" class="font-mono-code text-[11px] sm:text-xs uppercase tracking-wider px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 text-slate-200 hover:text-white flex items-center gap-1.5 transition-all active:scale-95" title="Click to test live event execution">
+                                <i class="ph-bold ph-play text-[11px] text-accent" aria-hidden="true"></i>
+                                <span class="hidden sm:inline font-semibold">Simulate Event</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Flow Canvas Area (4-Stage Pipeline: Ingest -> Router -> Parallel Workers -> Dispatch) -->
+                    <div class="relative min-h-[324px] sm:min-h-[360px] flex items-center justify-between px-2 sm:px-6">
+                        
+                        <!-- Connecting SVG Wire Cables with Flowing Data Streams -->
+                        <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 540 280" fill="none" preserveAspectRatio="none">
+                            <!-- Inbound -> Router -->
+                            <path d="M 110 140 C 140 140, 150 140, 180 140" stroke="rgba(148, 163, 184, 0.2)" stroke-width="2" />
+                            <!-- Router -> AI Worker (Top) -->
+                            <path d="M 260 120 C 290 120, 290 75, 320 75" stroke="rgba(148, 163, 184, 0.2)" stroke-width="2" />
+                            <!-- Router -> DB Worker (Bottom) -->
+                            <path d="M 260 160 C 290 160, 290 205, 320 205" stroke="rgba(148, 163, 184, 0.2)" stroke-width="2" />
+                            <!-- AI Worker -> Dispatch -->
+                            <path d="M 400 75 C 430 75, 430 120, 460 120" stroke="rgba(148, 163, 184, 0.2)" stroke-width="2" />
+                            <!-- DB Worker -> Dispatch -->
+                            <path d="M 400 205 C 430 205, 430 160, 460 160" stroke="rgba(148, 163, 184, 0.2)" stroke-width="2" />
+
+                            <!-- Active Pulse Stream Overlays -->
+                            <path d="M 110 140 C 140 140, 150 140, 180 140" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="8 45" class="wire-pulse-1" />
+                            <path d="M 260 120 C 290 120, 290 75, 320 75" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="8 45" class="wire-pulse-2" />
+                            <path d="M 260 160 C 290 160, 290 205, 320 205" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="8 45" class="wire-pulse-3" />
+                            <path d="M 400 75 C 430 75, 430 120, 460 120" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="8 45" class="wire-pulse-1" />
+                            <path d="M 400 205 C 430 205, 430 160, 460 160" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="8 45" class="wire-pulse-2" />
+                        </svg>
+
+                        <!-- Stage 1: Event Ingestion Node -->
+                        <div id="node-ingest" class="relative z-10 n8n-node w-[102px] sm:w-[116px] p-2.5 sm:p-3 rounded-xl bg-[var(--surface-card)] border border-[var(--border-card)] shadow-xl cursor-pointer">
+                            <div class="flex items-center gap-1.5 mb-1.5">
+                                <i class="ph-bold ph-plugs text-xs text-accent" aria-hidden="true"></i>
+                                <span class="font-mono-code text-[11px] sm:text-xs font-bold text-[var(--text-primary)] truncate">Event Ingest</span>
+                            </div>
+                            <div class="font-mono-code text-[11px] text-slate-300 bg-black/50 px-1.5 py-0.5 rounded truncate mb-1 border border-white/5">
+                                POST /events
+                            </div>
+                            <div class="flex justify-between items-center font-mono-code text-[11px] text-emerald-400 font-medium">
+                                <span>200 Ingest</span>
+                                <span class="text-slate-400">8ms</span>
+                            </div>
+                            <!-- Output Port Pin -->
+                            <span class="absolute right-[-5px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[var(--accent)] border border-[var(--bg-base)]"></span>
+                        </div>
+
+                        <!-- Stage 2: Rule Engine & Router Node -->
+                        <div id="node-router" class="relative z-10 n8n-node w-[102px] sm:w-[116px] p-2.5 sm:p-3 rounded-xl bg-[var(--surface-card)] border border-[var(--border-card)] shadow-xl cursor-pointer">
+                            <!-- Input Port Pin -->
+                            <span class="absolute left-[-5px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-slate-400 border border-[var(--bg-base)]"></span>
+                            <div class="flex items-center gap-1.5 mb-1.5">
+                                <i class="ph-bold ph-tree-structure text-xs text-accent" aria-hidden="true"></i>
+                                <span class="font-mono-code text-[11px] sm:text-xs font-bold text-[var(--text-primary)] truncate">Rule Router</span>
+                            </div>
+                            <div class="font-mono-code text-[11px] text-slate-300 bg-black/50 px-1.5 py-0.5 rounded truncate mb-1 border border-white/5">
+                                priority == 'p0'
+                            </div>
+                            <div class="flex justify-between items-center font-mono-code text-[11px] text-accent font-medium">
+                                <span>Split 2x</span>
+                                <span class="text-slate-400">3ms</span>
+                            </div>
+                            <!-- Output Pins -->
+                            <span class="absolute right-[-5px] top-[28%] -translate-y-1/2 w-2 h-2 rounded-full bg-emerald-400 border border-[var(--bg-base)]"></span>
+                            <span class="absolute right-[-5px] top-[72%] -translate-y-1/2 w-2 h-2 rounded-full bg-amber-400 border border-[var(--bg-base)]"></span>
+                        </div>
+
+                        <!-- Stage 3: Stacked Parallel Workers (AI & DB) -->
+                        <div class="relative z-10 flex flex-col gap-3">
+                            <!-- Top Worker: AI / LLM Reasoning Engine -->
+                            <div id="node-worker-ai" class="n8n-node w-[110px] sm:w-[128px] p-2.5 sm:p-3 rounded-xl bg-[var(--surface-card)] border border-[var(--border-card)] shadow-xl cursor-pointer relative">
+                                <span class="absolute left-[-5px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-emerald-400 border border-[var(--bg-base)]"></span>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <i class="ph-bold ph-cpu text-xs text-accent" aria-hidden="true"></i>
+                                    <span class="font-mono-code text-[11px] sm:text-xs font-bold text-[var(--text-primary)] truncate">AI Worker</span>
+                                </div>
+                                <div class="font-mono-code text-[11px] text-emerald-400 flex justify-between font-medium">
+                                    <span>Vector Eval</span>
+                                    <span class="text-slate-400">34ms</span>
+                                </div>
+                                <span class="absolute right-[-5px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-emerald-400 border border-[var(--bg-base)]"></span>
+                            </div>
+
+                            <!-- Bottom Worker: Transactional State & DB Sync -->
+                            <div id="node-worker-db" class="n8n-node w-[110px] sm:w-[128px] p-2.5 sm:p-3 rounded-xl bg-[var(--surface-card)] border border-[var(--border-card)] shadow-xl cursor-pointer relative">
+                                <span class="absolute left-[-5px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-amber-400 border border-[var(--bg-base)]"></span>
+                                <div class="flex items-center gap-1.5 mb-1">
+                                    <i class="ph-bold ph-database text-xs text-accent" aria-hidden="true"></i>
+                                    <span class="font-mono-code text-[11px] sm:text-xs font-bold text-[var(--text-primary)] truncate">Cloud Sync</span>
+                                </div>
+                                <div class="font-mono-code text-[11px] text-emerald-400 flex justify-between font-medium">
+                                    <span>Atomic Upsert</span>
+                                    <span class="text-slate-400">12ms</span>
+                                </div>
+                                <span class="absolute right-[-5px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-amber-400 border border-[var(--bg-base)]"></span>
+                            </div>
+                        </div>
+
+                        <!-- Stage 4: Outbound Dispatch & Webhook Delivery -->
+                        <div id="node-dispatch" class="relative z-10 n8n-node w-[102px] sm:w-[116px] p-2.5 sm:p-3 rounded-xl bg-[var(--surface-card)] border border-[var(--border-card)] shadow-xl cursor-pointer">
+                            <span class="absolute left-[-5px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-slate-400 border border-[var(--bg-base)]"></span>
+                            <div class="flex items-center gap-1.5 mb-1.5">
+                                <i class="ph-bold ph-paper-plane-tilt text-xs text-accent" aria-hidden="true"></i>
+                                <span class="font-mono-code text-[11px] sm:text-xs font-bold text-[var(--text-primary)] truncate">API Dispatch</span>
+                            </div>
+                            <div class="font-mono-code text-[11px] text-slate-300 bg-black/50 px-1.5 py-0.5 rounded truncate mb-1 border border-white/5">
+                                Webhook / CRM
+                            </div>
+                            <div class="flex justify-between items-center font-mono-code text-[11px] text-emerald-400 font-medium">
+                                <span>Delivered</span>
+                                <span class="text-slate-400">100%</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Bottom Runtime Telemetry Bar -->
+                    <div class="flex items-center justify-between pt-2 mt-2 border-t border-white/10 font-mono-code text-[11px] sm:text-xs text-slate-300">
+                        <span class="flex items-center gap-2" id="telemetry-latency">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"></span>
+                            <span>Pipeline Latency: <strong class="text-[var(--text-primary)]">24ms avg</strong></span>
+                        </span>
+                        <span id="telemetry-throughput" class="hidden sm:inline text-slate-300">Throughput: <strong class="text-[var(--text-primary)]">1,480 events/min</strong></span>
+                        <span class="text-slate-300">Uptime: <span class="text-accent font-semibold">99.99%</span></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Container for Subsequent Content Sections -->
+    <main class="max-w-7xl mx-auto px-6 py-8 md:py-12 space-y-24">
+
+        <!-- Section 2: Monochrome SaaS Credibility Strip -->
+        <section class="border-y border-[var(--border-card)] py-8">
+            <p class="font-mono-code text-center text-xs uppercase tracking-widest text-[var(--text-muted)] mb-6">
+                Engineered for High-Growth Stacks &amp; Production Environments
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-75 grayscale hover:grayscale-0 transition-all text-slate-300">
+                <div class="flex items-center gap-2 font-mono-code font-bold text-sm tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-accent"></span>
+                    <span>Event-Driven</span>
+                </div>
+                <div class="flex items-center gap-2 font-mono-code font-semibold text-sm tracking-wider hover:text-white transition-colors">
+                    <svg class="h-4 w-4" viewBox="0 0 180 180" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M90 180C139.706 180 180 139.706 180 90C180 40.2944 139.706 0 90 0C40.2944 0 0 40.2944 0 90C0 139.706 40.2944 180 90 180ZM143.765 149.206L72.2353 54.7059H54.7059V125.294H68.8235V72.2353L132.824 157.059C136.635 154.676 140.294 152.059 143.765 149.206ZM125.294 125.294H111.176V93.5294L125.294 112.235V125.294Z"/></svg>
+                    <span>Next.js</span>
+                </div>
+                <div class="flex items-center gap-2 font-mono-code font-semibold text-sm tracking-wider hover:text-white transition-colors">
+                    <svg class="h-4 w-4 text-emerald-400" viewBox="0 0 109 113" fill="currentColor"><path d="M63.7076 110.284C60.948 113.888 55.2045 111.977 55.1583 107.447L54.7735 69.6974L97.5818 69.6974C104.938 69.6974 109.112 78.1388 104.593 84.0416L63.7076 110.284Z"/><path d="M45.687 2.4578C48.4466 -1.14624 54.1901 0.764518 54.2363 5.29477L54.6211 43.0445L11.8128 43.0445C4.45663 43.0445 0.282855 34.6031 4.80186 28.7003L45.687 2.4578Z"/></svg>
+                    <span>Supabase</span>
+                </div>
+                <div class="flex items-center gap-2 font-mono-code font-semibold text-sm tracking-wider hover:text-white transition-colors">
+                    <svg class="h-4 w-auto" viewBox="0 0 60 25" fill="currentColor"><path d="M59.64 14.28c0-4.42-3.14-7.57-7.44-7.57-4.32 0-7.38 3.19-7.38 7.55 0 5.22 3.65 7.49 7.97 7.49 2.11 0 3.7-.49 4.9-1.22v-3.23c-1.2.66-2.61 1.05-4.3 1.05-1.93 0-3.53-.78-3.77-2.65h10c.02-.45.02-.92.02-1.42zm-9.98-1.24c.09-1.63 1.25-2.5 2.58-2.5 1.3 0 2.44.87 2.53 2.5h-5.11zM34.8 6.71c-1.78 0-2.92.83-3.48 1.4V6.99h-4.4v14.47h4.63v-7.23c0-2.22 1.4-3.56 3.09-3.56.57 0 1.05.08 1.34.22V6.99c-.43-.19-1.27-.28-1.18-.28zm-13.62 0c-4.42 0-7.27 3.1-7.27 7.57s2.85 7.47 7.27 7.47c1.82 0 3.39-.51 4.54-1.26v-3.47c-1.15.76-2.52 1.2-3.99 1.2-1.97 0-3.21-.92-3.32-2.58h12.18c.04-.47.06-.94.06-1.42 0-4.42-3.15-7.51-7.47-7.51zm-2.73 6.13c.11-1.6 1.25-2.48 2.58-2.48s2.44.88 2.55 2.48h-5.13zM6.51 9.87c0-.98.81-1.37 2.15-1.37 1.93 0 4.38.59 6.29 1.63V5.88C13.04 5.09 10.74 4.7 8.66 4.7 3.51 4.7 0 7.4 0 11.96c0 6.94 9.53 5.82 9.53 8.81 0 1.15-.99 1.55-2.38 1.55-2.06 0-4.71-.85-6.8-2.07v4.4c2.27.99 4.77 1.35 6.8 1.35 5.34 0 9.17-2.64 9.17-7.22 0-7.47-9.81-6.1-9.81-8.91z"/></svg>
+                    <span>Stripe</span>
+                </div>
+                <div class="flex items-center gap-2 font-mono-code font-semibold text-sm tracking-wider hover:text-white transition-colors">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M13.827 3.5h3.693l6.48 17h-3.692l-1.332-3.655H11.024L9.692 20.5H6l7.827-17zm3.844 10.375l-1.996-5.485-1.997 5.485h3.993zM0 20.5h3.692l4.8-12.588H4.8L0 20.5z"/></svg>
+                    <span>Anthropic</span>
+                </div>
+                <div class="flex items-center gap-2 font-mono-code font-semibold text-sm tracking-wider hover:text-white transition-colors">
+                    <i class="ph-bold ph-database text-base text-accent" aria-hidden="true"></i>
+                    <span>PostgreSQL</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Core Capabilities (Asymmetric Bento Grid, Breaking 7-Card Repetition) -->
+        <section id="capabilities" class="space-y-8">
+            <div>
+                <span class="font-mono-code text-xs sm:text-sm uppercase tracking-wider text-accent font-bold">Studio Capabilities</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--text-primary)] mt-2">
+                    Production Systems. Built and Shipped.
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                
+                <!-- Cell 1: n8n Workflow Automation (Large Flagship Span 7) -->
+                <div class="md:col-span-7 glass-card rounded-2xl p-7 sm:p-8 relative overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl badge-accent flex items-center justify-center mb-6">
+                            <i class="ph-bold ph-lightning text-2xl text-accent" aria-hidden="true"></i>
+                        </div>
+                        <span class="font-mono-code text-xs sm:text-sm uppercase tracking-wider text-accent font-bold">Flagship Focus</span>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mt-1 mb-3">Workflow &amp; Event Orchestration</h3>
+                        <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-lg mb-6">
+                            We build end-to-end event-driven pipelines that automate lead qualification, CRM synchronization, payment routing, and internal operations without flaky no-code hacks.
+                        </p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-black/40 border border-white/5 font-mono-code text-xs sm:text-sm text-slate-300 flex items-center justify-between">
+                        <span>Includes: Webhooks, Retry Queues, Error Fallbacks, Multi-Branch Routing</span>
+                        <span class="text-accent font-bold">&rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Cell 2: Multi-Tenant SaaS Development (Span 5) -->
+                <div class="md:col-span-5 glass-card rounded-2xl p-7 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl badge-accent flex items-center justify-center mb-6">
+                            <i class="ph-bold ph-browsers text-2xl text-accent" aria-hidden="true"></i>
+                        </div>
+                        <span class="font-mono-code text-xs sm:text-sm uppercase tracking-wider text-accent font-bold">Full-Stack SaaS</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-[var(--text-primary)] mt-1 mb-3">SaaS Product Engineering</h3>
+                        <p class="text-base text-slate-300 leading-relaxed mb-6">
+                            Multi-tenant web products built on Next.js, Supabase, and Stripe. From verified MVP to scalable SaaS with subscription billing, team RBAC, and responsive dashboards.
+                        </p>
+                    </div>
+                    <div class="font-mono-code text-sm text-accent flex items-center gap-1 font-semibold">
+                        <span>Production handoff in 3 to 6 weeks</span> &rarr;
+                    </div>
+                </div>
+
+                <!-- Cell 3: Custom AI Agents & Vector Pipelines (Span 5) -->
+                <div class="md:col-span-5 glass-card rounded-2xl p-7 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl badge-accent flex items-center justify-center mb-6">
+                            <i class="ph-bold ph-brain text-2xl text-accent" aria-hidden="true"></i>
+                        </div>
+                        <span class="font-mono-code text-xs sm:text-sm uppercase tracking-wider text-accent font-bold">AI Engineering</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-[var(--text-primary)] mt-1 mb-3">AI Agents &amp; RAG Systems</h3>
+                        <p class="text-base text-slate-300 leading-relaxed mb-6">
+                            We wire LLMs (Claude, GPT, Gemini, or local models) into your product for intelligent classification, autonomous agents, and enterprise semantic document search.
+                        </p>
+                    </div>
+                    <div class="font-mono-code text-sm text-slate-300">
+                        Zero toy wrappers. Strict token budgets &amp; error recovery.
+                    </div>
+                </div>
+
+                <!-- Cell 4: Systems Audit & Scoping (Span 7) -->
+                <div class="md:col-span-7 glass-card rounded-2xl p-7 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl badge-accent flex items-center justify-center mb-6">
+                            <i class="ph-bold ph-shield-check text-2xl text-accent" aria-hidden="true"></i>
+                        </div>
+                        <span class="font-mono-code text-xs sm:text-sm uppercase tracking-wider text-accent font-bold">Strategic Entry Point</span>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mt-1 mb-3">Architecture Audit &amp; Scoping</h3>
+                        <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-lg mb-6">
+                            Not sure what to build first? We inspect your current stack, diagnose operational bottlenecks, and provide an actionable fixed-price roadmap for automation ROI.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-white/5">
+                        <span class="font-mono-code text-xs sm:text-sm text-slate-300">Looking for SEO tuning or Content Ops?</span>
+                        <a href="services.html" class="font-mono-code text-xs sm:text-sm text-accent font-bold hover:underline">
+                            View All 7 Capabilities &rarr;
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 4: Architectural Process Pipeline (Replacing 4 Identical Boxes) -->
+        <section id="pipeline" class="space-y-8">
+            <div>
+                <span class="font-mono-code text-xs sm:text-sm uppercase tracking-wider text-accent font-bold">Delivery Lifecycle</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--text-primary)] mt-2">
+                    From Brief to Live in Four Milestones
+                </h2>
+            </div>
+
+            <!-- Connected Horizontal Pipeline -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-5 relative">
+                
+                <div class="glass-card rounded-xl p-6 sm:p-7 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-mono-code text-xs sm:text-sm text-accent font-bold tracking-wider">01 / DISCOVERY</span>
+                            <i class="ph-bold ph-chat-circle-dots text-lg text-accent" aria-hidden="true"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-[var(--text-primary)] mb-2.5">Technical Intake</h4>
+                        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+                            A focused technical call to evaluate stack constraints, data contracts, and immediate levers. No slides.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl p-6 sm:p-7 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-mono-code text-xs sm:text-sm text-accent font-bold tracking-wider">02 / BLUEPRINT</span>
+                            <i class="ph-bold ph-file-code text-lg text-accent" aria-hidden="true"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-[var(--text-primary)] mb-2.5">Fixed-Price Scope</h4>
+                        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+                            We map exact node architecture, data models, and edge cases. Fixed quote with zero surprise billable hours.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl p-6 sm:p-7 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-mono-code text-xs sm:text-sm text-accent font-bold tracking-wider">03 / SPRINT BUILD</span>
+                            <i class="ph-bold ph-hammer text-lg text-accent" aria-hidden="true"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-[var(--text-primary)] mb-2.5">Weekly Live Demos</h4>
+                        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+                            Rapid delivery sprints. You test working code and active pipelines each week, not a grand reveal at the end.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl p-6 sm:p-7 relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-mono-code text-xs sm:text-sm text-accent font-bold tracking-wider">04 / HANDOVER</span>
+                            <i class="ph-bold ph-key text-lg text-accent" aria-hidden="true"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-[var(--text-primary)] mb-2.5">100% Client Ownership</h4>
+                        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+                            Full source repository, hosting credentials, documentation, and a post-launch warranty window.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 5: Shipped Work Showcase -->
+        <section id="work" class="space-y-8">
+            <div class="flex flex-wrap items-end justify-between gap-4">
+                <div>
+                    <span class="font-mono-code text-xs sm:text-sm uppercase tracking-wider text-accent font-bold">Track Record</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--text-primary)] mt-2">
+                        Engineered Systems in Production
+                    </h2>
+                </div>
+                <a href="featured-work.html" class="font-mono-code text-xs sm:text-sm text-accent hover:underline flex items-center gap-1 font-semibold">
+                    View Complete Portfolio &rarr;
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Project 1: WYSIWYG Editor -->
+                <div class="glass-card rounded-2xl p-7 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs sm:text-sm font-mono-code mb-4">
+                            <span class="text-accent font-bold flex items-center gap-2">
+                                <i class="ph-bold ph-textbox text-base" aria-hidden="true"></i> Web Application
+                            </span>
+                            <span class="text-slate-400 font-medium">Live SaaS</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-[var(--text-primary)] mb-3">WYSIWYG HTML Studio</h3>
+                        <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
+                            High-performance rich-text visual editor with side-by-side real-time DOM inspection, clean code export, and modular templating.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between font-mono-code text-xs sm:text-sm">
+                        <span class="text-slate-300">Next.js · Tailwind · Monaco</span>
+                        <a href="wysiwyg.html" class="text-accent hover:underline font-bold">Explore &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Stylchat Widget -->
+                <div class="glass-card rounded-2xl p-7 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs sm:text-sm font-mono-code mb-4">
+                            <span class="text-accent font-bold flex items-center gap-2">
+                                <i class="ph-bold ph-chat-teardrop-dots text-base" aria-hidden="true"></i> Automation Tooling
+                            </span>
+                            <span class="text-slate-400 font-medium">Client Widget</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-[var(--text-primary)] mb-3">Stylchat n8n Widget</h3>
+                        <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
+                            Embeddable conversational client widget built specifically for n8n workflows with webhook streaming, file attachments, and token security.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between font-mono-code text-xs sm:text-sm">
+                        <span class="text-slate-300">n8n · WebSockets · Vanilla JS</span>
+                        <a href="stylchat.html" class="text-accent hover:underline font-bold">Explore &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Novodesk -->
+                <div class="glass-card rounded-2xl p-7 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs sm:text-sm font-mono-code mb-4">
+                            <span class="text-accent font-bold flex items-center gap-2">
+                                <i class="ph-bold ph-ticket text-base" aria-hidden="true"></i> Operations Software
+                            </span>
+                            <span class="text-slate-400 font-medium">Multi-Tenant</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-[var(--text-primary)] mb-3">Novodesk Support Desk</h3>
+                        <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
+                            Streamlined customer ticketing platform with automated team triage, SLA alerting, role-based access, and operational analytics.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between font-mono-code text-xs sm:text-sm">
+                        <span class="text-slate-300">PostgreSQL · Supabase · Next.js</span>
+                        <a href="novodesk.html" class="text-accent hover:underline font-bold">Explore &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 6: Founder FAQ (Zero Em-Dashes, Clean HTML) -->
+        <section id="faq" class="space-y-8 max-w-4xl mx-auto">
+            <div class="text-center">
+                <span class="font-mono-code text-xs sm:text-sm uppercase tracking-wider text-accent font-bold">Direct Answers</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--text-primary)] mt-2">
+                    Questions Before Engaging
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <details class="glass-card p-6 rounded-xl group cursor-pointer">
+                    <summary class="font-bold text-lg sm:text-xl text-[var(--text-primary)] list-none flex items-center justify-between">
+                        <span>Do we own the source code and infrastructure after launch?</span>
+                        <i class="ph-bold ph-plus text-accent text-lg transition-transform duration-200 group-open:rotate-45" aria-hidden="true"></i>
+                    </summary>
+                    <p class="text-base text-slate-300 mt-4 leading-relaxed">
+                        Yes, completely. All source code, database migrations, workflow JSON definitions, and deployment credentials transfer to your accounts at final sign-off. We require zero retainers to keep your systems running.
+                    </p>
+                </details>
+
+                <details class="glass-card p-6 rounded-xl group cursor-pointer">
+                    <summary class="font-bold text-lg sm:text-xl text-[var(--text-primary)] list-none flex items-center justify-between">
+                        <span>What if I only need a single high-leverage workflow automated?</span>
+                        <i class="ph-bold ph-plus text-accent text-lg transition-transform duration-200 group-open:rotate-45" aria-hidden="true"></i>
+                    </summary>
+                    <p class="text-base text-slate-300 mt-4 leading-relaxed">
+                        That is one of our most frequent projects. A single production-grade n8n pipeline or API integration can resolve your largest operational bottleneck in days. We never inflate scopes.
+                    </p>
+                </details>
+
+                <details class="glass-card p-6 rounded-xl group cursor-pointer">
+                    <summary class="font-bold text-lg sm:text-xl text-[var(--text-primary)] list-none flex items-center justify-between">
+                        <span>What does production-ready actually mean at TrailOps?</span>
+                        <i class="ph-bold ph-plus text-accent text-lg transition-transform duration-200 group-open:rotate-45" aria-hidden="true"></i>
+                    </summary>
+                    <p class="text-base text-slate-300 mt-4 leading-relaxed">
+                        Production-ready means structured error handlers, automated retries, rate-limit resilience, secure token handling, and observability logging. If it breaks when an external webhook drops, it is not production-ready.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- Section 7: Closing Conversion Banner -->
+        <section class="glass-card rounded-3xl p-10 sm:p-14 text-center border-[var(--border-highlight)] relative overflow-hidden">
+            <div class="max-w-2xl mx-auto space-y-6">
+                <span class="font-mono-code text-xs sm:text-sm uppercase tracking-wider text-accent font-bold px-3.5 py-1.5 rounded-full badge-accent">
+                    Immediate Engineer Access
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--text-primary)]">
+                    Ready to Ship Working Systems?
+                </h2>
+                <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+                    Tell us what is bottlenecking your engineering or operations team. We scope technical requirements live on the call.
+                </p>
+                <div class="pt-4 flex flex-wrap justify-center gap-4">
+                    <a href="contact.html" class="btn-primary font-mono-code text-sm sm:text-base font-bold px-8 py-4 rounded-xl uppercase tracking-wider">
+                        Book a Technical Call
+                    </a>
+                    <a href="featured-work.html" class="btn-secondary font-mono-code text-sm sm:text-base font-semibold px-8 py-4 rounded-xl uppercase tracking-wider">
+                        Browse Past Work
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-[var(--border-card)] py-12 px-6 mt-20 bg-black/30">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-6 font-mono-code text-xs text-[var(--text-muted)]">
+            <div class="flex items-center gap-2">
+                <img src="assets/logo.png" alt="TrailOps" class="w-6 h-6 object-contain" />
+                <span class="font-bold text-[var(--text-primary)]">TrailOps</span>
+                <span>· High-Reliability SaaS &amp; Automation</span>
+            </div>
+            <div>
+                &copy; 2026 TrailOps Systems. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Palette Switcher & Simulation Scripts -->
+    <script>
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            
+            const buttons = {
+                amber: document.getElementById('btn-amber'),
+                teal: document.getElementById('btn-teal'),
+                cobalt: document.getElementById('btn-cobalt')
+            };
+
+            for (const key in buttons) {
+                if (key === theme) {
+                    buttons[key].className = 'font-mono-code text-xs px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center gap-1.5 border ' +
+                        (key === 'amber' ? 'bg-amber-500/20 text-amber-400 border-amber-500/40' :
+                         key === 'teal' ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40' :
+                         'bg-blue-500/20 text-blue-400 border-blue-500/40');
+                } else {
+                    buttons[key].className = 'font-mono-code text-xs px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center gap-1.5 text-slate-400 hover:text-white border border-transparent';
+                }
+            }
+        }
+
+        function runPipelineSimulation() {
+            const btn = document.getElementById('trigger-simulation-btn');
+            if (btn) btn.disabled = true;
+
+            const nIngest = document.getElementById('node-ingest');
+            const nRouter = document.getElementById('node-router');
+            const nAi = document.getElementById('node-worker-ai');
+            const nDb = document.getElementById('node-worker-db');
+            const nDispatch = document.getElementById('node-dispatch');
+            const latencyEl = document.getElementById('telemetry-latency');
+
+            // Reset
+            [nIngest, nRouter, nAi, nDb, nDispatch].forEach(el => el && el.classList.remove('node-active-pulse'));
+
+            // Step 1: Ingest
+            setTimeout(() => {
+                if (nIngest) nIngest.classList.add('node-active-pulse');
+                if (latencyEl) latencyEl.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span><span>Event Ingest: <strong class="text-[var(--text-primary)]">POST /events (8ms)</strong></span>';
+            }, 60);
+
+            // Step 2: Router
+            setTimeout(() => {
+                if (nIngest) nIngest.classList.remove('node-active-pulse');
+                if (nRouter) nRouter.classList.add('node-active-pulse');
+                if (latencyEl) latencyEl.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span><span>Rules Engine: <strong class="text-[var(--text-primary)]">Evaluating Branch (11ms)</strong></span>';
+            }, 320);
+
+            // Step 3: Parallel Workers
+            setTimeout(() => {
+                if (nRouter) nRouter.classList.remove('node-active-pulse');
+                if (nAi) nAi.classList.add('node-active-pulse');
+                if (nDb) nDb.classList.add('node-active-pulse');
+                if (latencyEl) latencyEl.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span><span>Workers Executing: <strong class="text-[var(--text-primary)]">AI Vector + Cloud Sync (22ms)</strong></span>';
+            }, 640);
+
+            // Step 4: Dispatch
+            setTimeout(() => {
+                if (nAi) nAi.classList.remove('node-active-pulse');
+                if (nDb) nDb.classList.remove('node-active-pulse');
+                if (nDispatch) nDispatch.classList.add('node-active-pulse');
+                if (latencyEl) latencyEl.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span>Execution Success: <strong class="text-emerald-400">Delivered in 28ms (Zero Loss)</strong></span>';
+            }, 960);
+
+            // Cleanup & reset button
+            setTimeout(() => {
+                if (nDispatch) nDispatch.classList.remove('node-active-pulse');
+                if (latencyEl) latencyEl.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"></span><span>Pipeline Latency: <strong class="text-[var(--text-primary)]">24ms avg</strong></span>';
+                if (btn) btn.disabled = false;
+            }, 2200);
+        }
+    </script>
+</body>
+</html>
