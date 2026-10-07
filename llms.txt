@@ -26,8 +26,9 @@
 ## Featured Work & Projects
 
 - [WYSIWYG HTML Editor](https://trailops.biz/wysiwyg.html): Free, browser-based HTML visual and code editor with live syntax inspection, templates, and export utilities (Live at https://wysiwyg-six.vercel.app).
-- [Stylchat](https://trailops.biz/stylchat.html): Embeddable chat widget builder designed specifically for n8n webhook pipelines with live styling and file handling (Live at https://www.stylchat.com).
+- [Stylchat](https://trailops.biz/stylchat.html): AI chatbot and customer support desk for ecommerce and smart businesses with live human takeover, product catalog sync, service desk tickets, and BYOI (Bring Your Own Infrastructure) n8n integration (Live at https://www.stylchat.com).
 - [Novodesk](https://trailops.biz/novodesk.html): Fast, lightweight customer support ticketing platform with multi-workspace management, RBAC, and queues (Live at https://www.novodesk.cc).
+- [Editorial3D](https://trailops.biz/editorial3d.html): PDF to interactive 3D flipbook publishing platform with realistic page turning, lead capture gates, reading depth analytics, and custom domain hosting (Live at https://editorial3d.com).
 - [Featured Work Portfolio](https://trailops.biz/featured-work.html): Comprehensive project breakdowns with architecture overviews and performance metrics.
 
 ---
