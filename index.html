@@ -571,6 +571,34 @@
                 transition: opacity 150ms ease !important;
             }
         }
+
+        /* Mega Menu Panel Visibility & Elevation */
+        .mega-menu-panel {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, 8px);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+            z-index: 50;
+        }
+
+        .mega-menu-container:hover .mega-menu-panel,
+        .mega-menu-container:focus-within .mega-menu-panel,
+        .mega-menu-panel.is-active {
+            opacity: 1 !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
+            transform: translate(-50%, 0) !important;
+        }
+
+        .mega-menu-container:hover #services-chevron,
+        .mega-menu-container:focus-within #services-chevron,
+        #services-menu-trigger[aria-expanded="true"] #services-chevron {
+            transform: rotate(180deg);
+        }
     </style>
     <script id="tailwind-config">
         tailwind.config = {
@@ -628,7 +656,7 @@
 
                     <!-- Mega Menu Dropdown Panel (100% Solid Filled Background - Zero Transparency) -->
                     <div id="services-mega-menu" role="region" aria-label="Services Menu"
-                        class="mega-menu-panel absolute top-full left-1/2 -translate-x-1/2 pt-3 -mt-1 w-[820px] max-w-[90vw] opacity-0 invisible pointer-events-none transition-all duration-200 transform translate-y-2 [.mega-menu-panel.is-active]:opacity-100 [.mega-menu-panel.is-active]:visible [.mega-menu-panel.is-active]:pointer-events-auto [.mega-menu-panel.is-active]:translate-y-0 z-50">
+                        class="mega-menu-panel pt-3 -mt-1 w-[820px] max-w-[90vw]">
                         <div
                             class="solid-mega-panel bg-white border border-foundry-border rounded-xl p-6 shadow-[0_25px_60px_-10px_rgba(9,9,11,0.18),0_0_0_1px_rgba(228,232,237,0.9)] relative overflow-hidden"
                             style="background-color: #FFFFFF !important;">
