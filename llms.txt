@@ -26,6 +26,7 @@
 ## Featured Work & Projects
 
 - [WYSIWYG HTML Editor](https://trailops.biz/wysiwyg.html): Free, browser-based HTML visual and code editor with live syntax inspection, templates, and export utilities (Live at https://wysiwyg-six.vercel.app).
+- [Stylacal](https://trailops.biz/stylacal.html): Multi-business calendar scheduling instrument with tenant context isolation, horizontal staff timetables, PostgreSQL concurrency locks, and 0% platform fee direct Stripe Connect (Live at https://stylacal.com).
 - [Stylchat](https://trailops.biz/stylchat.html): AI chatbot and customer support desk for ecommerce and smart businesses with live human takeover, product catalog sync, service desk tickets, and BYOI (Bring Your Own Infrastructure) n8n integration (Live at https://www.stylchat.com).
 - [Novodesk](https://trailops.biz/novodesk.html): Fast, lightweight customer support ticketing platform with multi-workspace management, RBAC, and queues (Live at https://www.novodesk.cc).
 - [Editorial3D](https://trailops.biz/editorial3d.html): PDF to interactive 3D flipbook publishing platform with realistic page turning, lead capture gates, reading depth analytics, and custom domain hosting (Live at https://editorial3d.com).
